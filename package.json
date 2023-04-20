@@ -1,0 +1,23 @@
+{
+  "name": "aqua-ide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chethana101/aqua-ide.git"
+  },
+  "author": "Chethana Perera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chethana101/aqua-ide/issues"
+  },
+  "homepage": "https://github.com/chethana101/aqua-ide#readme",
+  "dependencies": {
+    "electron": "^24.1.2"
+  }
+}
