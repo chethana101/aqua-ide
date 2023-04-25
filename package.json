@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/chethana101/aqua-ide#readme",
   "dependencies": {
-    "electron": "^24.1.2"
+    "ace-builds": "^1.18.0",
+    "directory-tree": "^3.5.1",
+    "electron": "^24.1.2",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-tabs": "^1.0.1",
+    "path": "^0.12.7",
+    "split.js": "^1.6.5"
   }
 }
