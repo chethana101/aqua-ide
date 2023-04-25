@@ -1,0 +1,102 @@
+/* ---------------------------------
+* Icon configuration
+* -----------------------------------*/
+@font-face {
+    font-family: 'File Icons';
+    src: url('../theme/file-icons.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Devop Icons';
+    src: url('../theme/devopicons.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontawesome';
+    src: url('../theme/fontawesome.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Octicons';
+    src: url('../theme/octicons.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mfixx';
+    src: url('../theme/mfixx.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.file-icon {
+    font-family: 'File Icons';
+    font-size: var(--directory-icon-size-default);
+}
+
+.devopicons {
+    font-family: 'Devop Icons';
+    font-size: var(--directory-icon-size-default);
+}
+
+.fontawesome {
+    font-family: 'Fontawesome';
+    font-size: var(--directory-icon-size-default);
+}
+
+.octicons {
+    font-family: 'Octicons';
+    font-size: var(--directory-icon-size-default);
+}
+
+.mfixx {
+    font-family: 'Mfixx';
+    font-size: var(--directory-icon-size-default);
+}
+
+/* ---------------------------------
+* Directory css
+* -----------------------------------*/
+.directory-holder {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+ul.gj-list li [data-role=wrapper] {
+    width: max-content !important;
+}
+
+ul.gj-list-md li [data-role=display] {
+    color: var(--text-default);
+    font-size: var(--directory-font-size-default);
+}
+
+[data-type=tree] ul li [data-role=expander].gj-tree-material-icons-expander {
+    width: 20px !important;
+}
+
+ul.gj-list-md li [data-role=checkbox], ul.gj-list-md li [data-role=image] {
+    width: auto;
+}
+
+.gj-icon {
+    font-size: 18px;
+}
+
+.gj-list-md-active {
+    background: var(--primary-color-100);
+    border-radius: 3px;
+}
+
+#directory .icon-right-arrow:before {
+    font-size: 7px;
+    line-height: 28px;
+}
