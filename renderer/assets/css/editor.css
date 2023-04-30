@@ -1,7 +1,7 @@
 .editor-container {
     width: 100%;
     height: calc(100vh - 109px);
-    font-family: "JetBrains Mono", sans-serif;
+    font-family: var(--editor-font);
     /*line-height: 1.8em;*/
 }
 
@@ -16,17 +16,43 @@
 }
 
 .ace_content, .ace_gutter {
+    font-family: var(--editor-font);
     width: 100%;
     background: var(--editor-primary) !important;
 }
 
 .ace_content {
+    /*width: 100% !important;*/
     max-width: none !important;
     z-index: 111;
 }
 
+.ace_scrollbar-v {
+    background: var(--editor-primary);
+    bottom: 0px !important;
+}
+
+/*.ace_scrollbar-v,*/
+/*.ace_scrollbar-v .ace_scrollbar-inner {*/
+/*    width: auto !important;*/
+/*    z-index: 111;*/
+/*}*/
+
+.ace_scrollbar-h {
+    z-index: 111;
+}
+
+.ace_scrollbar-h::-webkit-scrollbar {
+    border: none;
+}
+
 .ace_folding-enabled > .ace_gutter-cell {
     color: var(--editor-gutter-text-default) !important;
+}
+
+.ace_autocomplete {
+    padding: 10px !important;
+    box-sizing: border-box !important;
 }
 
 .ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
@@ -37,16 +63,88 @@
     background: var(--primary-color) !important;
 }
 
+.ace_tooltip {
+    background: var(--primary-dark);
+    border: 1px solid var(--border);
+}
+
 .ace_tooltip, .ace_doc-tooltip {
-    background: var(--editor-primary) !important;
     font-family: "JetBrains Mono", sans-serif;
     color: var(--text-default);
     font-size: var(--editor-tooltip-font-default);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .Ace-Tern-tooltip {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid var(--editor-tooltip-suggest-border);
     background: var(--editor-primary) !important;
     font-family: "JetBrains Mono", sans-serif;
     color: var(--text-default);
     font-size: var(--editor-tooltip-suggest-font-default);
+}
+
+.ace_tooltip hr {
+    margin: 10px 0px;
+    border: 1px solid var(--editor-tooltip-suggest-border);
+}
+
+.ace_tooltip div {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    border-bottom: 2px solid var(--border);
+    display: block;
+}
+.ace_iconable:after {
+    content: "\f14c"; /* in my case it is font-awesome icon*/
+    font-family: 'Fontawesome';
+}
+
+.ace_search.right {
+    z-index: 111;
+}
+
+.ace_search {
+    background: var(--editor-primary);
+    color: var(--text-default) !important;
+    border: 1.5px solid var(--editor-search-border-default);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ace_search_field {
+    background: var(--primary-dark-200);
+    color: var(--text-default);
+    border: 1px solid var(--editor-search-border-default);
+}
+
+.ace_searchbtn {
+    background: var(--primary-dark-200);
+    color: var(--text-default);
+    border: 1px solid var(--editor-search-border-default);
+}
+
+.ace_searchbtn:hover {
+    background: var(--primary-color);
+    color: var(--text-default-hover);
+}
+
+.ace_searchbtn:hover .ace_searchbtn::after {
+    color: var(--text-default-hover);
+}
+
+.ace_button {
+    background: var(--primary-dark-200);
+    color: var(--text-default);
+    border: 1px solid var(--editor-search-border-default);
+}
+
+.ace_button:hover {
+    background: var(--primary-color);
+    color: var(--text-default-hover);
+}
+
+.ace_search_form.ace_nomatch {
+    outline: 1px solid transparent;
 }

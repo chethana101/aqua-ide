@@ -608,7 +608,6 @@ var SnippetManager = function() {
                 snippetMap[scope] = [];
                 snippetNameMap[scope] = {};
             }
-
             var map = snippetNameMap[scope];
             if (s.name) {
                 var old = map[s.name];
@@ -2035,8 +2034,9 @@ var snippetCompleter = {
                 completions.push({
                     caption: caption,
                     snippet: s.content,
-                    meta: s.tabTrigger && !s.name ? s.tabTrigger + "\u21E5 " : "snippet",
-                    type: "snippet"
+                    meta: s.tabTrigger && !s.name ? s.tabTrigger + "\\f147 " : "snippet",
+                    type: "snippet",
+                    className: "iconable"
                 });
             }
         }, this);
@@ -2045,7 +2045,7 @@ var snippetCompleter = {
     getDocTooltip: function(item) {
         if (item.type == "snippet" && !item.docHTML) {
             item.docHTML = [
-                "<b>", lang.escapeHTML(item.caption), "</b>", "<hr></hr>",
+                "<div>", lang.escapeHTML(item.caption), "</div>", "",
                 lang.escapeHTML(transformSnippetTooltip(item.snippet))
             ].join("");
         }

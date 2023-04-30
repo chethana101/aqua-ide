@@ -159,19 +159,19 @@
     });
 
     //#region not relevant to tern (custom beautify plugin) and demo loading
-    ace.config.loadModule('ace/ext/html_beautify', function (beautify) {
-        editor.setOptions({
-            // beautify when closing bracket typed in javascript or css mode
-            autoBeautify: true,
-            // this enables the plugin to work with hotkeys (ctrl+b to beautify)
-            htmlBeautify: true,
-        });
-
-        //modify beautify options as needed:
-        window.beautifyOptions = beautify.options;
-        console.log('beautifyOptions:', beautifyOptions);
-    });
-
+    // ace.config.loadModule('ace/ext/html_beautify', function (beautify) {
+    //     editor.setOptions({
+    //         // beautify when closing bracket typed in javascript or css mode
+    //         autoBeautify: true,
+    //         // this enables the plugin to work with hotkeys (ctrl+b to beautify)
+    //         htmlBeautify: true,
+    //     });
+    //
+    //     //modify beautify options as needed:
+    //     window.beautifyOptions = beautify.options;
+    //     console.log('beautifyOptions:', beautifyOptions);
+    // });
+    //
     function GetFile(file, c) {
         var xhr = new XMLHttpRequest();
         xhr.open("get", file, true);
@@ -182,28 +182,27 @@
     }
 
     function setModeFromHash() {
-        var available = [];
-        var modeSelect = document.getElementById('modeSelect');
-        for (var i = 0; i < modeSelect.options.length; i++) {
-            available.push(modeSelect.options[i].text);
-        }
-        var mode = window.location.hash.replace('#', '');
-        if (!mode || available.indexOf(mode) === -1) {
-            window.location.hash = modeSelect.value;
-            setModeFromHash();
-            return;
-        }
+        // var available = [];
+        // var modeSelect = document.getElementById('modeSelect');
+        // for (var i = 0; i < modeSelect.options.length; i++) {
+        //     available.push(modeSelect.options[i].text);
+        // }
+        // var mode = window.location.hash.replace('#', '');
+        // if (!mode || available.indexOf(mode) === -1) {
+        //     window.location.hash = modeSelect.value;
+        //     setModeFromHash();
+        //     return;
+        // }
+        //
+        // if (modeSelect.value != mode)
+        //     modeSelect.options[available.indexOf(mode)].selected = true;
 
-        if (modeSelect.value != mode)
-            modeSelect.options[available.indexOf(mode)].selected = true;
-
-        editor.session.setMode("ace/mode/" + mode);
-        GetFile(mode == 'javascript' ? 'DemoJavascript.js' : 'demo.html', function (f) {
+        editor.session.setMode("ace/mode/" + "javascript");
+        GetFile(true ? 'DemoJavascript.js' : 'demo.html', function (f) {
             editor.setValue(f);
-
         });
     }
-    //#endregion
+    // //#endregion
 </script>
 </body>
 

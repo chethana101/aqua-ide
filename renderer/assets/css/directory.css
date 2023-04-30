@@ -96,7 +96,8 @@ ul.gj-list-md li [data-role=checkbox], ul.gj-list-md li [data-role=image] {
     border-radius: 3px;
 }
 
-#directory .icon-right-arrow:before {
+#directory .icon-right-arrow:before,
+#directory .icon-down-arrow:before {
     font-size: 7px;
     line-height: 28px;
 }

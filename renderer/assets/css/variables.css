@@ -10,18 +10,29 @@
     --icon-default-hover: #ffffff;
     --text-default: #C0C0C0;
     --text-default-hover: #ffffff;
-    --scroll-bar-default: rgba(182, 182, 182, 0.3);
+    --scroll-bar-default: rgba(182, 182, 182, 0.09);
     --border: #1E1F22;
     --danger: #e30d0d;
     --success: #00d94c;
+    --white: #ffffff;
     /*  Editor Colors  */
     --editor-primary: #1a1b1e;
     --editor-gutter-text-default: #696565;
     --editor-tooltip-completion: #7679ff;
     --editor-scrollbar-background: #212125;
+    --editor-tooltip-suggest-border: #595656;
+    --editor-search-border-default: #37383b;
+    /*  Selector Colors  */
+    --selector-background-default: #212123;
+    --selector-border-default: #292a2c;
+    /*  Dialog Popup Colors  */
+    --dialog-popup-head: #1D1D1F;
+    --dialog-popup-body: #232327;
     /*  Editor Font Sizes  */
     --editor-tooltip-font-default: 13px;
-    --editor-tooltip-suggest-font-default: 8px;
+    --editor-tooltip-suggest-font-default: 12px;
+    /*  Editor Font  */
+    --editor-font: "JetBrains Mono", sans-serif;
     /*  Directory Font Sizes  */
     --directory-font-size-default: 12px;
     --directory-icon-size-default: 13px;

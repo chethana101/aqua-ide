@@ -14,45 +14,83 @@ require('electron-tabs');
 /*----------------------------------------
 * Set editor tabs
 *----------------------------------------*/
-const tabGroupadd = document.querySelector("tab-group");
+document.addEventListener("DOMContentLoaded", async () => {
+    const tabGroupadd = document.querySelector("tab-group");
 
-// Set up the default tab which is created when the "New Tab" button is clicked
-const tab = tabGroupadd.addTab({
-    title: 'Untitled',
-    active: true,
-    visible: true,
-});
-
-document.addEventListener("DOMContentLoaded", async function() {
+    // Set up the default tab which is created when the "New Tab" button is clicked
+    const tab = tabGroupadd.addTab({
+        title: 'Untitled', active: true, visible: true,
+    });
     await getEditor();
-    console.log("OK");
+    document.getElementById("aqua-editor-content").style.display = "block";
 });
 
 /*-------------------------------------
 * Get Editor Instance
 *------------------------------------*/
+let editor = null;
+
 async function getEditor() {
-    const editor = ace.edit('aqua-editor-1');
+    try {
+        editor = ace.edit('aqua-editor-1');
+        editor.setTheme("ace/theme/one_dark");
 
-    editor.getSession().setMode('ace/mode/html');
-    ace.require("ace/ext/language_tools");
-    editor.session.setValue('<!DOCTYPE html>\n' +
-        '<html lang="en">\n' +
-        '<head>\n' +
-        '    <meta charset="UTF-8">\n' +
-        '    <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">\n' +
-        '    <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">\n' +
-        '    <link type="text/css" rel="stylesheet" href="./assets/css/index.css">\n' +
-        '    <link type="text/css" rel="stylesheet" href="./assets/css/editor.css">\n' +
-        '    <title>Aqa IDE</title>\n' +
-        '</head>\n' +
-        '<body>', -1);
-    editor.setOptions(getEditorOptions(editor));
+        // ace.require("ace/ext/language_tools");
+        editor.session.setValue('<!DOCTYPE html>\n' + '<html lang="en">\n' + '<head>\n' + '    <meta charset="UTF-8">\n' + '    <script src="./assets/js/lib/jquery.min.js"></script>\n' + '    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>\n' + '    <script src="./assets/js/lib/gijgo.min.js" type="text/javascript"></script>\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/lib/gijgo.min.css" />\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/index.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/editor.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/directory.css">\n' + '    <title>Aqa IDE</title>\n' + '</head>\n' + '<body>', -1);
+        editor.setOptions(getEditorOptions(editor));
 
-    editor.container.style.lineHeight = 1.8;
-    editor.renderer.updateFontSize();
-    console.log(editor);
-    // var split = ace.split(editor, editor2, "horizontal");
+        var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
+        // TODO:: Need to handle when clear the current content and try to type. getiing error
+        ace.config.loadModule('ace/ext/tern', function () {
+            editor.setOptions({
+                /**
+                 * Either `true` or `false` or to enable with custom options pass object that
+                 * has options for tern server: http://ternjs.net/doc/manual.html#server_api
+                 * If `true`, then default options will be used
+                 */
+                enableTern: {
+                    /* http://ternjs.net/doc/manual.html#option_defs */
+                    defs: ['browser', 'ecma5'], /* http://ternjs.net/doc/manual.html#plugins */
+                    plugins: {
+                        doc_comment: {
+                            fullDocs: true
+                        }
+                    }, /**
+                     * (default is true) If web worker is used for tern server.
+                     * This is recommended as it offers better performance, but prevents this from working in a local html file due to browser security restrictions
+                     */
+                    useWorker: useWebWorker, /* if your editor supports switching between different files (such as tabbed interface) then tern can do this when jump to defnition of function in another file is called, but you must tell tern what to execute in order to jump to the specified file */
+                    switchToDoc: function (name, start) {
+                        // console.log('switchToDoc called but not defined. name=' + name + '; start=', start);
+                    }, /**
+                     * if passed, this function will be called once ternServer is started.
+                     * This is needed when useWorker=false because the tern source files are loaded asynchronously before the server is started.
+                     */
+                    startedCb: function () {
+                        //once tern is enabled, it can be accessed via editor.ternServer
+                        // console.log('editor.ternServer:', editor.ternServer);
+                    },
+                },
+                /**
+                 * when using tern, it takes over Ace's built in snippets support.
+                 * this setting affects all modes when using tern, not just javascript.
+                 */
+                enableSnippets: true,
+                enableBasicAutocompletion: true,
+                enableLiveAutocompletion: true,
+                scrollBarStyle: "thin",
+                autoBeautify: true, // this enables the plugin to work with hotkeys (ctrl+b to beautify)
+                htmlBeautify: true,
+            });
+        });
+
+        editor.getSession().setMode('ace/mode/html');
+
+        editor.container.style.lineHeight = 1.8;
+        editor.renderer.updateFontSize();
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 /*-------------------------------------
@@ -63,8 +101,7 @@ function getEditorOptions(editor) {
 
     editor.getSession().setUseWorker(useWebWorker);
 
-    return {
-        theme: "ace/theme/aqua_ide", // theme string from ace/theme or custom?
+    return { // theme string from ace/theme or custom?
         fontFamily: "JetBrains Mono", // string: set the font-family css value
         // editor options
         selectionStyle: "line", // "line"|"text"
@@ -82,14 +119,13 @@ function getEditorOptions(editor) {
         animatedScroll: false, // boolean: true if scroll should be animated
         displayIndentGuides: true, // boolean: true if the indent should be shown. See 'showInvisibles'
         showInvisibles: false, // boolean -> displayIndentGuides: true if show the invisible tabs/spaces in indents
-        showPrintMargin: true, // boolean: true if show the vertical print margin
+        showPrintMargin: false, // boolean: true if show the vertical print margin
         printMarginColumn: 8000, // number: number of columns for vertical print margin
         printMargin: undefined, // boolean | number: showPrintMargin | printMarginColumn
         showGutter: true, // boolean: true if show line gutter
         fadeFoldWidgets: false, // boolean: true if the fold lines should be faded
         showFoldWidgets: true, // boolean: true if the fold lines should be shown ?
-        showLineNumbers: true,
-        highlightGutterLine: true, // boolean: true if the gutter line should be highlighted
+        showLineNumbers: true, highlightGutterLine: true, // boolean: true if the gutter line should be highlighted
         hScrollBarAlwaysVisible: false, // boolean: true if the horizontal scroll bar should be shown regardless
         vScrollBarAlwaysVisible: false, // boolean: true if the vertical scroll bar should be shown regardless
         fontSize: 13, // number | string: set the font size to this many pixels
@@ -105,34 +141,6 @@ function getEditorOptions(editor) {
         dragEnabled: true, // boolean: enable dragging
         // focusTimout: 0, // number: the focus delay before focus starts.
         tooltipFollowsMouse: true, // boolean: true if the gutter tooltip should follow mouse
-
-        enableTern: {
-            /* http://ternjs.net/doc/manual.html#option_defs */
-            defs: ['browser', 'ecma5'],
-                /* http://ternjs.net/doc/manual.html#plugins */
-                plugins: {
-                doc_comment: {
-                    fullDocs: true
-                }
-            },
-            /**
-             * (default is true) If web worker is used for tern server.
-             * This is recommended as it offers better performance, but prevents this from working in a local html file due to browser security restrictions
-             */
-            useWorker: false,
-                /* if your editor supports switching between different files (such as tabbed interface) then tern can do this when jump to defnition of function in another file is called, but you must tell tern what to execute in order to jump to the specified file */
-                switchToDoc: function (name, start) {
-                console.log('switchToDoc called but not defined. name=' + name + '; start=', start);
-            },
-            /**
-             * if passed, this function will be called once ternServer is started.
-             * This is needed when useWorker=false because the tern source files are loaded asynchronously before the server is started.
-             */
-            startedCb: function () {
-                //once tern is enabled, it can be accessed via editor.ternServer
-                console.log('editor.ternServer:', editor.ternServer);
-            },
-        },
         // session options
         firstLineNumber: 1, // number: the line number in first line
         overwrite: false, // boolean
@@ -143,12 +151,6 @@ function getEditorOptions(editor) {
         wrap: false, // boolean | string | number: true/'free' means wrap instead of horizontal scroll, false/'off' means horizontal scroll instead of wrap, and number means number of column before wrap. -1 means wrap at print margin
         indentedSoftWrap: true, // boolean
         foldStyle: "markbegin", // enum: 'manual'/'markbegin'/'markbeginend'.
-        enableEmmet: true,
-        enableMultiselect: true,
-        enableLinking: true,
-        enableSnippets: true,
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true,
-        scrollBarStyle: "thin",
+        enableEmmet: true, enableMultiselect: true, enableLinking: true,
     }
 }
