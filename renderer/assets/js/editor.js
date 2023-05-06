@@ -10,37 +10,118 @@ require("./editor/ace/ext-modelist.js");
 require("./editor/ace/mode-snippets.js");
 require("./editor/ace/ext-tern.js");
 require('electron-tabs');
+import {getFileIcon, removeObjectFromArray} from '../../assets/js/common.js';
+
+const fs = require("fs");
+const path = require("path");
+
+/*----------------------------------------
+* Necessary Variables
+*----------------------------------------*/
+window.editorsConfig = [];
 
 /*----------------------------------------
 * Set editor tabs
 *----------------------------------------*/
-document.addEventListener("DOMContentLoaded", async () => {
-    const tabGroupadd = document.querySelector("tab-group");
+window.editorTabs = function (fileConfig) {
+    console.log(fileConfig);
+    const tabGroup = document.querySelector("tab-group");
 
+    // TODO:: Footer file navigator path add
+
+    const editorIcon = getFileIcon(fileConfig, true);
     // Set up the default tab which is created when the "New Tab" button is clicked
-    const tab = tabGroupadd.addTab({
-        title: 'Untitled', active: true, visible: true,
+    const tab = tabGroup.addTab({
+        title: fileConfig.text,
+        active: true,
+        visible: true,
     });
-    await getEditor();
-    document.getElementById("aqua-editor-content").style.display = "block";
-});
+    tab.spans.icon.className = editorIcon.className;
+    tab.spans.icon.innerHTML = editorIcon.iconCode;
+    tab.spans.icon.style.color = editorIcon.iconColor;
+
+    // Get editor element and set to this editor holder
+    let editor = getEditor(fileConfig);
+
+    // Check if file has change or not
+    let oldEditorValue = editor.getValue();
+    editor.on('change', () => {
+        const newEditorValue = editor.getValue();
+        if (newEditorValue !== oldEditorValue) {
+            console.log('Editor value has changed!');
+            tab.setBadge({text: "*", classname: "icon-add-new-icon"});
+            // oldEditorValue = newEditorValue;
+        } else {
+            tab.setBadge({text: "", classname: "icon-add-new-icon"});
+        }
+    });
+
+    tab.id = fileConfig.id;
+    window.editorsConfig.push(fileConfig);
+
+    // Display editor holder
+    document.getElementById("aqua-editor-content")
+        .style.display = "block";
+
+    // Set footer navigation
+    const index = fileConfig.filePath.indexOf(window.openedFolderName);
+    let pathAfterRoot = fileConfig.filePath.slice(index + window.openedFolderName.length);
+    pathAfterRoot = pathAfterRoot.split(path.sep).filter(Boolean);
+    console.log(pathAfterRoot)
+
+    // When tab active
+    tab.on("active", (tab) => {
+        const editorHolder =
+            document.getElementById("aqua-editors-holder");
+        const editor = document.getElementById("aqua-editor-" + tab.id);
+
+        editorHolder.insertBefore(editor, editorHolder.firstChild);
+    });
+    // When tab closed
+    tab.on("close", (tab) => {
+        document.getElementById("aqua-editor-" + tab.id).remove();
+
+        editorsConfigIds = removeObjectFromArray(editorsConfigIds, tab.id);
+        window.editorsConfig = removeObjectFromArray(window.editorsConfig, tab.id);
+
+        // Hide editor holder if editor count is 0
+        if (window.editorsConfig.length === 0) {
+            document.getElementById("aqua-editor-content")
+                .style.display = "none";
+        }
+    });
+}
 
 /*-------------------------------------
 * Get Editor Instance
 *------------------------------------*/
-let editor = null;
-
-async function getEditor() {
+function getEditor(fileConfig) {
     try {
-        editor = ace.edit('aqua-editor-1');
+        // Create editor element
+        const editorElement = document.createElement("div");
+        editorElement.id = "aqua-editor-" + fileConfig.id;
+        editorElement.classList = "editor-container aqua-editor";
+        // Add editor element to the editor holder
+        const editorHolder =
+            document.getElementById("aqua-editors-holder");
+        editorHolder.insertBefore(editorElement, editorHolder.firstChild);
+
+        let editor = ace.edit(editorElement.id);
         editor.setTheme("ace/theme/one_dark");
 
-        // ace.require("ace/ext/language_tools");
-        editor.session.setValue('<!DOCTYPE html>\n' + '<html lang="en">\n' + '<head>\n' + '    <meta charset="UTF-8">\n' + '    <script src="./assets/js/lib/jquery.min.js"></script>\n' + '    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>\n' + '    <script src="./assets/js/lib/gijgo.min.js" type="text/javascript"></script>\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/lib/gijgo.min.css" />\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/index.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/editor.css">\n' + '    <link type="text/css" rel="stylesheet" href="./assets/css/directory.css">\n' + '    <title>Aqa IDE</title>\n' + '</head>\n' + '<body>', -1);
+        ace.require("ace/ext/language_tools");
         editor.setOptions(getEditorOptions(editor));
+        editor.container.style.lineHeight = 1.8;
+        editor.renderer.updateFontSize();
 
-        var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
+        // Read the file and add content
+        const data = fs.readFileSync(fileConfig.filePath);
+        editor.setValue(data.toString());
+
         // TODO:: Need to handle when clear the current content and try to type. getiing error
+        var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
+        editor.getSession().setMode({path: 'ace/mode/' + getFileType(fileConfig.extension), inline: true});
+
         ace.config.loadModule('ace/ext/tern', function () {
             editor.setOptions({
                 /**
@@ -77,17 +158,54 @@ async function getEditor() {
                  */
                 enableSnippets: true,
                 enableBasicAutocompletion: true,
-                enableLiveAutocompletion: true,
+                // enableLiveAutocompletion: true,
                 scrollBarStyle: "thin",
                 autoBeautify: true, // this enables the plugin to work with hotkeys (ctrl+b to beautify)
                 htmlBeautify: true,
             });
         });
+        // Format editor
+        ace.config.loadModule('ace/ext/beautify', function (beautify) {
+            editor.setOptions({
+                // beautify when closing bracket typed in javascript or css mode
+                autoBeautify: true,
+                // this enables the plugin to work with hotkeys (ctrl+b to beautify)
+                htmlBeautify: true,
+            });
 
-        editor.getSession().setMode('ace/mode/html');
+            // modify beautify options as needed:
+            window.beautifyOptions = beautify.options;
 
-        editor.container.style.lineHeight = 1.8;
-        editor.renderer.updateFontSize();
+            document.getElementById("aqua-format-editor")
+                .addEventListener("click", () => {
+                    beautify.beautify(editor.session);
+                });
+        });
+
+        // Editor context menu
+        const $contextMenu = $('#contextmenu-editor-popup');
+        editor.container.addEventListener("contextmenu", function (e) {
+            $('#right-click-popup').hide();
+            $contextMenu.css({
+                display: 'block',
+                position: 'absolute',
+                left: e.pageX,
+                top: e.pageY,
+            });
+        }, false);
+        // Editor context menu close
+        $(document).on('click', function (e) {
+            // Get the target element that was clicked
+            const $target = $(e.target);
+
+            // Hide the context menu if the target element is neither a Tree node nor a context menu item
+            if (!$target.is('.node') && !$target.closest('.dropdown-menu').length) {
+                window.directoryIsRightClick = true;
+                $contextMenu.hide();
+            }
+        });
+
+        return editor;
     } catch (e) {
         console.log(e);
     }
@@ -153,4 +271,35 @@ function getEditorOptions(editor) {
         foldStyle: "markbegin", // enum: 'manual'/'markbegin'/'markbeginend'.
         enableEmmet: true, enableMultiselect: true, enableLinking: true,
     }
+}
+
+/*-------------------------------------
+* Get language name
+*------------------------------------*/
+function getFileType(fileExtension) {
+    fileExtension = fileExtension.replace(/\./g, '');
+    const fileTypes = {
+        js: "javascript",
+        py: "python",
+        rb: "ruby",
+        java: "java",
+        cpp: "c++",
+        cs: "c#",
+        php: "php_laravel_blade",
+        swift: "swift",
+        go: "go",
+        kotlin: "kotlin",
+        ts: "typescript",
+        jsx: "react JSX",
+        tsx: "react TSX",
+        vue: "vue",
+        html: "html",
+        css: "css",
+        scss: "scss",
+        json: "json",
+        xml: "xml",
+        svg: "xml",
+    };
+
+    return fileTypes[fileExtension] || "text";
 }

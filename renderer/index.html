@@ -14,7 +14,20 @@
     <title>Aqa IDE</title>
 </head>
 <body>
-<div class="main-container">
+<!-- Pre Loader -->
+<div class="pre-loader" id="pre-loader">
+    <div class="pre-loader-holder" id="loading-text">
+        <div class="loader"></div>
+    </div>
+    <div class="pre-loader-bottom">
+        <div class="pre-loader-logo-box">
+            <img width="30" height="30" src="./assets/images/aqua-ide-logo.png" alt="AQUA IDE">
+        </div>
+        <span>Aqua IDE</span>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="main-container" style="display: none">
     <!--  Container Body  -->
     <div class="container-body">
         <!--  LEFT | Sidebar Toggle  -->
@@ -144,7 +157,7 @@
                                 <li class="dropdown-menu-item">New Window</li>
                                 <hr>
                                 <li class="dropdown-menu-item">Open File...</li>
-                                <li class="dropdown-menu-item">Open Folder</li>
+                                <li class="dropdown-menu-item" id="title-bar-open-folder">Open Folder</li>
                                 <hr>
                                 <li class="dropdown-menu-item">Close Window</li>
                                 <li class="dropdown-menu-item">Exit</li>
@@ -153,6 +166,7 @@
                         <div class="dropdown">
                             <div class="dropdown-toggle" id="dropdown2">
                                 <div class="recent-project-box">
+                                    <div class="recent-project-visual-box">A</div>
                                     <div class="recent-project-title-box">
                                         aqua-ide
                                     </div>
@@ -162,9 +176,7 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item">Option A</li>
-                                <li class="dropdown-menu-item">Option B</li>
-                                <li class="dropdown-menu-item">Option C</li>
+                                <li class="dropdown-menu-item">Recent Project</li>
                             </ul>
                         </div>
                     </div>
@@ -181,19 +193,127 @@
                     </div>
                 </div>
                 <!-- Editor -->
-                <div class="aqua-editor" id="aqua-editor-content" style="display: none">
+                <div class="aqua-editor" id="aqua-editor-content" style="display: none;">
                     <div class="aqua-editor-tabs-holder">
-                        <tab-group draggable="true" sortable="true">
+                        <tab-group sortable="true" drag>
                             <style>
+                                /* ---------------------------------
+                                * Icon configuration
+                                * -----------------------------------*/
+                                @font-face {
+                                    font-family: 'icomoon';
+                                    src:  url('./assets/icons/icomoon.eot?ttaczi');
+                                    src:  url('./assets/icons/icomoon.eot?ttaczi#iefix') format('embedded-opentype'),
+                                    url('./assets/icons/icomoon.ttf?ttaczi') format('truetype'),
+                                    url('./assets/icons/icomoon.woff?ttaczi') format('woff'),
+                                    url('./assets/icons/icomoon.svg?ttaczi#icomoon') format('svg');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-display: block;
+                                }
+
+                                @font-face {
+                                    font-family: 'File Icons';
+                                    src: url('./assets/theme/file-icons.woff2') format('woff2');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                @font-face {
+                                    font-family: 'Devop Icons';
+                                    src: url('./assets/theme/devopicons.woff2') format('woff2');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                @font-face {
+                                    font-family: 'Fontawesome';
+                                    src: url('./assets/theme/fontawesome.woff2') format('woff2');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                @font-face {
+                                    font-family: 'Octicons';
+                                    src: url('./assets/theme/octicons.woff2') format('woff2');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                @font-face {
+                                    font-family: 'Mfixx';
+                                    src: url('./assets/theme/mfixx.woff2') format('woff2');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+
+                                .file-icon {
+                                    font-family: 'File Icons';
+                                    font-size: var(--directory-icon-size-default);
+                                }
+
+                                .devopicons {
+                                    font-family: 'Devop Icons';
+                                    font-size: var(--directory-icon-size-default);
+                                }
+
+                                .fontawesome {
+                                    font-family: 'Fontawesome';
+                                    font-size: var(--directory-icon-size-default);
+                                }
+
+                                .octicons {
+                                    font-family: 'Octicons';
+                                    font-size: var(--directory-icon-size-default);
+                                }
+
+                                .mfixx {
+                                    font-family: 'Mfixx';
+                                    font-size: var(--directory-icon-size-default);
+                                }
+
+                                .icon-file-icon-default {
+                                    font-family: 'icomoon';
+                                }
+
+                                .icon-file-icon-default:before {
+                                    content: "\e914";
+                                    color: #616c73;
+                                }
+
                                 .views {
                                     display: none;
+                                }
+
+                                .etabs {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 40px;
+                                    overflow: hidden;
                                 }
 
                                 .nav {
                                     background: var(--primary-dark);
                                     box-shadow: inset 0 -1px var(--primary-dark);
                                     border-top: 1px solid var(--primary-dark);
-                                    height: 37px;
+                                    height: 40px;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    overflow-x: auto;
+                                    overflow-y: hidden;
+                                    -webkit-overflow-scrolling: touch;
+                                    white-space: nowrap;
+                                }
+
+                                .nav::-webkit-scrollbar {
+                                    display: none;
+                                }
+
+                                .tabs {
+                                    margin-top: -2px;
                                 }
 
                                 .buttons {
@@ -210,7 +330,7 @@
                                     background: var(--editor-primary);
                                     color: #ffffff;
                                     border-left: none;
-                                    border-bottom: none;
+                                    border-bottom: 2px solid var(--primary-color);
                                     border-right: none;
                                 }
 
@@ -223,20 +343,30 @@
                                     color: #999999;
                                 }
 
+                                .tab-close button {
+                                    border-radius: 3px !important;
+                                }
+
                                 .tab-close button:hover {
-                                    /*color: var(--textColor);*/
-                                    /*background: var(--textBackHover);*/
+                                    color: var(--text-default-hover);
+                                    background: var(--primary-dark-300);
                                 }
 
                                 .tab-icon {
                                     width: 16px;
                                     height: 16px;
                                 }
+
+                                .tab-badge {
+                                    background: none;
+                                    padding: 0;
+                                    font-size: 15px;
+                                }
                             </style>
                         </tab-group>
                     </div>
-                    <div class="aqua-editors-holder">
-                        <div class="editor-container aqua-editor" id="aqua-editor-1"></div>
+                    <div class="aqua-editors-holder" id="aqua-editors-holder">
+                    <!-- <div class="editor-container aqua-editor" id="aqua-editor-1"></div> -->
                     </div>
                 </div>
                 <!-- TODO:: Welcome section -->
@@ -247,12 +377,14 @@
     <div class="container-footer">
         <div class="container-footer-holder">
             <div class="footer-left">
-                <div class="footer-navigator">
-                    <div class="footer-navigator-path-name">aqua-ide</div>
-                    <span class="icon-right-arrow"></span>
-                    <div class="footer-navigator-path-name">renderer</div>
-                    <span class="icon-right-arrow"></span>
-                    <div class="footer-navigator-path-name">loader.js</div>
+                <div class="footer-navigator" id="footer-navigator">
+<!--                    <div class="footer-navigator-path-name">aqua-ide</div>-->
+<!--                    <span class="icon-right-arrow"></span>-->
+<!--                    <div class="footer-navigator-path-name">renderer</div>-->
+<!--                    <span class="icon-right-arrow"></span>-->
+<!--                    <div class="footer-navigator-path-name">-->
+<!--                        <span class="mfixx" style="color: #f4bf75"></span>loader.js-->
+<!--                    </div>-->
                 </div>
             </div>
             <div class="footer-right">
@@ -262,30 +394,40 @@
                 <div class="footer-toggle-item">
                     <span class="footer-toggle-item-text">JavaScript</span>
                 </div>
-                <div class="footer-toggle-item">
+                <div class="footer-toggle-item abc">
                     <span class="icon-read-only-icon"></span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Right click popup -->
+<!-- Context menu for directory tree -->
 <ul class="dropdown-menu right-click-popup" id="right-click-popup" style="display: none">
-    <li class="dropdown-menu-item">New File</li>
-    <li class="dropdown-menu-item">New Folder</li>
-    <li class="dropdown-menu-item">Rename</li>
+    <li class="dropdown-menu-item" id="contextmenu-create-new-file-action">New File</li>
+    <li class="dropdown-menu-item" id="contextmenu-create-new-folder-action">New Folder</li>
+    <li class="dropdown-menu-item" id="contextmenu-rename-action">Rename</li>
     <hr>
-    <li class="dropdown-menu-item">Delete</li>
+    <li class="dropdown-menu-item" id="contextmenu-delete-action" data-action-type="Delete">Delete</li>
 </ul>
-<!-- Create file/folder popup -->
-<div class="aqua-popup-box" id="createNewFileDialog" width="350">
+<!-- Context menu for directory tree -->
+<ul class="dropdown-menu right-click-popup" id="contextmenu-editor-popup" style="display: none">
+    <li class="dropdown-menu-item">Save</li>
+    <li class="dropdown-menu-item">Copy</li>
+    <li class="dropdown-menu-item">Paste</li>
+    <hr>
+    <li class="dropdown-menu-item" id="aqua-format-editor">Format</li>
+</ul>
+<!-- Popup dialogs background -->
+<div class="aqua-popup-box-background" id="aqua-popup-box-background" style="display: none;"></div>
+<!-- Create file popup -->
+<div class="aqua-popup-box" id="aquaCreateNewFileDialog" style="display: none;" width="350">
     <div class="aqua-dialog-popup-body" data-role="body">
         <div class="field-box">
             <div class="field-label-holder">
                 <label class="field-label">File name: </label>
             </div>
             <div class="field-input">
-                <input class="field aqua-primary-dark-bg" type="text" id="create_new_file" value="">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_new_file" value="">
             </div>
         </div>
     </div>
@@ -294,10 +436,71 @@
         <button class="btn btn-primary btn-dialog-popup">CREATE</button>
     </div>
 </div>
+<!-- Create folder popup -->
+<div class="aqua-popup-box" id="aquaCreateNewFolderDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="field-box">
+            <div class="field-label-holder">
+                <label class="field-label">Folder name: </label>
+            </div>
+            <div class="field-input">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_folder_file" value="">
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup">CREATE</button>
+    </div>
+</div>
+<!-- Rename popup -->
+<div class="aqua-popup-box" id="aquaRenameDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="field-box">
+            <div class="field-input">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_rename_value" value="">
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup">RENAME</button>
+    </div>
+</div>
+<!-- Confirmation box -->
+<div class="aqua-popup-box" id="aquaConfirmDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="aqua-popup-confirm-box">
+            <div class="aqua-popup-confirm-box-left">
+                <div class="aqua-popup-confirm-icon-box">
+                    <img class="aqua-popup-confirm-icon"
+                         src="./assets/images/aqua-information-icon.png"
+                         width="50" height="50" alt="CONFIRMATION ICON">
+                </div>
+            </div>
+            <div class="aqua-popup-confirm-box-right">
+                <h3 class="aqua-popup-confirm-title">Confirm action</h3>
+                <p class="aqua-popup-confirm-text" id="aquaConfirmDialogText">
+                    Are you sure you want to do this action?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup">CONFIRM</button>
+    </div>
+</div>
 <!--  Scripts  -->
 <script src="./editor/ace/ace.js" type="module"></script>
 <script type="module" src="./assets/js/style.js"></script>
 <script type="module" src="./assets/js/directory.js"></script>
-<script defer type="module" src="./assets/js/editor.js"></script>
+<script type="module" src="./assets/js/editor.js"></script>
+<script>
+    // window.onload = function () {
+    //     // Display the container after loading all the resources
+    //     document.querySelector(".main-container").style.display = "block";
+    // }
+</script>
 </body>
 </html>

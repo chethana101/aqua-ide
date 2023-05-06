@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-file-icon-default:before {
+  content: "\e914";
+  color: #616c73;
+}
 .icon-add-new-file:before {
   content: "\e900";
   color: #c0c0c0;
@@ -67,12 +71,11 @@
 }
 .icon-folder-icon:before {
   content: "\e90a";
-  color: #ced0d6;
+  color: #c0c0c0;
 }
 .icon-gray-folder-icon:before {
   content: "\e90b";
   color: #c0c0c0;
-  font-size: 13px;
 }
 .icon-maximize-icon:before {
   content: "\e90c";

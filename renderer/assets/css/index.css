@@ -11,6 +11,7 @@
 
 body {
     overflow: hidden;
+    background: var(--primary-dark);
 }
 
 /* Scrollbar Styled */
@@ -51,6 +52,62 @@ div::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------------------
+* Loading spinner
+--------------------------------------- */
+.pre-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-dark);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    app-region: drag;
+}
+
+.pre-loader-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pre-loader-bottom {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+    text-align: center;
+}
+
+.pre-loader-bottom span {
+    color: var(--text-default);
+    font-size: 13px;
+}
+
+.loader {
+    width: 25px;
+    height: 25px;
+    border: 3px solid var(--text-default);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------
 * Primary CSS
 --------------------------------------- */
 .main-container {
@@ -59,7 +116,7 @@ div::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #28282a;
+    background: var(--primary-color-50);
     font-family: 'Inter', sans-serif;
     overflow: hidden;
 }
@@ -105,6 +162,7 @@ div::-webkit-scrollbar-thumb {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 8px;
+    color: var(--icon-default);
 }
 
 .side-bar-item:last-child {
@@ -123,6 +181,10 @@ div::-webkit-scrollbar-thumb {
 
 .side-bar-item:not(.side-bar-item-select):hover {
     background: var(--primary-dark-300);
+}
+
+.side-bar-item-select .side-bar-item-icon::before {
+    color: var(--icon-default-hover);
 }
 
 /* ------------------------------------
@@ -285,6 +347,20 @@ div::-webkit-scrollbar-thumb {
     white-space: nowrap;
 }
 
+.recent-project-visual-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #ff591b, #ff1616);
+    margin-right: 7px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #333333;
+}
+
 .recent-project-dropdown-icon-box {
     margin-left: 12px;
 }
@@ -334,9 +410,15 @@ div::-webkit-scrollbar-thumb {
 }
 
 .footer-navigator-path-name {
+    display: flex;
+    align-items: center;
     font-size: 11px;
     margin: 0px 8px;
     color: var(--text-default);
+}
+
+.footer-navigator-path-name span {
+    margin-right: 8px;
 }
 
 .footer-navigator .icon-right-arrow:before {
@@ -552,14 +634,27 @@ div::-webkit-scrollbar-thumb {
 /* ------------------------------------
  * Dialog popup
  * ------------------------------------ */
+.aqua-popup-box-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1111;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 .aqua-popup-box {
     background: var(--dialog-popup-head);
     color: var(--text-default);
     border-radius: 5px;
+    z-index: 11111;
 }
 .aqua-popup-box .gj-dialog-md-header {
     padding: 5px 5px 5px 12px;
     background: var(--primary-dark);
+    display: flex;
+    align-items: center;
 }
 
 .aqua-popup-box .aqua-dialog-popup-body {
@@ -568,6 +663,8 @@ div::-webkit-scrollbar-thumb {
 
 .aqua-popup-box .gj-dialog-md-title {
     font-size: 13px;
+    display: flex;
+    align-items: center;
 }
 
 .aqua-popup-box .aqua-dialog-popup-footer {
@@ -578,8 +675,9 @@ div::-webkit-scrollbar-thumb {
 
 .aqua-popup-box .btn-dialog-popup {
     width: auto;
-    padding: 0px 15px;
-    font-size: 12px;
+    padding: 0px 12px;
+    font-size: 11px;
+    font-weight: 500;
 }
 
 .aqua-popup-box .btn-dialog-popup-dark {
@@ -591,9 +689,37 @@ div::-webkit-scrollbar-thumb {
     font-size: 23px;
     padding: 0px 8px;
     border-radius: 3px;
+    margin-left: auto;
 }
 
 .aqua-popup-box .gj-dialog-md-close:hover {
     background: var(--primary-dark-300);
     color: var(--text-default-hover);
+}
+
+.aqua-dialog-box-icon {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.aqua-popup-confirm-box {
+    display: flex;
+    align-items: center;
+    padding: 2px 0px 8px 0px;
+}
+
+.aqua-popup-confirm-box .aqua-popup-confirm-box-left {
+    margin-right: 18px;
+}
+
+.aqua-popup-confirm-box .aqua-popup-confirm-box-right {
+    color: var(--text-default);
+}
+
+.aqua-popup-confirm-box .aqua-popup-confirm-title {
+    margin-bottom: 3px;
+}
+
+.aqua-popup-confirm-box .aqua-popup-confirm-text {
+    font-size: 12px;
 }
