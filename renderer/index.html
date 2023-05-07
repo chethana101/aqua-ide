@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="./assets/css/lib/gijgo.min.css"/>
     <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/file-folder-icons.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/index.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/editor.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/directory.css">
@@ -195,10 +196,17 @@
                 <!-- Editor -->
                 <div class="aqua-editor" id="aqua-editor-content" style="display: none;">
                     <div class="aqua-editor-tabs-holder">
-                        <tab-group sortable="true" drag>
+                        <tab-group sortable="true" dragable="false">
                             <style>
                                 /* ---------------------------------
-                                * Icon configuration
+                                * Material Icon configuration
+                                * -----------------------------------*/
+                                @import url("./assets/css/file-folder-icons.css");
+                                .icon-material-theme-tabs {
+                                    font-size: var(--directory-icon-size-default);
+                                }
+                                /* ---------------------------------
+                                * IDE Icon configuration
                                 * -----------------------------------*/
                                 @font-face {
                                     font-family: 'icomoon';
@@ -212,66 +220,6 @@
                                     font-display: block;
                                 }
 
-                                @font-face {
-                                    font-family: 'File Icons';
-                                    src: url('./assets/theme/file-icons.woff2') format('woff2');
-                                    font-weight: normal;
-                                    font-style: normal;
-                                }
-
-                                @font-face {
-                                    font-family: 'Devop Icons';
-                                    src: url('./assets/theme/devopicons.woff2') format('woff2');
-                                    font-weight: normal;
-                                    font-style: normal;
-                                }
-
-                                @font-face {
-                                    font-family: 'Fontawesome';
-                                    src: url('./assets/theme/fontawesome.woff2') format('woff2');
-                                    font-weight: normal;
-                                    font-style: normal;
-                                }
-
-                                @font-face {
-                                    font-family: 'Octicons';
-                                    src: url('./assets/theme/octicons.woff2') format('woff2');
-                                    font-weight: normal;
-                                    font-style: normal;
-                                }
-
-                                @font-face {
-                                    font-family: 'Mfixx';
-                                    src: url('./assets/theme/mfixx.woff2') format('woff2');
-                                    font-weight: normal;
-                                    font-style: normal;
-                                }
-
-                                .file-icon {
-                                    font-family: 'File Icons';
-                                    font-size: var(--directory-icon-size-default);
-                                }
-
-                                .devopicons {
-                                    font-family: 'Devop Icons';
-                                    font-size: var(--directory-icon-size-default);
-                                }
-
-                                .fontawesome {
-                                    font-family: 'Fontawesome';
-                                    font-size: var(--directory-icon-size-default);
-                                }
-
-                                .octicons {
-                                    font-family: 'Octicons';
-                                    font-size: var(--directory-icon-size-default);
-                                }
-
-                                .mfixx {
-                                    font-family: 'Mfixx';
-                                    font-size: var(--directory-icon-size-default);
-                                }
-
                                 .icon-file-icon-default {
                                     font-family: 'icomoon';
                                 }
@@ -279,6 +227,7 @@
                                 .icon-file-icon-default:before {
                                     content: "\e914";
                                     color: #616c73;
+                                    font-size: var(--default-icon-size-16px);
                                 }
 
                                 .views {
@@ -367,6 +316,11 @@
                     </div>
                     <div class="aqua-editors-holder" id="aqua-editors-holder">
                     <!-- <div class="editor-container aqua-editor" id="aqua-editor-1"></div> -->
+<!--                        <div class="aqua-image-file-preview">-->
+<!--                            <div class="aqua-image-file-holder">-->
+<!--                                <img class="aqua-image-file" src="./assets/images/original-87800601a7080329e35f2ad3511585e3.webp" id="aqua-image-file" alt="IMAGE FILE PREVIEW">-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
                 <!-- TODO:: Welcome section -->
@@ -378,13 +332,13 @@
         <div class="container-footer-holder">
             <div class="footer-left">
                 <div class="footer-navigator" id="footer-navigator">
-<!--                    <div class="footer-navigator-path-name">aqua-ide</div>-->
-<!--                    <span class="icon-right-arrow"></span>-->
-<!--                    <div class="footer-navigator-path-name">renderer</div>-->
-<!--                    <span class="icon-right-arrow"></span>-->
-<!--                    <div class="footer-navigator-path-name">-->
-<!--                        <span class="mfixx" style="color: #f4bf75"></span>loader.js-->
-<!--                    </div>-->
+                    <div class="footer-navigator-path-name">aqua-ide</div>
+                    <span class="icon-right-arrow"></span>
+                    <div class="footer-navigator-path-name">renderer</div>
+                    <span class="icon-right-arrow"></span>
+                    <div class="footer-navigator-path-name">
+                        <span class="mfixx" style="color: #f4bf75"></span>loader.js
+                    </div>
                 </div>
             </div>
             <div class="footer-right">

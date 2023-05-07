@@ -3,7 +3,8 @@
 *----------------------------------------*/
 const dirTree = require("directory-tree");
 const path = require("path");
-import { removeObjectFromArray, footerNavigateBuilder } from '../../assets/js/common.js';
+const {ipcRenderer} = require('electron');
+import {removeObjectFromArray, footerNavigateBuilder, seperateFolders} from '../../assets/js/common.js';
 
 // Directory tree variables
 // Selected directory/file data
@@ -18,7 +19,6 @@ let createNewFolderDialog;
 let aquaRenameDialog;
 let aquaConfirmDialog;
 
-const {ipcRenderer} = require('electron');
 ipcRenderer.on('window-loaded', async function () {
     console.log('Window loaded');
 });
@@ -38,13 +38,12 @@ titleBarOpenFolder.addEventListener("click", async () => {
 });
 
 // TODO:: Remove after testing. Combine with `open folder` feature
-const openedFolderPath = "C:\\xampp8_1\\htdocs\\dashboard";
+const openedFolderPath = "C:\\Users\\TigEr_MP\\Desktop\\Text Document";
 window.openedFolderName = path.basename(openedFolderPath);
 // Set footer navigator
-document.getElementById("footer-navigator")
-    .append(
-        footerNavigateBuilder({rootName: window.openedFolderName}, "directory")
-    );
+footerNavigateBuilder(
+    {rootName: window.openedFolderName},
+);
 
 const treeDatra = dirTree(openedFolderPath, {
     attributes: ["size", "type", "extension", "mode", "mtime"],
@@ -73,6 +72,7 @@ worker.addEventListener('message', (event) => {
             if (window.directoryIsRightClick) {
                 // Unassigned old data
                 window.directorySelectGlobal = [];
+
                 // Assigned new data
                 window.directorySelectGlobal.push($tree.getDataById(id));
                 if (window.directorySelectGlobal[0].type == "file") {
@@ -86,8 +86,21 @@ worker.addEventListener('message', (event) => {
                     if (result == undefined) {
                         window.editorTabs(window.directorySelectGlobal[0]);
                         window.editorsConfigIds.push({id: id});
+                    } else {
+                        let tabGroup = document.querySelector("tab-group");
+                        let tab = tabGroup.getTab(parseInt(id));
+                        tab.activate();
                     }
                 }
+                let pathAfterRoot = seperateFolders(
+                    window.directorySelectGlobal[0].filePath,
+                );
+                footerNavigateBuilder(
+                    {
+                        rootName: window.openedFolderName,
+                        allFiles: pathAfterRoot,
+                        imageHtml: window.directorySelectGlobal[0].imageHtml,
+                    }, true);
             }
         },
     });

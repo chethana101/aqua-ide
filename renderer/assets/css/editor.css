@@ -1,6 +1,6 @@
 .editor-container {
     width: 100%;
-    height: calc(100vh - 109px);
+    height: calc(100vh - 114px);
     font-family: var(--editor-font);
     /*line-height: 1.8em;*/
 }
@@ -147,4 +147,47 @@
 
 .ace_search_form.ace_nomatch {
     outline: 1px solid transparent;
+}
+
+/* --------------------------
+* Image preview styles
+* -----------------------------*/
+.aqua-image-file-preview {
+    width: 100%;
+    height: calc(100vh - 114px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.aqua-image-file-holder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.aqua-image-file {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.aqua-no-preview-text {
+    color: var(--text-default);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }

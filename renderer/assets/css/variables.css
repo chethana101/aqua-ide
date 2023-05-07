@@ -11,7 +11,7 @@
     --icon-default-hover: #ffffff;
     --text-default: #C0C0C0;
     --text-default-hover: #ffffff;
-    --scroll-bar-default: rgba(182, 182, 182, 0.09);
+    --scroll-bar-default: rgba(182, 182, 182, 0.1);
     --border: #1E1F22;
     --danger: #e30d0d;
     --success: #00d94c;
@@ -36,5 +36,6 @@
     --editor-font: "JetBrains Mono", sans-serif;
     /*  Directory Font Sizes  */
     --directory-font-size-default: 12px;
-    --directory-icon-size-default: 13px;
+    --directory-icon-size-default: 15px;
+    --default-icon-size-16px: 16px;
 }

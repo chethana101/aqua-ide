@@ -10,7 +10,15 @@ require("./editor/ace/ext-modelist.js");
 require("./editor/ace/mode-snippets.js");
 require("./editor/ace/ext-tern.js");
 require('electron-tabs');
-import {getFileIcon, removeObjectFromArray} from '../../assets/js/common.js';
+import {
+    getFileIcon,
+    removeObjectFromArray,
+    footerNavigateBuilder,
+    seperateFolders,
+    isImage,
+    previewImageComponent,
+    isNoPreview,
+} from '../../assets/js/common.js';
 
 const fs = require("fs");
 const path = require("path");
@@ -36,25 +44,37 @@ window.editorTabs = function (fileConfig) {
         active: true,
         visible: true,
     });
-    tab.spans.icon.className = editorIcon.className;
-    tab.spans.icon.innerHTML = editorIcon.iconCode;
-    tab.spans.icon.style.color = editorIcon.iconColor;
+    tab.spans.title.title = fileConfig.filePath;
+    tab.spans.icon.className = editorIcon;
 
-    // Get editor element and set to this editor holder
-    let editor = getEditor(fileConfig);
+    // Check if the file is image or not
+    if (isImage(fileConfig.extension)) {
+        const previewImageComponentHtml = previewImageComponent(fileConfig);
+        const editorHolder =
+            document.getElementById("aqua-editors-holder");
+        editorHolder.insertBefore(previewImageComponentHtml, editorHolder.firstChild);
+    } else if (isNoPreview(fileConfig.extension)) {
+        const previewImageComponentHtml = previewImageComponent(fileConfig, true);
+        const editorHolder =
+            document.getElementById("aqua-editors-holder");
+        editorHolder.insertBefore(previewImageComponentHtml, editorHolder.firstChild);
+    } else {
+        // Get editor element and set to this editor holder
+        let editor = getEditor(fileConfig);
 
-    // Check if file has change or not
-    let oldEditorValue = editor.getValue();
-    editor.on('change', () => {
-        const newEditorValue = editor.getValue();
-        if (newEditorValue !== oldEditorValue) {
-            console.log('Editor value has changed!');
-            tab.setBadge({text: "*", classname: "icon-add-new-icon"});
-            // oldEditorValue = newEditorValue;
-        } else {
-            tab.setBadge({text: "", classname: "icon-add-new-icon"});
-        }
-    });
+        // Check if file has change or not
+        let oldEditorValue = editor.getValue();
+        editor.on('change', () => {
+            const newEditorValue = editor.getValue();
+            if (newEditorValue !== oldEditorValue) {
+                console.log('Editor value has changed!');
+                tab.setBadge({text: "*", classname: "icon-add-new-icon"});
+                // oldEditorValue = newEditorValue;
+            } else {
+                tab.setBadge({text: "", classname: "icon-add-new-icon"});
+            }
+        });
+    }
 
     tab.id = fileConfig.id;
     window.editorsConfig.push(fileConfig);
@@ -64,10 +84,13 @@ window.editorTabs = function (fileConfig) {
         .style.display = "block";
 
     // Set footer navigation
-    const index = fileConfig.filePath.indexOf(window.openedFolderName);
-    let pathAfterRoot = fileConfig.filePath.slice(index + window.openedFolderName.length);
-    pathAfterRoot = pathAfterRoot.split(path.sep).filter(Boolean);
-    console.log(pathAfterRoot)
+    let pathAfterRoot = seperateFolders(fileConfig.filePath);
+    footerNavigateBuilder(
+        {
+            rootName: window.openedFolderName,
+            allFiles: pathAfterRoot,
+            imageHtml: fileConfig.imageHtml,
+        }, true);
 
     // When tab active
     tab.on("active", (tab) => {
@@ -76,6 +99,14 @@ window.editorTabs = function (fileConfig) {
         const editor = document.getElementById("aqua-editor-" + tab.id);
 
         editorHolder.insertBefore(editor, editorHolder.firstChild);
+
+        let pathAfterRoot = seperateFolders(fileConfig.filePath);
+        footerNavigateBuilder(
+            {
+                rootName: window.openedFolderName,
+                allFiles: pathAfterRoot,
+                imageHtml: fileConfig.imageHtml,
+            }, true);
     });
     // When tab closed
     tab.on("close", (tab) => {
@@ -120,7 +151,10 @@ function getEditor(fileConfig) {
 
         // TODO:: Need to handle when clear the current content and try to type. getiing error
         var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
-        editor.getSession().setMode({path: 'ace/mode/' + getFileType(fileConfig.extension), inline: true});
+        editor.getSession().setMode({
+            path: 'ace/mode/' + getFileType(fileConfig.extension, fileConfig.text),
+            inline: true
+        });
 
         ace.config.loadModule('ace/ext/tern', function () {
             editor.setOptions({
@@ -276,7 +310,7 @@ function getEditorOptions(editor) {
 /*-------------------------------------
 * Get language name
 *------------------------------------*/
-function getFileType(fileExtension) {
+function getFileType(fileExtension, fileName) {
     fileExtension = fileExtension.replace(/\./g, '');
     const fileTypes = {
         js: "javascript",
@@ -285,7 +319,7 @@ function getFileType(fileExtension) {
         java: "java",
         cpp: "c++",
         cs: "c#",
-        php: "php_laravel_blade",
+        php: "php",
         swift: "swift",
         go: "go",
         kotlin: "kotlin",

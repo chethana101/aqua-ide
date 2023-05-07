@@ -58,7 +58,7 @@
 
 .mfixx {
     font-family: 'Mfixx';
-    font-size: var(--directory-icon-size-default);
+    font-size: var(--directory-mfixx-icon-size-default);
 }
 
 /* ---------------------------------
@@ -80,11 +80,11 @@ ul.gj-list-md li [data-role=display] {
 }
 
 [data-type=tree] ul li [data-role=expander].gj-tree-material-icons-expander {
-    width: 20px !important;
+    width: 15px !important;
 }
 
 ul.gj-list-md li [data-role=checkbox], ul.gj-list-md li [data-role=image] {
-    width: auto;
+    width: 18px;
 }
 
 .gj-icon {

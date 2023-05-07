@@ -390,6 +390,7 @@ div::-webkit-scrollbar-thumb {
     border-top: 2px solid var(--border);
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .container-footer-holder {
@@ -413,17 +414,22 @@ div::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     font-size: 11px;
-    margin: 0px 8px;
     color: var(--text-default);
 }
 
-.footer-navigator-path-name span {
-    margin-right: 8px;
+.footer-navigator-path-name .icon-folder-border {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--editor-tooltip-completion);
 }
 
-.footer-navigator .icon-right-arrow:before {
+.footer-navigator-path-name .icon-right-arrow {
+    margin: 0px 7px;
+}
+
+.footer-navigator-path-name .icon-right-arrow:before {
     font-size: 7px;
-    line-height: 2.7;
+    line-height: 2;
     color: var(--editor-tooltip-completion);
 }
 

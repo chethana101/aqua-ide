@@ -1,0 +1,8369 @@
+@font-face {
+  font-family: 'icomoon-material-icon';
+  src:  url('../icons/directory-icons/icomoon-material-icon.eot?qn3jpt');
+  src:  url('../icons/directory-icons/icomoon-material-icon.eot?qn3jpt#iefix') format('embedded-opentype'),
+    url('../icons/directory-icons/icomoon-material-icon.ttf?qn3jpt') format('truetype'),
+    url('../icons/directory-icons/icomoon-material-icon.woff?qn3jpt') format('woff'),
+    url('../icons/directory-icons/icomoon-material-icon.svg?qn3jpt#icomoon-material-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-material-"], [class*=" icon-material-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-material-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-material-d:before {
+  content: "\e916";
+  color: #29b6f6;
+}
+.icon-material-abc:before {
+  content: "\e917";
+  color: #ff5722;
+}
+.icon-material-actionscript:before {
+  content: "\e918";
+  color: #f44336;
+}
+.icon-material-ada:before {
+  content: "\e919";
+  color: #0277bd;
+}
+.icon-material-adonis:before {
+  content: "\e91a";
+  color: #7c4dff;
+}
+.icon-material-advpl_include:before {
+  content: "\e91b";
+  color: #00bcd4;
+}
+.icon-material-advpl_prw:before {
+  content: "\e91c";
+  color: #7986cb;
+}
+.icon-material-advpl_ptm:before {
+  content: "\e91d";
+  color: #ef5350;
+}
+.icon-material-advpl_tlpp:before {
+  content: "\e91e";
+  color: #fbc02d;
+}
+.icon-material-android:before {
+  content: "\e91f";
+  color: #8bc34a;
+}
+.icon-material-angular:before {
+  content: "\e920";
+  color: #e53935;
+}
+.icon-material-angular-component:before {
+  content: "\e921";
+  color: #0288d1;
+}
+.icon-material-angular-directive:before {
+  content: "\e922";
+  color: #ab47bc;
+}
+.icon-material-angular-guard:before {
+  content: "\e923";
+  color: #43a047;
+}
+.icon-material-angular-pipe:before {
+  content: "\e924";
+  color: #00897b;
+}
+.icon-material-angular-resolver:before {
+  content: "\e925";
+  color: #43a047;
+}
+.icon-material-angular-service:before {
+  content: "\e926";
+  color: #ffca28;
+}
+.icon-material-antlr:before {
+  content: "\e927";
+  color: #f44336;
+}
+.icon-material-apiblueprint:before {
+  content: "\e928";
+  color: #42a5f5;
+}
+.icon-material-apollo:before {
+  content: "\e929";
+  color: #7e57c2;
+}
+.icon-material-applescript:before {
+  content: "\e92a";
+  color: #78909c;
+}
+.icon-material-appveyor:before {
+  content: "\e92b";
+  color: #00b3e0;
+}
+.icon-material-architecture:before {
+  content: "\e92c";
+  color: #66bb6a;
+}
+.icon-material-arduino:before {
+  content: "\e92d";
+}
+.icon-material-asciidoc:before {
+  content: "\e92e";
+  color: #f44336;
+}
+.icon-material-assembly:before {
+  content: "\e92f";
+  color: #ff6e40;
+}
+.icon-material-astro:before {
+  content: "\e930";
+  color: #ff6d00;
+}
+.icon-material-astyle:before {
+  content: "\e931";
+  color: #ef5350;
+}
+.icon-material-audio:before {
+  content: "\e932";
+  color: #ef5350;
+}
+.icon-material-aurelia .path1:before {
+  content: "\e933";
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path2:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path3:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path4:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path5:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path6:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path7:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-aurelia .path8:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(113, 72, 150);
+}
+.icon-material-aurelia .path9:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(111, 71, 149);
+}
+.icon-material-aurelia .path10:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(136, 81, 159);
+}
+.icon-material-aurelia .path11:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(133, 80, 158);
+}
+.icon-material-aurelia .path12:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(141, 22, 106);
+}
+.icon-material-aurelia .path13:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(167, 13, 111);
+}
+.icon-material-aurelia .path14:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(158, 97, 173);
+}
+.icon-material-aurelia .path15:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(128, 83, 163);
+}
+.icon-material-aurelia .path16:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-authors:before {
+  content: "\e943";
+  color: #f44336;
+}
+.icon-material-auto .path1:before {
+  content: "\e944";
+  color: rgb(255, 196, 0);
+}
+.icon-material-auto .path2:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(173, 20, 87);
+}
+.icon-material-auto .path3:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-auto .path4:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(255, 82, 82);
+}
+.icon-material-auto .path5:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-auto_light .path1:before {
+  content: "\e949";
+  color: rgb(255, 196, 0);
+}
+.icon-material-auto_light .path2:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(173, 20, 87);
+}
+.icon-material-auto_light .path3:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(84, 110, 122);
+}
+.icon-material-auto_light .path4:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(255, 82, 82);
+}
+.icon-material-auto_light .path5:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(84, 110, 122);
+}
+.icon-material-autohotkey:before {
+  content: "\e94e";
+  color: #4caf50;
+}
+.icon-material-autoit:before {
+  content: "\e94f";
+  color: #1976d2;
+}
+.icon-material-azure .path1:before {
+  content: "\e950";
+  color: rgb(1, 87, 155);
+}
+.icon-material-azure .path2:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(25, 118, 210);
+}
+.icon-material-azure .path3:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(41, 182, 246);
+}
+.icon-material-azure-pipelines .path1:before {
+  content: "\e953";
+  color: rgb(100, 181, 246);
+}
+.icon-material-azure-pipelines .path2:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(21, 101, 192);
+}
+.icon-material-azure-pipelines .path3:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(30, 136, 229);
+}
+.icon-material-azure-pipelines .path4:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(10, 68, 194);
+}
+.icon-material-azure-pipelines .path5:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(100, 181, 246);
+}
+.icon-material-azure-pipelines .path6:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(66, 165, 245);
+}
+.icon-material-azure-pipelines .path7:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(10, 68, 194);
+}
+.icon-material-azure-pipelines .path8:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(144, 202, 249);
+}
+.icon-material-babel:before {
+  content: "\e95b";
+  color: #fdd835;
+}
+.icon-material-ballerina:before {
+  content: "\e95c";
+  color: #00bfa5;
+}
+.icon-material-bazel .path1:before {
+  content: "\e95d";
+  color: rgb(129, 199, 132);
+}
+.icon-material-bazel .path2:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(67, 160, 71);
+}
+.icon-material-bazel .path3:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: rgb(129, 199, 132);
+}
+.icon-material-bazel .path4:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(67, 160, 71);
+}
+.icon-material-bazel .path5:before {
+  content: "\e961";
+  margin-left: -1em;
+  color: rgb(46, 125, 50);
+}
+.icon-material-bazel .path6:before {
+  content: "\e962";
+  margin-left: -1em;
+  color: rgb(27, 94, 32);
+}
+.icon-material-bicep:before {
+  content: "\e963";
+  color: #fbc02d;
+}
+.icon-material-bitbucket .path1:before {
+  content: "\e964";
+  color: rgb(30, 136, 229);
+}
+.icon-material-bitbucket .path2:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-bithound:before {
+  content: "\e966";
+  color: #e53935;
+}
+.icon-material-blink:before {
+  content: "\e967";
+  color: #f9a825;
+}
+.icon-material-blink_light .path1:before {
+  content: "\e968";
+  color: rgb(55, 71, 79);
+}
+.icon-material-blink_light .path2:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-blink_light .path3:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-blitz:before {
+  content: "\e96b";
+  color: #7c4dff;
+}
+.icon-material-bower .path1:before {
+  content: "\e96c";
+  color: rgb(84, 55, 41);
+}
+.icon-material-bower .path2:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(0, 172, 238);
+}
+.icon-material-bower .path3:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: rgb(43, 175, 43);
+}
+.icon-material-bower .path4:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-bower .path5:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(206, 206, 206);
+}
+.icon-material-bower .path6:before {
+  content: "\e971";
+  margin-left: -1em;
+  color: rgb(239, 87, 52);
+}
+.icon-material-bower .path7:before {
+  content: "\e972";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-bower .path8:before {
+  content: "\e973";
+  margin-left: -1em;
+  color: rgb(84, 55, 41);
+}
+.icon-material-bower .path9:before {
+  content: "\e974";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-brainfuck:before {
+  content: "\e975";
+  color: #ff4081;
+}
+.icon-material-browserlist:before {
+  content: "\e976";
+  color: #ffca28;
+}
+.icon-material-browserlist_light .path1:before {
+  content: "\e977";
+  color: rgb(255, 202, 40);
+}
+.icon-material-browserlist_light .path2:before {
+  content: "\e978";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-buck:before {
+  content: "\e979";
+  color: #0277bd;
+}
+.icon-material-bucklescript:before {
+  content: "\e97a";
+  color: #26a69a;
+}
+.icon-material-buildkite .path1:before {
+  content: "\e97b";
+  color: rgb(0, 230, 118);
+}
+.icon-material-buildkite .path2:before {
+  content: "\e97c";
+  margin-left: -1em;
+  color: rgb(0, 200, 83);
+}
+.icon-material-bun .path1:before {
+  content: "\e97d";
+  color: rgb(255, 243, 224);
+}
+.icon-material-bun .path2:before {
+  content: "\e97e";
+  margin-left: -1em;
+  color: rgb(251, 233, 231);
+}
+.icon-material-bun .path3:before {
+  content: "\e97f";
+  margin-left: -1em;
+  color: rgb(250, 250, 250);
+}
+.icon-material-bun .path4:before {
+  content: "\e980";
+  margin-left: -1em;
+  color: rgb(188, 170, 164);
+}
+.icon-material-bun .path5:before {
+  content: "\e981";
+  margin-left: -1em;
+  color: rgb(183, 28, 28);
+}
+.icon-material-bun .path6:before {
+  content: "\e982";
+  margin-left: -1em;
+  color: rgb(255, 82, 82);
+}
+.icon-material-bun .path7:before {
+  content: "\e983";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-bun .path8:before {
+  content: "\e984";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-bun .path9:before {
+  content: "\e985";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-bun .path10:before {
+  content: "\e986";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-bun .path11:before {
+  content: "\e987";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-bun .path12:before {
+  content: "\e988";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-bun_light .path1:before {
+  content: "\e989";
+  color: rgb(69, 90, 100);
+}
+.icon-material-bun_light .path2:before {
+  content: "\e98a";
+  margin-left: -1em;
+  color: rgb(255, 243, 224);
+}
+.icon-material-bun_light .path3:before {
+  content: "\e98b";
+  margin-left: -1em;
+  color: rgb(251, 233, 231);
+}
+.icon-material-bun_light .path4:before {
+  content: "\e98c";
+  margin-left: -1em;
+  color: rgb(250, 250, 250);
+}
+.icon-material-bun_light .path5:before {
+  content: "\e98d";
+  margin-left: -1em;
+  color: rgb(188, 170, 164);
+}
+.icon-material-bun_light .path6:before {
+  content: "\e98e";
+  margin-left: -1em;
+  color: rgb(183, 28, 28);
+}
+.icon-material-bun_light .path7:before {
+  content: "\e98f";
+  margin-left: -1em;
+  color: rgb(255, 82, 82);
+}
+.icon-material-bun_light .path8:before {
+  content: "\e990";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-bun_light .path9:before {
+  content: "\e991";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-bun_light .path10:before {
+  content: "\e992";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-bun_light .path11:before {
+  content: "\e993";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-bun_light .path12:before {
+  content: "\e994";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-bun_light .path13:before {
+  content: "\e995";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-c:before {
+  content: "\e996";
+  color: #0288d1;
+}
+.icon-material-cabal .path1:before {
+  content: "\e997";
+  color: rgb(45, 155, 189);
+}
+.icon-material-cabal .path2:before {
+  content: "\e998";
+  margin-left: -1em;
+  color: rgb(74, 75, 205);
+}
+.icon-material-cabal .path3:before {
+  content: "\e999";
+  margin-left: -1em;
+  color: rgb(46, 91, 193);
+}
+.icon-material-caddy:before {
+  content: "\e99a";
+  color: #4fc3f7;
+}
+.icon-material-cadence:before {
+  content: "\e99b";
+  color: #00e676;
+}
+.icon-material-cake:before {
+  content: "\e99c";
+  color: #ff7043;
+}
+.icon-material-capacitor:before {
+  content: "\e99d";
+  color: #4fc3f7;
+}
+.icon-material-certificate:before {
+  content: "\e99e";
+  color: #ff5722;
+}
+.icon-material-changelog:before {
+  content: "\e99f";
+  color: #8bc34a;
+}
+.icon-material-chess:before {
+  content: "\e9a0";
+  color: #cfd8dc;
+}
+.icon-material-chess_light:before {
+  content: "\e9a1";
+  color: #455a64;
+}
+.icon-material-circleci:before {
+  content: "\e9a2";
+  color: #fafafa;
+}
+.icon-material-circleci_light:before {
+  content: "\e9a3";
+}
+.icon-material-clojure .path1:before {
+  content: "\e9a4";
+  color: rgb(100, 221, 23);
+}
+.icon-material-clojure .path2:before {
+  content: "\e9a5";
+  margin-left: -1em;
+  color: rgb(124, 179, 66);
+}
+.icon-material-clojure .path3:before {
+  content: "\e9a6";
+  margin-left: -1em;
+  color: rgb(41, 182, 246);
+}
+.icon-material-clojure .path4:before {
+  content: "\e9a7";
+  margin-left: -1em;
+  color: rgb(30, 136, 229);
+}
+.icon-material-cloudfoundry .path1:before {
+  content: "\e9a8";
+  color: rgb(2, 136, 209);
+}
+.icon-material-cloudfoundry .path2:before {
+  content: "\e9a9";
+  margin-left: -1em;
+  color: rgb(120, 144, 156);
+}
+.icon-material-cmake .path1:before {
+  content: "\e9aa";
+  color: rgb(30, 136, 229);
+}
+.icon-material-cmake .path2:before {
+  content: "\e9ab";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-cmake .path3:before {
+  content: "\e9ac";
+  margin-left: -1em;
+  color: rgb(124, 179, 66);
+}
+.icon-material-coala .path1:before {
+  content: "\e9ad";
+  color: rgb(144, 164, 174);
+}
+.icon-material-coala .path2:before {
+  content: "\e9ae";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-coala .path3:before {
+  content: "\e9af";
+  margin-left: -1em;
+  color: rgb(38, 50, 56);
+}
+.icon-material-cobol:before {
+  content: "\e9b0";
+  color: #0288d1;
+}
+.icon-material-coconut:before {
+  content: "\e9b1";
+  color: #8d6e63;
+}
+.icon-material-code-climate:before {
+  content: "\e9b2";
+  color: #eee;
+}
+.icon-material-code-climate_light:before {
+  content: "\e9b3";
+  color: #455a64;
+}
+.icon-material-codecov:before {
+  content: "\e9b4";
+  color: #ec407a;
+}
+.icon-material-codeowners:before {
+  content: "\e9b5";
+  color: #afb42b;
+}
+.icon-material-coffee:before {
+  content: "\e9b6";
+  color: #42a5f5;
+}
+.icon-material-coldfusion .path1:before {
+  content: "\e9b7";
+  color: rgb(13, 56, 88);
+}
+.icon-material-coldfusion .path2:before {
+  content: "\e9b8";
+  margin-left: -1em;
+  color: rgb(77, 208, 225);
+}
+.icon-material-command:before {
+  content: "\e9b9";
+  color: #90a4ae;
+}
+.icon-material-commitlint:before {
+  content: "\e9ba";
+  color: #009688;
+}
+.icon-material-conduct:before {
+  content: "\e9bb";
+  color: #cddc39;
+}
+.icon-material-console:before {
+  content: "\e9bc";
+  color: #ff7043;
+}
+.icon-material-contributing:before {
+  content: "\e9bd";
+  color: #ffca28;
+}
+.icon-material-cpp:before {
+  content: "\e9be";
+  color: #0288d1;
+}
+.icon-material-craco:before {
+  content: "\e9bf";
+  color: #00bfa5;
+}
+.icon-material-credits:before {
+  content: "\e9c0";
+  color: #9ccc65;
+}
+.icon-material-crystal:before {
+  content: "\e9c1";
+  color: #cfd8dc;
+}
+.icon-material-crystal_light:before {
+  content: "\e9c2";
+  color: #37474f;
+}
+.icon-material-csharp:before {
+  content: "\e9c3";
+  color: #0288d1;
+}
+.icon-material-css:before {
+  content: "\e9c4";
+  color: #42a5f5;
+}
+.icon-material-css-map:before {
+  content: "\e9c5";
+  color: #42a5f5;
+}
+.icon-material-cucumber:before {
+  content: "\e9c6";
+  color: #4caf50;
+}
+.icon-material-cuda:before {
+  content: "\e9c7";
+  color: #76b900;
+}
+.icon-material-cypress:before {
+  content: "\e9c8";
+  color: #00bfa5;
+}
+.icon-material-d1:before {
+  content: "\e9c9";
+  color: #f44336;
+}
+.icon-material-dart .path1:before {
+  content: "\e9ca";
+  color: rgb(102, 195, 250);
+}
+.icon-material-dart .path2:before {
+  content: "\e9cb";
+  margin-left: -1em;
+  color: rgb(33, 88, 150);
+}
+.icon-material-dart .path3:before {
+  content: "\e9cc";
+  margin-left: -1em;
+  color: rgb(35, 89, 151);
+}
+.icon-material-dart .path4:before {
+  content: "\e9cd";
+  margin-left: -1em;
+  color: rgb(88, 182, 240);
+}
+.icon-material-dart_generated .path1:before {
+  content: "\e9ce";
+  color: rgb(144, 164, 174);
+}
+.icon-material-dart_generated .path2:before {
+  content: "\e9cf";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-dart_generated .path3:before {
+  content: "\e9d0";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-dart_generated .path4:before {
+  content: "\e9d1";
+  margin-left: -1em;
+  color: rgb(144, 164, 174);
+}
+.icon-material-database:before {
+  content: "\e9d2";
+  color: #ffca28;
+}
+.icon-material-denizenscript:before {
+  content: "\e9d3";
+}
+.icon-material-deno:before {
+  content: "\e9d4";
+  color: #cfd8dc;
+}
+.icon-material-deno_light:before {
+  content: "\e9d5";
+  color: #455a64;
+}
+.icon-material-dependabot:before {
+  content: "\e9d6";
+  color: #448aff;
+}
+.icon-material-dhall:before {
+  content: "\e9d7";
+  color: #78909c;
+}
+.icon-material-diff:before {
+  content: "\e9d8";
+  color: #42a5f5;
+}
+.icon-material-dinophp:before {
+  content: "\e9d9";
+  color: #ff5252;
+}
+.icon-material-disc:before {
+  content: "\e9da";
+  color: #b0bec5;
+}
+.icon-material-django:before {
+  content: "\e9db";
+  color: #43a047;
+}
+.icon-material-docker:before {
+  content: "\e9dc";
+  color: #0087c9;
+}
+.icon-material-document:before {
+  content: "\e9dd";
+  color: #42a5f5;
+}
+.icon-material-dotjs:before {
+  content: "\e9de";
+  color: #2196f3;
+}
+.icon-material-drawio:before {
+  content: "\e9df";
+  color: #fb8c00;
+}
+.icon-material-drone:before {
+  content: "\e9e0";
+  color: #cfd8dc;
+}
+.icon-material-drone_light:before {
+  content: "\e9e1";
+  color: #546e7a;
+}
+.icon-material-dune:before {
+  content: "\e9e2";
+  color: #f57c00;
+}
+.icon-material-edge:before {
+  content: "\e9e3";
+  color: #ef6c00;
+}
+.icon-material-editorconfig .path1:before {
+  content: "\e9e4";
+  color: rgb(227, 227, 248);
+}
+.icon-material-editorconfig .path2:before {
+  content: "\e9e5";
+  margin-left: -1em;
+  color: rgb(253, 253, 253);
+}
+.icon-material-editorconfig .path3:before {
+  content: "\e9e6";
+  margin-left: -1em;
+  color: rgb(253, 253, 253);
+}
+.icon-material-editorconfig .path4:before {
+  content: "\e9e7";
+  margin-left: -1em;
+  color: rgb(2, 2, 2);
+}
+.icon-material-editorconfig .path5:before {
+  content: "\e9e8";
+  margin-left: -1em;
+  color: rgb(253, 242, 242);
+}
+.icon-material-editorconfig .path6:before {
+  content: "\e9e9";
+  margin-left: -1em;
+  color: rgb(254, 243, 243);
+}
+.icon-material-editorconfig .path7:before {
+  content: "\e9ea";
+  margin-left: -1em;
+  color: rgb(239, 239, 239);
+}
+.icon-material-editorconfig .path8:before {
+  content: "\e9eb";
+  margin-left: -1em;
+  color: rgb(250, 241, 241);
+}
+.icon-material-ejs:before {
+  content: "\e9ec";
+  color: #ffca28;
+}
+.icon-material-elixir:before {
+  content: "\e9ed";
+  color: #9575cd;
+}
+.icon-material-elm .path1:before {
+  content: "\e9ee";
+  color: rgb(240, 173, 0);
+}
+.icon-material-elm .path2:before {
+  content: "\e9ef";
+  margin-left: -1em;
+  color: rgb(127, 209, 59);
+}
+.icon-material-elm .path3:before {
+  content: "\e9f0";
+  margin-left: -1em;
+  color: rgb(96, 181, 204);
+}
+.icon-material-elm .path4:before {
+  content: "\e9f1";
+  margin-left: -1em;
+  color: rgb(90, 99, 120);
+}
+.icon-material-elm .path5:before {
+  content: "\e9f2";
+  margin-left: -1em;
+  color: rgb(240, 173, 0);
+}
+.icon-material-elm .path6:before {
+  content: "\e9f3";
+  margin-left: -1em;
+  color: rgb(96, 181, 204);
+}
+.icon-material-email:before {
+  content: "\e9f4";
+  color: #42a5f5;
+}
+.icon-material-ember:before {
+  content: "\e9f5";
+  color: #ff5722;
+}
+.icon-material-erlang:before {
+  content: "\e9f6";
+  color: #f44336;
+}
+.icon-material-eslint .path1:before {
+  content: "\e9f7";
+  color: rgb(121, 134, 203);
+}
+.icon-material-eslint .path2:before {
+  content: "\e9f8";
+  margin-left: -1em;
+  color: rgb(63, 81, 181);
+}
+.icon-material-exe:before {
+  content: "\e9f9";
+  color: #e64a19;
+}
+.icon-material-fastlane .path1:before {
+  content: "\e9fa";
+  color: rgb(10, 123, 255);
+}
+.icon-material-fastlane .path2:before {
+  content: "\e9fb";
+  margin-left: -1em;
+  color: rgb(235, 61, 0);
+}
+.icon-material-fastlane .path3:before {
+  content: "\e9fc";
+  margin-left: -1em;
+  color: rgb(0, 188, 212);
+}
+.icon-material-fastlane .path4:before {
+  content: "\e9fd";
+  margin-left: -1em;
+  color: rgb(134, 195, 81);
+}
+.icon-material-fastlane .path5:before {
+  content: "\e9fe";
+  margin-left: -1em;
+  color: rgb(144, 50, 233);
+}
+.icon-material-favicon:before {
+  content: "\e9ff";
+  color: #ffd54f;
+}
+.icon-material-figma .path1:before {
+  content: "\ea00";
+  color: rgb(0, 230, 118);
+}
+.icon-material-figma .path2:before {
+  content: "\ea01";
+  margin-left: -1em;
+  color: rgb(124, 77, 255);
+}
+.icon-material-figma .path3:before {
+  content: "\ea02";
+  margin-left: -1em;
+  color: rgb(244, 81, 30);
+}
+.icon-material-figma .path4:before {
+  content: "\ea03";
+  margin-left: -1em;
+  color: rgb(255, 138, 101);
+}
+.icon-material-figma .path5:before {
+  content: "\ea04";
+  margin-left: -1em;
+  color: rgb(41, 182, 246);
+}
+.icon-material-firebase:before {
+  content: "\ea05";
+  color: #fbc02d;
+}
+.icon-material-flash:before {
+  content: "\ea06";
+  color: #e53935;
+}
+.icon-material-flow:before {
+  content: "\ea07";
+  color: #fbc02d;
+}
+.icon-material-folder-admin .path1:before {
+  content: "\ea08";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-admin .path2:before {
+  content: "\ea09";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-admin-open .path1:before {
+  content: "\ea0a";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-admin-open .path2:before {
+  content: "\ea0b";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-android .path1:before {
+  content: "\ea0c";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-android .path2:before {
+  content: "\ea0d";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-android-open .path1:before {
+  content: "\ea0e";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-android-open .path2:before {
+  content: "\ea0f";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-angular .path1:before {
+  content: "\ea10";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-angular .path2:before {
+  content: "\ea11";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-angular-open .path1:before {
+  content: "\ea12";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-angular-open .path2:before {
+  content: "\ea13";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-animation .path1:before {
+  content: "\ea14";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-animation .path2:before {
+  content: "\ea15";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-animation-open .path1:before {
+  content: "\ea16";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-animation-open .path2:before {
+  content: "\ea17";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-ansible .path1:before {
+  content: "\ea18";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-ansible .path2:before {
+  content: "\ea19";
+  margin-left: -1em;
+  color: rgb(132, 137, 146);
+}
+.icon-material-folder-ansible .path3:before {
+  content: "\ea1a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-ansible-open .path1:before {
+  content: "\ea1b";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-ansible-open .path2:before {
+  content: "\ea1c";
+  margin-left: -1em;
+  color: rgb(132, 137, 146);
+}
+.icon-material-folder-ansible-open .path3:before {
+  content: "\ea1d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-api .path1:before {
+  content: "\ea1e";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-api .path2:before {
+  content: "\ea1f";
+  margin-left: -1em;
+  color: rgb(255, 253, 231);
+}
+.icon-material-folder-api-open .path1:before {
+  content: "\ea20";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-api-open .path2:before {
+  content: "\ea21";
+  margin-left: -1em;
+  color: rgb(255, 253, 231);
+}
+.icon-material-folder-apollo .path1:before {
+  content: "\ea22";
+  color: rgb(126, 87, 194);
+}
+.icon-material-folder-apollo .path2:before {
+  content: "\ea23";
+  margin-left: -1em;
+  color: rgb(209, 196, 233);
+}
+.icon-material-folder-apollo-open .path1:before {
+  content: "\ea24";
+  color: rgb(126, 87, 194);
+}
+.icon-material-folder-apollo-open .path2:before {
+  content: "\ea25";
+  margin-left: -1em;
+  color: rgb(209, 196, 233);
+}
+.icon-material-folder-app .path1:before {
+  content: "\ea26";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-app .path2:before {
+  content: "\ea27";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-app-open .path1:before {
+  content: "\ea28";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-app-open .path2:before {
+  content: "\ea29";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-archive .path1:before {
+  content: "\ea2a";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-archive .path2:before {
+  content: "\ea2b";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-archive-open .path1:before {
+  content: "\ea2c";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-archive-open .path2:before {
+  content: "\ea2d";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-audio .path1:before {
+  content: "\ea2e";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-audio .path2:before {
+  content: "\ea2f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-audio-open .path1:before {
+  content: "\ea30";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-audio-open .path2:before {
+  content: "\ea31";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-aurelia .path1:before {
+  content: "\ea32";
+  color: rgb(240, 98, 146);
+}
+.icon-material-folder-aurelia .path2:before {
+  content: "\ea33";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path3:before {
+  content: "\ea34";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path4:before {
+  content: "\ea35";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path5:before {
+  content: "\ea36";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path6:before {
+  content: "\ea37";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path7:before {
+  content: "\ea38";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path8:before {
+  content: "\ea39";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia .path9:before {
+  content: "\ea3a";
+  margin-left: -1em;
+  color: rgb(113, 72, 150);
+}
+.icon-material-folder-aurelia .path10:before {
+  content: "\ea3b";
+  margin-left: -1em;
+  color: rgb(111, 71, 149);
+}
+.icon-material-folder-aurelia .path11:before {
+  content: "\ea3c";
+  margin-left: -1em;
+  color: rgb(136, 81, 159);
+}
+.icon-material-folder-aurelia .path12:before {
+  content: "\ea3d";
+  margin-left: -1em;
+  color: rgb(133, 80, 158);
+}
+.icon-material-folder-aurelia .path13:before {
+  content: "\ea3e";
+  margin-left: -1em;
+  color: rgb(141, 22, 106);
+}
+.icon-material-folder-aurelia .path14:before {
+  content: "\ea3f";
+  margin-left: -1em;
+  color: rgb(167, 13, 111);
+}
+.icon-material-folder-aurelia .path15:before {
+  content: "\ea40";
+  margin-left: -1em;
+  color: rgb(158, 97, 173);
+}
+.icon-material-folder-aurelia .path16:before {
+  content: "\ea41";
+  margin-left: -1em;
+  color: rgb(128, 83, 163);
+}
+.icon-material-folder-aurelia .path17:before {
+  content: "\ea42";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path1:before {
+  content: "\ea43";
+  color: rgb(240, 98, 146);
+}
+.icon-material-folder-aurelia-open .path2:before {
+  content: "\ea44";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path3:before {
+  content: "\ea45";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path4:before {
+  content: "\ea46";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path5:before {
+  content: "\ea47";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path6:before {
+  content: "\ea48";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path7:before {
+  content: "\ea49";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path8:before {
+  content: "\ea4a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aurelia-open .path9:before {
+  content: "\ea4b";
+  margin-left: -1em;
+  color: rgb(113, 72, 150);
+}
+.icon-material-folder-aurelia-open .path10:before {
+  content: "\ea4c";
+  margin-left: -1em;
+  color: rgb(111, 71, 149);
+}
+.icon-material-folder-aurelia-open .path11:before {
+  content: "\ea4d";
+  margin-left: -1em;
+  color: rgb(136, 81, 159);
+}
+.icon-material-folder-aurelia-open .path12:before {
+  content: "\ea4e";
+  margin-left: -1em;
+  color: rgb(133, 80, 158);
+}
+.icon-material-folder-aurelia-open .path13:before {
+  content: "\ea4f";
+  margin-left: -1em;
+  color: rgb(141, 22, 106);
+}
+.icon-material-folder-aurelia-open .path14:before {
+  content: "\ea50";
+  margin-left: -1em;
+  color: rgb(167, 13, 111);
+}
+.icon-material-folder-aurelia-open .path15:before {
+  content: "\ea51";
+  margin-left: -1em;
+  color: rgb(158, 97, 173);
+}
+.icon-material-folder-aurelia-open .path16:before {
+  content: "\ea52";
+  margin-left: -1em;
+  color: rgb(128, 83, 163);
+}
+.icon-material-folder-aurelia-open .path17:before {
+  content: "\ea53";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-aws .path1:before {
+  content: "\ea54";
+  color: rgb(255, 179, 0);
+}
+.icon-material-folder-aws .path2:before {
+  content: "\ea55";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-aws-open .path1:before {
+  content: "\ea56";
+  color: rgb(255, 179, 0);
+}
+.icon-material-folder-aws-open .path2:before {
+  content: "\ea57";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-azure-pipelines .path1:before {
+  content: "\ea58";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-azure-pipelines .path2:before {
+  content: "\ea59";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-azure-pipelines-open .path1:before {
+  content: "\ea5a";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-azure-pipelines-open .path2:before {
+  content: "\ea5b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-base .path1:before {
+  content: "\ea5c";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-base .path2:before {
+  content: "\ea5d";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-base-open .path1:before {
+  content: "\ea5e";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-base-open .path2:before {
+  content: "\ea5f";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-batch .path1:before {
+  content: "\ea60";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-batch .path2:before {
+  content: "\ea61";
+  margin-left: -1em;
+  color: rgb(189, 189, 189);
+}
+.icon-material-folder-batch-open .path1:before {
+  content: "\ea62";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-batch-open .path2:before {
+  content: "\ea63";
+  margin-left: -1em;
+  color: rgb(189, 189, 189);
+}
+.icon-material-folder-benchmark .path1:before {
+  content: "\ea64";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-benchmark .path2:before {
+  content: "\ea65";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-benchmark-open .path1:before {
+  content: "\ea66";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-benchmark-open .path2:before {
+  content: "\ea67";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-bower .path1:before {
+  content: "\ea68";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-bower .path2:before {
+  content: "\ea69";
+  margin-left: -1em;
+  color: rgb(84, 55, 41);
+}
+.icon-material-folder-bower .path3:before {
+  content: "\ea6a";
+  margin-left: -1em;
+  color: rgb(0, 172, 238);
+}
+.icon-material-folder-bower .path4:before {
+  content: "\ea6b";
+  margin-left: -1em;
+  color: rgb(43, 175, 43);
+}
+.icon-material-folder-bower .path5:before {
+  content: "\ea6c";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-folder-bower .path6:before {
+  content: "\ea6d";
+  margin-left: -1em;
+  color: rgb(206, 206, 206);
+}
+.icon-material-folder-bower .path7:before {
+  content: "\ea6e";
+  margin-left: -1em;
+  color: rgb(239, 87, 52);
+}
+.icon-material-folder-bower .path8:before {
+  content: "\ea6f";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-folder-bower .path9:before {
+  content: "\ea70";
+  margin-left: -1em;
+  color: rgb(84, 55, 41);
+}
+.icon-material-folder-bower .path10:before {
+  content: "\ea71";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-bower-open .path1:before {
+  content: "\ea72";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-bower-open .path2:before {
+  content: "\ea73";
+  margin-left: -1em;
+  color: rgb(84, 55, 41);
+}
+.icon-material-folder-bower-open .path3:before {
+  content: "\ea74";
+  margin-left: -1em;
+  color: rgb(0, 172, 238);
+}
+.icon-material-folder-bower-open .path4:before {
+  content: "\ea75";
+  margin-left: -1em;
+  color: rgb(43, 175, 43);
+}
+.icon-material-folder-bower-open .path5:before {
+  content: "\ea76";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-folder-bower-open .path6:before {
+  content: "\ea77";
+  margin-left: -1em;
+  color: rgb(206, 206, 206);
+}
+.icon-material-folder-bower-open .path7:before {
+  content: "\ea78";
+  margin-left: -1em;
+  color: rgb(239, 87, 52);
+}
+.icon-material-folder-bower-open .path8:before {
+  content: "\ea79";
+  margin-left: -1em;
+  color: rgb(255, 204, 47);
+}
+.icon-material-folder-bower-open .path9:before {
+  content: "\ea7a";
+  margin-left: -1em;
+  color: rgb(84, 55, 41);
+}
+.icon-material-folder-bower-open .path10:before {
+  content: "\ea7b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-buildkite .path1:before {
+  content: "\ea7c";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-buildkite .path2:before {
+  content: "\ea7d";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-buildkite .path3:before {
+  content: "\ea7e";
+  margin-left: -1em;
+  color: rgb(165, 214, 167);
+}
+.icon-material-folder-buildkite-open .path1:before {
+  content: "\ea7f";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-buildkite-open .path2:before {
+  content: "\ea80";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-buildkite-open .path3:before {
+  content: "\ea81";
+  margin-left: -1em;
+  color: rgb(165, 214, 167);
+}
+.icon-material-folder-cart .path1:before {
+  content: "\ea82";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-cart .path2:before {
+  content: "\ea83";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cart-open .path1:before {
+  content: "\ea84";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-cart-open .path2:before {
+  content: "\ea85";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-changesets .path1:before {
+  content: "\ea86";
+  color: rgb(33, 150, 243);
+}
+.icon-material-folder-changesets .path2:before {
+  content: "\ea87";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-changesets-open .path1:before {
+  content: "\ea88";
+  color: rgb(33, 150, 243);
+}
+.icon-material-folder-changesets-open .path2:before {
+  content: "\ea89";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-ci .path1:before {
+  content: "\ea8a";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-ci .path2:before {
+  content: "\ea8b";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-ci-open .path1:before {
+  content: "\ea8c";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-ci-open .path2:before {
+  content: "\ea8d";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-circleci .path1:before {
+  content: "\ea8e";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-circleci .path2:before {
+  content: "\ea8f";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-folder-circleci-open .path1:before {
+  content: "\ea90";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-circleci-open .path2:before {
+  content: "\ea91";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-folder-class .path1:before {
+  content: "\ea92";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-class .path2:before {
+  content: "\ea93";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-class-open .path1:before {
+  content: "\ea94";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-class-open .path2:before {
+  content: "\ea95";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-client .path1:before {
+  content: "\ea96";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-client .path2:before {
+  content: "\ea97";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-client-open .path1:before {
+  content: "\ea98";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-client-open .path2:before {
+  content: "\ea99";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-cluster .path1:before {
+  content: "\ea9a";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-cluster .path2:before {
+  content: "\ea9b";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cluster .path3:before {
+  content: "\ea9c";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cluster .path4:before {
+  content: "\ea9d";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cluster-open .path1:before {
+  content: "\ea9e";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-cluster-open .path2:before {
+  content: "\ea9f";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cluster-open .path3:before {
+  content: "\eaa0";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cluster-open .path4:before {
+  content: "\eaa1";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cobol .path1:before {
+  content: "\eaa2";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-cobol .path2:before {
+  content: "\eaa3";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-cobol .path3:before {
+  content: "\eaa4";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-cobol-open .path1:before {
+  content: "\eaa5";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-cobol-open .path2:before {
+  content: "\eaa6";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-cobol-open .path3:before {
+  content: "\eaa7";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-command .path1:before {
+  content: "\eaa8";
+  color: rgb(3, 169, 244);
+}
+.icon-material-folder-command .path2:before {
+  content: "\eaa9";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-command-open .path1:before {
+  content: "\eaaa";
+  color: rgb(3, 169, 244);
+}
+.icon-material-folder-command-open .path2:before {
+  content: "\eaab";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-components .path1:before {
+  content: "\eaac";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-components .path2:before {
+  content: "\eaad";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-components-open .path1:before {
+  content: "\eaae";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-components-open .path2:before {
+  content: "\eaaf";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-config .path1:before {
+  content: "\eab0";
+  color: rgb(0, 172, 193);
+}
+.icon-material-folder-config .path2:before {
+  content: "\eab1";
+  margin-left: -1em;
+  color: rgb(128, 222, 234);
+}
+.icon-material-folder-config-open .path1:before {
+  content: "\eab2";
+  color: rgb(0, 172, 193);
+}
+.icon-material-folder-config-open .path2:before {
+  content: "\eab3";
+  margin-left: -1em;
+  color: rgb(128, 222, 234);
+}
+.icon-material-folder-connection .path1:before {
+  content: "\eab4";
+  color: rgb(0, 172, 193);
+}
+.icon-material-folder-connection .path2:before {
+  content: "\eab5";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-connection-open .path1:before {
+  content: "\eab6";
+  color: rgb(0, 172, 193);
+}
+.icon-material-folder-connection-open .path2:before {
+  content: "\eab7";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-constant .path1:before {
+  content: "\eab8";
+  color: rgb(96, 125, 139);
+}
+.icon-material-folder-constant .path2:before {
+  content: "\eab9";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-constant-open .path1:before {
+  content: "\eaba";
+  color: rgb(96, 125, 139);
+}
+.icon-material-folder-constant-open .path2:before {
+  content: "\eabb";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-container .path1:before {
+  content: "\eabc";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-container .path2:before {
+  content: "\eabd";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-container-open .path1:before {
+  content: "\eabe";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-container-open .path2:before {
+  content: "\eabf";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-content .path1:before {
+  content: "\eac0";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-content .path2:before {
+  content: "\eac1";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-content-open .path1:before {
+  content: "\eac2";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-content-open .path2:before {
+  content: "\eac3";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-context .path1:before {
+  content: "\eac4";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-context .path2:before {
+  content: "\eac5";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-context-open .path1:before {
+  content: "\eac6";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-context-open .path2:before {
+  content: "\eac7";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-contract .path1:before {
+  content: "\eac8";
+  color: rgb(68, 138, 255);
+}
+.icon-material-folder-contract .path2:before {
+  content: "\eac9";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-contract-open .path1:before {
+  content: "\eaca";
+  color: rgb(68, 138, 255);
+}
+.icon-material-folder-contract-open .path2:before {
+  content: "\eacb";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-controller .path1:before {
+  content: "\eacc";
+  color: rgb(255, 193, 7);
+}
+.icon-material-folder-controller .path2:before {
+  content: "\eacd";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-controller-open .path1:before {
+  content: "\eace";
+  color: rgb(255, 193, 7);
+}
+.icon-material-folder-controller-open .path2:before {
+  content: "\eacf";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-core .path1:before {
+  content: "\ead0";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-core .path2:before {
+  content: "\ead1";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-core-open .path1:before {
+  content: "\ead2";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-core-open .path2:before {
+  content: "\ead3";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-coverage .path1:before {
+  content: "\ead4";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-coverage .path2:before {
+  content: "\ead5";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-coverage-open .path1:before {
+  content: "\ead6";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-coverage-open .path2:before {
+  content: "\ead7";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-css .path1:before {
+  content: "\ead8";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-css .path2:before {
+  content: "\ead9";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-css-open .path1:before {
+  content: "\eada";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-css-open .path2:before {
+  content: "\eadb";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-custom .path1:before {
+  content: "\eadc";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-custom .path2:before {
+  content: "\eadd";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-custom-open .path1:before {
+  content: "\eade";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-custom-open .path2:before {
+  content: "\eadf";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-cypress .path1:before {
+  content: "\eae0";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-cypress .path2:before {
+  content: "\eae1";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-cypress-open .path1:before {
+  content: "\eae2";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-cypress-open .path2:before {
+  content: "\eae3";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-database .path1:before {
+  content: "\eae4";
+  color: rgb(255, 202, 40);
+}
+.icon-material-folder-database .path2:before {
+  content: "\eae5";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-database-open .path1:before {
+  content: "\eae6";
+  color: rgb(255, 202, 40);
+}
+.icon-material-folder-database-open .path2:before {
+  content: "\eae7";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-debug .path1:before {
+  content: "\eae8";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-debug .path2:before {
+  content: "\eae9";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-debug-open .path1:before {
+  content: "\eaea";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-debug-open .path2:before {
+  content: "\eaeb";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-decorators .path1:before {
+  content: "\eaec";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-decorators .path2:before {
+  content: "\eaed";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-decorators-open .path1:before {
+  content: "\eaee";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-decorators-open .path2:before {
+  content: "\eaef";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-delta .path1:before {
+  content: "\eaf0";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-delta .path2:before {
+  content: "\eaf1";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-delta-open .path1:before {
+  content: "\eaf2";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-delta-open .path2:before {
+  content: "\eaf3";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-dist .path1:before {
+  content: "\eaf4";
+  color: rgb(229, 115, 115);
+}
+.icon-material-folder-dist .path2:before {
+  content: "\eaf5";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-dist-open .path1:before {
+  content: "\eaf6";
+  color: rgb(229, 115, 115);
+}
+.icon-material-folder-dist-open .path2:before {
+  content: "\eaf7";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-docker .path1:before {
+  content: "\eaf8";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-docker .path2:before {
+  content: "\eaf9";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-docker .path3:before {
+  content: "\eafa";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-docker-open .path1:before {
+  content: "\eafb";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-docker-open .path2:before {
+  content: "\eafc";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-docker-open .path3:before {
+  content: "\eafd";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-docs .path1:before {
+  content: "\eafe";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-docs .path2:before {
+  content: "\eaff";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-docs-open .path1:before {
+  content: "\eb00";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-docs-open .path2:before {
+  content: "\eb01";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-download .path1:before {
+  content: "\eb02";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-download .path2:before {
+  content: "\eb03";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-download-open .path1:before {
+  content: "\eb04";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-download-open .path2:before {
+  content: "\eb05";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-dump .path1:before {
+  content: "\eb06";
+  color: rgb(117, 117, 117);
+}
+.icon-material-folder-dump .path2:before {
+  content: "\eb07";
+  margin-left: -1em;
+  color: rgb(189, 189, 189);
+}
+.icon-material-folder-dump-open .path1:before {
+  content: "\eb08";
+  color: rgb(117, 117, 117);
+}
+.icon-material-folder-dump-open .path2:before {
+  content: "\eb09";
+  margin-left: -1em;
+  color: rgb(189, 189, 189);
+}
+.icon-material-folder-environment .path1:before {
+  content: "\eb0a";
+  color: rgb(102, 187, 106);
+}
+.icon-material-folder-environment .path2:before {
+  content: "\eb0b";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-environment-open .path1:before {
+  content: "\eb0c";
+  color: rgb(102, 187, 106);
+}
+.icon-material-folder-environment-open .path2:before {
+  content: "\eb0d";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-error .path1:before {
+  content: "\eb0e";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-error .path2:before {
+  content: "\eb0f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-error-open .path1:before {
+  content: "\eb10";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-error-open .path2:before {
+  content: "\eb11";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-event .path1:before {
+  content: "\eb12";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-event .path2:before {
+  content: "\eb13";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-event-open .path1:before {
+  content: "\eb14";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-event-open .path2:before {
+  content: "\eb15";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-examples .path1:before {
+  content: "\eb16";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-examples .path2:before {
+  content: "\eb17";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-examples-open .path1:before {
+  content: "\eb18";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-examples-open .path2:before {
+  content: "\eb19";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-expo .path1:before {
+  content: "\eb1a";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-expo .path2:before {
+  content: "\eb1b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-expo-open .path1:before {
+  content: "\eb1c";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-expo-open .path2:before {
+  content: "\eb1d";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-export .path1:before {
+  content: "\eb1e";
+  color: rgb(255, 138, 101);
+}
+.icon-material-folder-export .path2:before {
+  content: "\eb1f";
+  margin-left: -1em;
+  color: rgb(251, 233, 231);
+  opacity: 0.949;
+}
+.icon-material-folder-export-open .path1:before {
+  content: "\eb20";
+  color: rgb(255, 138, 101);
+}
+.icon-material-folder-export-open .path2:before {
+  content: "\eb21";
+  margin-left: -1em;
+  color: rgb(251, 233, 231);
+  opacity: 0.949;
+}
+.icon-material-folder-fastlane .path1:before {
+  content: "\eb22";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-fastlane .path2:before {
+  content: "\eb23";
+  margin-left: -1em;
+  color: rgb(227, 242, 253);
+}
+.icon-material-folder-fastlane-open .path1:before {
+  content: "\eb24";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-fastlane-open .path2:before {
+  content: "\eb25";
+  margin-left: -1em;
+  color: rgb(227, 242, 253);
+}
+.icon-material-folder-firebase .path1:before {
+  content: "\eb26";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-firebase .path2:before {
+  content: "\eb27";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-firebase-open .path1:before {
+  content: "\eb28";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-firebase-open .path2:before {
+  content: "\eb29";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-flow .path1:before {
+  content: "\eb2a";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-flow .path2:before {
+  content: "\eb2b";
+  margin-left: -1em;
+  color: rgb(251, 192, 45);
+  opacity: 0.976;
+}
+.icon-material-folder-flow-open .path1:before {
+  content: "\eb2c";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-flow-open .path2:before {
+  content: "\eb2d";
+  margin-left: -1em;
+  color: rgb(251, 192, 45);
+  opacity: 0.976;
+}
+.icon-material-folder-font .path1:before {
+  content: "\eb2e";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-font .path2:before {
+  content: "\eb2f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-font-open .path1:before {
+  content: "\eb30";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-font-open .path2:before {
+  content: "\eb31";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-functions .path1:before {
+  content: "\eb32";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-functions .path2:before {
+  content: "\eb33";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-functions-open .path1:before {
+  content: "\eb34";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-functions-open .path2:before {
+  content: "\eb35";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-gamemaker .path1:before {
+  content: "\eb36";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-gamemaker .path2:before {
+  content: "\eb37";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-gamemaker-open .path1:before {
+  content: "\eb38";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-gamemaker-open .path2:before {
+  content: "\eb39";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-generator .path1:before {
+  content: "\eb3a";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-generator .path2:before {
+  content: "\eb3b";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-generator-open .path1:before {
+  content: "\eb3c";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-generator-open .path2:before {
+  content: "\eb3d";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-git .path1:before {
+  content: "\eb3e";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-git .path2:before {
+  content: "\eb3f";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-github .path1:before {
+  content: "\eb40";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-github .path2:before {
+  content: "\eb41";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-folder-github-open .path1:before {
+  content: "\eb42";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-github-open .path2:before {
+  content: "\eb43";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-folder-gitlab .path1:before {
+  content: "\eb44";
+  color: rgb(117, 117, 117);
+}
+.icon-material-folder-gitlab .path2:before {
+  content: "\eb45";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-folder-gitlab .path3:before {
+  content: "\eb46";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-folder-gitlab .path4:before {
+  content: "\eb47";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-gitlab .path5:before {
+  content: "\eb48";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-folder-gitlab-open .path1:before {
+  content: "\eb49";
+  color: rgb(117, 117, 117);
+}
+.icon-material-folder-gitlab-open .path2:before {
+  content: "\eb4a";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-folder-gitlab-open .path3:before {
+  content: "\eb4b";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-folder-gitlab-open .path4:before {
+  content: "\eb4c";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-gitlab-open .path5:before {
+  content: "\eb4d";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-folder-git-open .path1:before {
+  content: "\eb4e";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-git-open .path2:before {
+  content: "\eb4f";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-global .path1:before {
+  content: "\eb50";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-global .path2:before {
+  content: "\eb51";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-global-open .path1:before {
+  content: "\eb52";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-global-open .path2:before {
+  content: "\eb53";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-godot .path1:before {
+  content: "\eb54";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-godot .path2:before {
+  content: "\eb55";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-godot .path3:before {
+  content: "\eb56";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-godot-open .path1:before {
+  content: "\eb57";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-godot-open .path2:before {
+  content: "\eb58";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-godot-open .path3:before {
+  content: "\eb59";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-gradle .path1:before {
+  content: "\eb5a";
+  color: rgb(0, 151, 167);
+}
+.icon-material-folder-gradle .path2:before {
+  content: "\eb5b";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-gradle-open .path1:before {
+  content: "\eb5c";
+  color: rgb(0, 151, 167);
+}
+.icon-material-folder-gradle-open .path2:before {
+  content: "\eb5d";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-graphql .path1:before {
+  content: "\eb5e";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-graphql .path2:before {
+  content: "\eb5f";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-graphql-open .path1:before {
+  content: "\eb60";
+  color: rgb(236, 64, 122);
+}
+.icon-material-folder-graphql-open .path2:before {
+  content: "\eb61";
+  margin-left: -1em;
+  color: rgb(248, 187, 208);
+}
+.icon-material-folder-guard .path1:before {
+  content: "\eb62";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-guard .path2:before {
+  content: "\eb63";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-guard-open .path1:before {
+  content: "\eb64";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-guard-open .path2:before {
+  content: "\eb65";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-gulp .path1:before {
+  content: "\eb66";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-gulp .path2:before {
+  content: "\eb67";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-gulp-open .path1:before {
+  content: "\eb68";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-gulp-open .path2:before {
+  content: "\eb69";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-helper .path1:before {
+  content: "\eb6a";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-helper .path2:before {
+  content: "\eb6b";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-helper-open .path1:before {
+  content: "\eb6c";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-helper-open .path2:before {
+  content: "\eb6d";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-home .path1:before {
+  content: "\eb6e";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-home .path2:before {
+  content: "\eb6f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-home-open .path1:before {
+  content: "\eb70";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-home-open .path2:before {
+  content: "\eb71";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-hook .path1:before {
+  content: "\eb72";
+  color: rgb(126, 87, 194);
+}
+.icon-material-folder-hook .path2:before {
+  content: "\eb73";
+  margin-left: -1em;
+  color: rgb(209, 196, 233);
+}
+.icon-material-folder-hook-open .path1:before {
+  content: "\eb74";
+  color: rgb(126, 87, 194);
+}
+.icon-material-folder-hook-open .path2:before {
+  content: "\eb75";
+  margin-left: -1em;
+  color: rgb(209, 196, 233);
+}
+.icon-material-folder-husky .path1:before {
+  content: "\eb76";
+  color: rgb(96, 125, 139);
+}
+.icon-material-folder-husky .path2:before {
+  content: "\eb77";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-husky-open .path1:before {
+  content: "\eb78";
+  color: rgb(96, 125, 139);
+}
+.icon-material-folder-husky-open .path2:before {
+  content: "\eb79";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-i18n .path1:before {
+  content: "\eb7a";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-i18n .path2:before {
+  content: "\eb7b";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-i18n-open .path1:before {
+  content: "\eb7c";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-i18n-open .path2:before {
+  content: "\eb7d";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-images .path1:before {
+  content: "\eb7e";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-images .path2:before {
+  content: "\eb7f";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-images-open .path1:before {
+  content: "\eb80";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-images-open .path2:before {
+  content: "\eb81";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-import .path1:before {
+  content: "\eb82";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-import .path2:before {
+  content: "\eb83";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-import-open .path1:before {
+  content: "\eb84";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-import-open .path2:before {
+  content: "\eb85";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-include .path1:before {
+  content: "\eb86";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-include .path2:before {
+  content: "\eb87";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-include-open .path1:before {
+  content: "\eb88";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-include-open .path2:before {
+  content: "\eb89";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-intellij .path1:before {
+  content: "\eb8a";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-intellij .path2:before {
+  content: "\eb8b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij .path3:before {
+  content: "\eb8c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij .path4:before {
+  content: "\eb8d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij .path5:before {
+  content: "\eb8e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij_light .path1:before {
+  content: "\eb8f";
+  color: rgb(176, 190, 197);
+}
+.icon-material-folder-intellij_light .path2:before {
+  content: "\eb90";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij_light .path3:before {
+  content: "\eb91";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij_light .path4:before {
+  content: "\eb92";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij_light .path5:before {
+  content: "\eb93";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open .path1:before {
+  content: "\eb94";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-intellij-open .path2:before {
+  content: "\eb95";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open .path3:before {
+  content: "\eb96";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open .path4:before {
+  content: "\eb97";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open .path5:before {
+  content: "\eb98";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open_light .path1:before {
+  content: "\eb99";
+  color: rgb(176, 190, 197);
+}
+.icon-material-folder-intellij-open_light .path2:before {
+  content: "\eb9a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open_light .path3:before {
+  content: "\eb9b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open_light .path4:before {
+  content: "\eb9c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-intellij-open_light .path5:before {
+  content: "\eb9d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-folder-interface .path1:before {
+  content: "\eb9e";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-interface .path2:before {
+  content: "\eb9f";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-interface-open .path1:before {
+  content: "\eba0";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-interface-open .path2:before {
+  content: "\eba1";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-ios .path1:before {
+  content: "\eba2";
+  color: rgb(120, 144, 156);
+}
+.icon-material-folder-ios .path2:before {
+  content: "\eba3";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-ios-open .path1:before {
+  content: "\eba4";
+  color: rgb(120, 144, 156);
+}
+.icon-material-folder-ios-open .path2:before {
+  content: "\eba5";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-java .path1:before {
+  content: "\eba6";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-java .path2:before {
+  content: "\eba7";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-java-open .path1:before {
+  content: "\eba8";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-java-open .path2:before {
+  content: "\eba9";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-javascript .path1:before {
+  content: "\ebaa";
+  color: rgb(255, 202, 40);
+}
+.icon-material-folder-javascript .path2:before {
+  content: "\ebab";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-javascript-open .path1:before {
+  content: "\ebac";
+  color: rgb(255, 202, 40);
+}
+.icon-material-folder-javascript-open .path2:before {
+  content: "\ebad";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-jinja .path1:before {
+  content: "\ebae";
+  color: rgb(224, 224, 224);
+}
+.icon-material-folder-jinja .path2:before {
+  content: "\ebaf";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja .path3:before {
+  content: "\ebb0";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja .path4:before {
+  content: "\ebb1";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja .path5:before {
+  content: "\ebb2";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja_light .path1:before {
+  content: "\ebb3";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-jinja_light .path2:before {
+  content: "\ebb4";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja_light .path3:before {
+  content: "\ebb5";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja_light .path4:before {
+  content: "\ebb6";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja_light .path5:before {
+  content: "\ebb7";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja-open .path1:before {
+  content: "\ebb8";
+  color: rgb(224, 224, 224);
+}
+.icon-material-folder-jinja-open .path2:before {
+  content: "\ebb9";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja-open .path3:before {
+  content: "\ebba";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja-open .path4:before {
+  content: "\ebbb";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja-open .path5:before {
+  content: "\ebbc";
+  margin-left: -1em;
+  color: rgb(66, 66, 66);
+}
+.icon-material-folder-jinja-open_light .path1:before {
+  content: "\ebbd";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-jinja-open_light .path2:before {
+  content: "\ebbe";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja-open_light .path3:before {
+  content: "\ebbf";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja-open_light .path4:before {
+  content: "\ebc0";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-jinja-open_light .path5:before {
+  content: "\ebc1";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-job .path1:before {
+  content: "\ebc2";
+  color: rgb(255, 160, 0);
+}
+.icon-material-folder-job .path2:before {
+  content: "\ebc3";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-job-open .path1:before {
+  content: "\ebc4";
+  color: rgb(255, 160, 0);
+}
+.icon-material-folder-job-open .path2:before {
+  content: "\ebc5";
+  margin-left: -1em;
+  color: rgb(255, 236, 179);
+}
+.icon-material-folder-json .path1:before {
+  content: "\ebc6";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-json .path2:before {
+  content: "\ebc7";
+  margin-left: -1em;
+  color: rgb(255, 248, 225);
+}
+.icon-material-folder-json-open .path1:before {
+  content: "\ebc8";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-json-open .path2:before {
+  content: "\ebc9";
+  margin-left: -1em;
+  color: rgb(255, 248, 225);
+}
+.icon-material-folder-keys .path1:before {
+  content: "\ebca";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-keys .path2:before {
+  content: "\ebcb";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-keys-open .path1:before {
+  content: "\ebcc";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-keys-open .path2:before {
+  content: "\ebcd";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-kubernetes .path1:before {
+  content: "\ebce";
+  color: rgb(100, 181, 246);
+}
+.icon-material-folder-kubernetes .path2:before {
+  content: "\ebcf";
+  margin-left: -1em;
+  color: rgb(50, 109, 230);
+}
+.icon-material-folder-kubernetes .path3:before {
+  content: "\ebd0";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-kubernetes-open .path1:before {
+  content: "\ebd1";
+  color: rgb(100, 181, 246);
+}
+.icon-material-folder-kubernetes-open .path2:before {
+  content: "\ebd2";
+  margin-left: -1em;
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-kubernetes-open .path3:before {
+  content: "\ebd3";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-folder-layout .path1:before {
+  content: "\ebd4";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-layout .path2:before {
+  content: "\ebd5";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-layout-open .path1:before {
+  content: "\ebd6";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-layout-open .path2:before {
+  content: "\ebd7";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-less .path1:before {
+  content: "\ebd8";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-less .path2:before {
+  content: "\ebd9";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-less-open .path1:before {
+  content: "\ebda";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-less-open .path2:before {
+  content: "\ebdb";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-lib .path1:before {
+  content: "\ebdc";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-lib .path2:before {
+  content: "\ebdd";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-lib-open .path1:before {
+  content: "\ebde";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-lib-open .path2:before {
+  content: "\ebdf";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-log .path1:before {
+  content: "\ebe0";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-log .path2:before {
+  content: "\ebe1";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-log-open .path1:before {
+  content: "\ebe2";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-log-open .path2:before {
+  content: "\ebe3";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-lua .path1:before {
+  content: "\ebe4";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-lua .path2:before {
+  content: "\ebe5";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-folder-lua .path3:before {
+  content: "\ebe6";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-lua .path4:before {
+  content: "\ebe7";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-lua-open .path1:before {
+  content: "\ebe8";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-lua-open .path2:before {
+  content: "\ebe9";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-folder-lua-open .path3:before {
+  content: "\ebea";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-lua-open .path4:before {
+  content: "\ebeb";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-mail .path1:before {
+  content: "\ebec";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-mail .path2:before {
+  content: "\ebed";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-mail-open .path1:before {
+  content: "\ebee";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-mail-open .path2:before {
+  content: "\ebef";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-mappings .path1:before {
+  content: "\ebf0";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-mappings .path2:before {
+  content: "\ebf1";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-mappings-open .path1:before {
+  content: "\ebf2";
+  color: rgb(175, 180, 43);
+}
+.icon-material-folder-mappings-open .path2:before {
+  content: "\ebf3";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-markdown .path1:before {
+  content: "\ebf4";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-markdown .path2:before {
+  content: "\ebf5";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-markdown-open .path1:before {
+  content: "\ebf6";
+  color: rgb(2, 119, 189);
+}
+.icon-material-folder-markdown-open .path2:before {
+  content: "\ebf7";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-mercurial .path1:before {
+  content: "\ebf8";
+  color: rgb(120, 144, 156);
+}
+.icon-material-folder-mercurial .path2:before {
+  content: "\ebf9";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-mercurial .path3:before {
+  content: "\ebfa";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-mercurial .path4:before {
+  content: "\ebfb";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-mercurial-open .path1:before {
+  content: "\ebfc";
+  color: rgb(120, 144, 156);
+}
+.icon-material-folder-mercurial-open .path2:before {
+  content: "\ebfd";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-mercurial-open .path3:before {
+  content: "\ebfe";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-mercurial-open .path4:before {
+  content: "\ebff";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-messages .path1:before {
+  content: "\ec00";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-messages .path2:before {
+  content: "\ec01";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-messages-open .path1:before {
+  content: "\ec02";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-messages-open .path2:before {
+  content: "\ec03";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-meta .path1:before {
+  content: "\ec04";
+  color: rgb(124, 179, 66);
+}
+.icon-material-folder-meta .path2:before {
+  content: "\ec05";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-meta-open .path1:before {
+  content: "\ec06";
+  color: rgb(124, 179, 66);
+}
+.icon-material-folder-meta-open .path2:before {
+  content: "\ec07";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-middleware .path1:before {
+  content: "\ec08";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-middleware .path2:before {
+  content: "\ec09";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-middleware-open .path1:before {
+  content: "\ec0a";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-middleware-open .path2:before {
+  content: "\ec0b";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-mjml .path1:before {
+  content: "\ec0c";
+  color: rgb(255, 87, 34);
+}
+.icon-material-folder-mjml .path2:before {
+  content: "\ec0d";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-mjml-open .path1:before {
+  content: "\ec0e";
+  color: rgb(255, 87, 34);
+}
+.icon-material-folder-mjml-open .path2:before {
+  content: "\ec0f";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-mobile .path1:before {
+  content: "\ec10";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-mobile .path2:before {
+  content: "\ec11";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-mobile-open .path1:before {
+  content: "\ec12";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-mobile-open .path2:before {
+  content: "\ec13";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-mock .path1:before {
+  content: "\ec14";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-mock .path2:before {
+  content: "\ec15";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-mock-open .path1:before {
+  content: "\ec16";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-mock-open .path2:before {
+  content: "\ec17";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-netlify .path1:before {
+  content: "\ec18";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-netlify .path2:before {
+  content: "\ec19";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-netlify-open .path1:before {
+  content: "\ec1a";
+  color: rgb(38, 166, 154);
+}
+.icon-material-folder-netlify-open .path2:before {
+  content: "\ec1b";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-next .path1:before {
+  content: "\ec1c";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-next .path2:before {
+  content: "\ec1d";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-next-open .path1:before {
+  content: "\ec1e";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-next-open .path2:before {
+  content: "\ec1f";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-ngrx-actions .path1:before {
+  content: "\ec20";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-ngrx-actions .path2:before {
+  content: "\ec21";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-ngrx-actions-open .path1:before {
+  content: "\ec22";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-ngrx-actions-open .path2:before {
+  content: "\ec23";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-ngrx-effects .path1:before {
+  content: "\ec24";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-ngrx-effects .path2:before {
+  content: "\ec25";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-ngrx-effects-open .path1:before {
+  content: "\ec26";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-ngrx-effects-open .path2:before {
+  content: "\ec27";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-ngrx-entities .path1:before {
+  content: "\ec28";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-ngrx-entities .path2:before {
+  content: "\ec29";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-ngrx-entities-open .path1:before {
+  content: "\ec2a";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-ngrx-entities-open .path2:before {
+  content: "\ec2b";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-ngrx-reducer .path1:before {
+  content: "\ec2c";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-ngrx-reducer .path2:before {
+  content: "\ec2d";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-ngrx-reducer-open .path1:before {
+  content: "\ec2e";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-ngrx-reducer-open .path2:before {
+  content: "\ec2f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-ngrx-selectors .path1:before {
+  content: "\ec30";
+  color: rgb(255, 110, 64);
+}
+.icon-material-folder-ngrx-selectors .path2:before {
+  content: "\ec31";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-ngrx-selectors-open .path1:before {
+  content: "\ec32";
+  color: rgb(255, 110, 64);
+}
+.icon-material-folder-ngrx-selectors-open .path2:before {
+  content: "\ec33";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-ngrx-state .path1:before {
+  content: "\ec34";
+  color: rgb(158, 157, 36);
+}
+.icon-material-folder-ngrx-state .path2:before {
+  content: "\ec35";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-ngrx-state-open .path1:before {
+  content: "\ec36";
+  color: rgb(158, 157, 36);
+}
+.icon-material-folder-ngrx-state-open .path2:before {
+  content: "\ec37";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-ngrx-store .path1:before {
+  content: "\ec38";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-ngrx-store .path2:before {
+  content: "\ec39";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-ngrx-store-open .path1:before {
+  content: "\ec3a";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-ngrx-store-open .path2:before {
+  content: "\ec3b";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-node .path1:before {
+  content: "\ec3c";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-node .path2:before {
+  content: "\ec3d";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-node-open .path1:before {
+  content: "\ec3e";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-node-open .path2:before {
+  content: "\ec3f";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-nuxt .path1:before {
+  content: "\ec40";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-nuxt .path2:before {
+  content: "\ec41";
+  margin-left: -1em;
+  color: rgb(105, 240, 174);
+}
+.icon-material-folder-nuxt .path3:before {
+  content: "\ec42";
+  margin-left: -1em;
+  color: rgb(0, 230, 118);
+}
+.icon-material-folder-nuxt-open .path1:before {
+  content: "\ec43";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-nuxt-open .path2:before {
+  content: "\ec44";
+  margin-left: -1em;
+  color: rgb(105, 240, 174);
+}
+.icon-material-folder-nuxt-open .path3:before {
+  content: "\ec45";
+  margin-left: -1em;
+  color: rgb(0, 230, 118);
+}
+.icon-material-folder-other .path1:before {
+  content: "\ec46";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-other .path2:before {
+  content: "\ec47";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-other-open .path1:before {
+  content: "\ec48";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-other-open .path2:before {
+  content: "\ec49";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-packages .path1:before {
+  content: "\ec4a";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-packages .path2:before {
+  content: "\ec4b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-packages-open .path1:before {
+  content: "\ec4c";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-packages-open .path2:before {
+  content: "\ec4d";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-pdf .path1:before {
+  content: "\ec4e";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-pdf .path2:before {
+  content: "\ec4f";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-pdf-open .path1:before {
+  content: "\ec50";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-pdf-open .path2:before {
+  content: "\ec51";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-php .path1:before {
+  content: "\ec52";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-php .path2:before {
+  content: "\ec53";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-phpmailer .path1:before {
+  content: "\ec54";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-phpmailer .path2:before {
+  content: "\ec55";
+  margin-left: -1em;
+  color: rgb(232, 232, 232);
+}
+.icon-material-folder-phpmailer .path3:before {
+  content: "\ec56";
+  margin-left: -1em;
+  color: rgb(255, 209, 128);
+}
+.icon-material-folder-phpmailer .path4:before {
+  content: "\ec57";
+  margin-left: -1em;
+  color: rgb(255, 209, 128);
+}
+.icon-material-folder-phpmailer-open .path1:before {
+  content: "\ec58";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-phpmailer-open .path2:before {
+  content: "\ec59";
+  margin-left: -1em;
+  color: rgb(232, 232, 232);
+}
+.icon-material-folder-phpmailer-open .path3:before {
+  content: "\ec5a";
+  margin-left: -1em;
+  color: rgb(255, 209, 128);
+}
+.icon-material-folder-phpmailer-open .path4:before {
+  content: "\ec5b";
+  margin-left: -1em;
+  color: rgb(255, 209, 128);
+}
+.icon-material-folder-php-open .path1:before {
+  content: "\ec5c";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-php-open .path2:before {
+  content: "\ec5d";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-pipe .path1:before {
+  content: "\ec5e";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-pipe .path2:before {
+  content: "\ec5f";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-pipe-open .path1:before {
+  content: "\ec60";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-pipe-open .path2:before {
+  content: "\ec61";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-plastic .path1:before {
+  content: "\ec62";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-plastic .path2:before {
+  content: "\ec63";
+  margin-left: -1em;
+  color: rgb(255, 243, 224);
+}
+.icon-material-folder-plastic .path3:before {
+  content: "\ec64";
+  margin-left: -1em;
+  color: rgb(255, 243, 224);
+}
+.icon-material-folder-plastic-open .path1:before {
+  content: "\ec65";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-plastic-open .path2:before {
+  content: "\ec66";
+  margin-left: -1em;
+  color: rgb(255, 243, 224);
+}
+.icon-material-folder-plastic-open .path3:before {
+  content: "\ec67";
+  margin-left: -1em;
+  color: rgb(255, 243, 224);
+}
+.icon-material-folder-plugin .path1:before {
+  content: "\ec68";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-plugin .path2:before {
+  content: "\ec69";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-plugin-open .path1:before {
+  content: "\ec6a";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-plugin-open .path2:before {
+  content: "\ec6b";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-prisma .path1:before {
+  content: "\ec6c";
+  color: rgb(0, 191, 165);
+}
+.icon-material-folder-prisma .path2:before {
+  content: "\ec6d";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-prisma-open .path1:before {
+  content: "\ec6e";
+  color: rgb(0, 191, 165);
+}
+.icon-material-folder-prisma-open .path2:before {
+  content: "\ec6f";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-private .path1:before {
+  content: "\ec70";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-private .path2:before {
+  content: "\ec71";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-private-open .path1:before {
+  content: "\ec72";
+  color: rgb(255, 82, 82);
+}
+.icon-material-folder-private-open .path2:before {
+  content: "\ec73";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-project .path1:before {
+  content: "\ec74";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-project .path2:before {
+  content: "\ec75";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-project-open .path1:before {
+  content: "\ec76";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-project-open .path2:before {
+  content: "\ec77";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-proto .path1:before {
+  content: "\ec78";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-proto .path2:before {
+  content: "\ec79";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-proto .path3:before {
+  content: "\ec7a";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-proto .path4:before {
+  content: "\ec7b";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-proto-open .path1:before {
+  content: "\ec7c";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-proto-open .path2:before {
+  content: "\ec7d";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-proto-open .path3:before {
+  content: "\ec7e";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-proto-open .path4:before {
+  content: "\ec7f";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-public .path1:before {
+  content: "\ec80";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-public .path2:before {
+  content: "\ec81";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-public-open .path1:before {
+  content: "\ec82";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-public-open .path2:before {
+  content: "\ec83";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-python .path1:before {
+  content: "\ec84";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-python .path2:before {
+  content: "\ec85";
+  margin-left: -1em;
+  color: rgb(60, 120, 170);
+}
+.icon-material-folder-python .path3:before {
+  content: "\ec86";
+  margin-left: -1em;
+  color: rgb(253, 216, 53);
+}
+.icon-material-folder-python-open .path1:before {
+  content: "\ec87";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-python-open .path2:before {
+  content: "\ec88";
+  margin-left: -1em;
+  color: rgb(60, 120, 170);
+}
+.icon-material-folder-python-open .path3:before {
+  content: "\ec89";
+  margin-left: -1em;
+  color: rgb(253, 216, 53);
+}
+.icon-material-folder-quasar .path1:before {
+  content: "\ec8a";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-quasar .path2:before {
+  content: "\ec8b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-quasar-open .path1:before {
+  content: "\ec8c";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-quasar-open .path2:before {
+  content: "\ec8d";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-queue .path1:before {
+  content: "\ec8e";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-queue .path2:before {
+  content: "\ec8f";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue .path3:before {
+  content: "\ec90";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue .path4:before {
+  content: "\ec91";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue .path5:before {
+  content: "\ec92";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue .path6:before {
+  content: "\ec93";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue .path7:before {
+  content: "\ec94";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path1:before {
+  content: "\ec95";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-queue-open .path2:before {
+  content: "\ec96";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path3:before {
+  content: "\ec97";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path4:before {
+  content: "\ec98";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path5:before {
+  content: "\ec99";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path6:before {
+  content: "\ec9a";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-queue-open .path7:before {
+  content: "\ec9b";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-react-components .path1:before {
+  content: "\ec9c";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-react-components .path2:before {
+  content: "\ec9d";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-react-components-open .path1:before {
+  content: "\ec9e";
+  color: rgb(0, 188, 212);
+}
+.icon-material-folder-react-components-open .path2:before {
+  content: "\ec9f";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-redux-actions .path1:before {
+  content: "\eca0";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-redux-actions .path2:before {
+  content: "\eca1";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-actions .path3:before {
+  content: "\eca2";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-actions .path4:before {
+  content: "\eca3";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-actions-open .path1:before {
+  content: "\eca4";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-redux-actions-open .path2:before {
+  content: "\eca5";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-actions-open .path3:before {
+  content: "\eca6";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-actions-open .path4:before {
+  content: "\eca7";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-redux-reducer .path1:before {
+  content: "\eca8";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-redux-reducer .path2:before {
+  content: "\eca9";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-reducer .path3:before {
+  content: "\ecaa";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-reducer .path4:before {
+  content: "\ecab";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-reducer-open .path1:before {
+  content: "\ecac";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-redux-reducer-open .path2:before {
+  content: "\ecad";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-reducer-open .path3:before {
+  content: "\ecae";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-reducer-open .path4:before {
+  content: "\ecaf";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-redux-selector .path1:before {
+  content: "\ecb0";
+  color: rgb(255, 110, 64);
+}
+.icon-material-folder-redux-selector .path2:before {
+  content: "\ecb1";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-selector .path3:before {
+  content: "\ecb2";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-selector .path4:before {
+  content: "\ecb3";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-selector-open .path1:before {
+  content: "\ecb4";
+  color: rgb(255, 110, 64);
+}
+.icon-material-folder-redux-selector-open .path2:before {
+  content: "\ecb5";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-selector-open .path3:before {
+  content: "\ecb6";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-selector-open .path4:before {
+  content: "\ecb7";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-redux-store .path1:before {
+  content: "\ecb8";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-redux-store .path2:before {
+  content: "\ecb9";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-redux-store .path3:before {
+  content: "\ecba";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-redux-store .path4:before {
+  content: "\ecbb";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-redux-store-open .path1:before {
+  content: "\ecbc";
+  color: rgb(139, 195, 74);
+}
+.icon-material-folder-redux-store-open .path2:before {
+  content: "\ecbd";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-redux-store-open .path3:before {
+  content: "\ecbe";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-redux-store-open .path4:before {
+  content: "\ecbf";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-resolver .path1:before {
+  content: "\ecc0";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-resolver .path2:before {
+  content: "\ecc1";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-resolver-open .path1:before {
+  content: "\ecc2";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-resolver-open .path2:before {
+  content: "\ecc3";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-resource .path1:before {
+  content: "\ecc4";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-resource .path2:before {
+  content: "\ecc5";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-resource-open .path1:before {
+  content: "\ecc6";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-resource-open .path2:before {
+  content: "\ecc7";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-review .path1:before {
+  content: "\ecc8";
+  color: rgb(33, 150, 243);
+}
+.icon-material-folder-review .path2:before {
+  content: "\ecc9";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-review-open .path1:before {
+  content: "\ecca";
+  color: rgb(33, 150, 243);
+}
+.icon-material-folder-review-open .path2:before {
+  content: "\eccb";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-routes .path1:before {
+  content: "\eccc";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-routes .path2:before {
+  content: "\eccd";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-routes-open .path1:before {
+  content: "\ecce";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-routes-open .path2:before {
+  content: "\eccf";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-rules .path1:before {
+  content: "\ecd0";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-rules .path2:before {
+  content: "\ecd1";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-rules-open .path1:before {
+  content: "\ecd2";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-rules-open .path2:before {
+  content: "\ecd3";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-sass .path1:before {
+  content: "\ecd4";
+  color: rgb(240, 98, 146);
+}
+.icon-material-folder-sass .path2:before {
+  content: "\ecd5";
+  margin-left: -1em;
+  color: rgb(252, 228, 236);
+}
+.icon-material-folder-sass-open .path1:before {
+  content: "\ecd6";
+  color: rgb(240, 98, 146);
+}
+.icon-material-folder-sass-open .path2:before {
+  content: "\ecd7";
+  margin-left: -1em;
+  color: rgb(252, 228, 236);
+}
+.icon-material-folder-scala .path1:before {
+  content: "\ecd8";
+  color: rgb(244, 67, 54);
+}
+.icon-material-folder-scala .path2:before {
+  content: "\ecd9";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-scala-open .path1:before {
+  content: "\ecda";
+  color: rgb(244, 67, 54);
+}
+.icon-material-folder-scala-open .path2:before {
+  content: "\ecdb";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-scripts .path1:before {
+  content: "\ecdc";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-scripts .path2:before {
+  content: "\ecdd";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-scripts-open .path1:before {
+  content: "\ecde";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-scripts-open .path2:before {
+  content: "\ecdf";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-secure .path1:before {
+  content: "\ece0";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-secure .path2:before {
+  content: "\ece1";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-secure-open .path1:before {
+  content: "\ece2";
+  color: rgb(249, 168, 37);
+}
+.icon-material-folder-secure-open .path2:before {
+  content: "\ece3";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-server .path1:before {
+  content: "\ece4";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-server .path2:before {
+  content: "\ece5";
+  margin-left: -1em;
+  color: rgb(255, 253, 231);
+}
+.icon-material-folder-serverless .path1:before {
+  content: "\ece6";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-serverless .path2:before {
+  content: "\ece7";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-serverless-open .path1:before {
+  content: "\ece8";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-serverless-open .path2:before {
+  content: "\ece9";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-server-open .path1:before {
+  content: "\ecea";
+  color: rgb(251, 192, 45);
+}
+.icon-material-folder-server-open .path2:before {
+  content: "\eceb";
+  margin-left: -1em;
+  color: rgb(255, 253, 231);
+}
+.icon-material-folder-shader .path1:before {
+  content: "\ecec";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-shader .path2:before {
+  content: "\eced";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-shader-open .path1:before {
+  content: "\ecee";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-shader-open .path2:before {
+  content: "\ecef";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-shared .path1:before {
+  content: "\ecf0";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-shared .path2:before {
+  content: "\ecf1";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-shared-open .path1:before {
+  content: "\ecf2";
+  color: rgb(171, 71, 188);
+}
+.icon-material-folder-shared-open .path2:before {
+  content: "\ecf3";
+  margin-left: -1em;
+  color: rgb(225, 190, 231);
+}
+.icon-material-folder-src .path1:before {
+  content: "\ecf4";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-src .path2:before {
+  content: "\ecf5";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-src-open .path1:before {
+  content: "\ecf6";
+  color: rgb(76, 175, 80);
+}
+.icon-material-folder-src-open .path2:before {
+  content: "\ecf7";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-stack .path1:before {
+  content: "\ecf8";
+  color: rgb(255, 167, 38);
+}
+.icon-material-folder-stack .path2:before {
+  content: "\ecf9";
+  margin-left: -1em;
+  color: rgb(255, 224, 178);
+}
+.icon-material-folder-stack-open .path1:before {
+  content: "\ecfa";
+  color: rgb(255, 167, 38);
+}
+.icon-material-folder-stack-open .path2:before {
+  content: "\ecfb";
+  margin-left: -1em;
+  color: rgb(255, 224, 178);
+}
+.icon-material-folder-stencil .path1:before {
+  content: "\ecfc";
+  color: rgb(68, 138, 255);
+}
+.icon-material-folder-stencil .path2:before {
+  content: "\ecfd";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-stencil-open .path1:before {
+  content: "\ecfe";
+  color: rgb(68, 138, 255);
+}
+.icon-material-folder-stencil-open .path2:before {
+  content: "\ecff";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-storybook .path1:before {
+  content: "\ed00";
+  color: rgb(255, 64, 129);
+}
+.icon-material-folder-storybook .path2:before {
+  content: "\ed01";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-storybook-open .path1:before {
+  content: "\ed02";
+  color: rgb(255, 64, 129);
+}
+.icon-material-folder-storybook-open .path2:before {
+  content: "\ed03";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-stylus .path1:before {
+  content: "\ed04";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-stylus .path2:before {
+  content: "\ed05";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-stylus-open .path1:before {
+  content: "\ed06";
+  color: rgb(192, 202, 51);
+}
+.icon-material-folder-stylus-open .path2:before {
+  content: "\ed07";
+  margin-left: -1em;
+  color: rgb(240, 244, 195);
+}
+.icon-material-folder-sublime .path1:before {
+  content: "\ed08";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-sublime .path2:before {
+  content: "\ed09";
+  margin-left: -1em;
+  color: rgb(255, 167, 38);
+}
+.icon-material-folder-sublime-open .path1:before {
+  content: "\ed0a";
+  color: rgb(97, 97, 97);
+}
+.icon-material-folder-sublime-open .path2:before {
+  content: "\ed0b";
+  margin-left: -1em;
+  color: rgb(255, 167, 38);
+}
+.icon-material-folder-supabase .path1:before {
+  content: "\ed0c";
+  color: rgb(102, 187, 106);
+}
+.icon-material-folder-supabase .path2:before {
+  content: "\ed0d";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-supabase-open .path1:before {
+  content: "\ed0e";
+  color: rgb(102, 187, 106);
+}
+.icon-material-folder-supabase-open .path2:before {
+  content: "\ed0f";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-svelte .path1:before {
+  content: "\ed10";
+  color: rgb(255, 87, 34);
+}
+.icon-material-folder-svelte .path2:before {
+  content: "\ed11";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-svelte-open .path1:before {
+  content: "\ed12";
+  color: rgb(255, 87, 34);
+}
+.icon-material-folder-svelte-open .path2:before {
+  content: "\ed13";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-svg .path1:before {
+  content: "\ed14";
+  color: rgb(255, 179, 0);
+}
+.icon-material-folder-svg .path2:before {
+  content: "\ed15";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-svg-open .path1:before {
+  content: "\ed16";
+  color: rgb(255, 179, 0);
+}
+.icon-material-folder-svg-open .path2:before {
+  content: "\ed17";
+  margin-left: -1em;
+  color: rgb(255, 249, 196);
+}
+.icon-material-folder-syntax .path1:before {
+  content: "\ed18";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-syntax .path2:before {
+  content: "\ed19";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-syntax-open .path1:before {
+  content: "\ed1a";
+  color: rgb(239, 83, 80);
+}
+.icon-material-folder-syntax-open .path2:before {
+  content: "\ed1b";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-target .path1:before {
+  content: "\ed1c";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-target .path2:before {
+  content: "\ed1d";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-target-open .path1:before {
+  content: "\ed1e";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-target-open .path2:before {
+  content: "\ed1f";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-tasks .path1:before {
+  content: "\ed20";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-tasks .path2:before {
+  content: "\ed21";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-tasks-open .path1:before {
+  content: "\ed22";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-tasks-open .path2:before {
+  content: "\ed23";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-temp .path1:before {
+  content: "\ed24";
+  color: rgb(0, 151, 167);
+}
+.icon-material-folder-temp .path2:before {
+  content: "\ed25";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-template .path1:before {
+  content: "\ed26";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-template .path2:before {
+  content: "\ed27";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-template-open .path1:before {
+  content: "\ed28";
+  color: rgb(141, 110, 99);
+}
+.icon-material-folder-template-open .path2:before {
+  content: "\ed29";
+  margin-left: -1em;
+  color: rgb(215, 204, 200);
+}
+.icon-material-folder-temp-open .path1:before {
+  content: "\ed2a";
+  color: rgb(0, 151, 167);
+}
+.icon-material-folder-temp-open .path2:before {
+  content: "\ed2b";
+  margin-left: -1em;
+  color: rgb(178, 235, 242);
+}
+.icon-material-folder-terraform .path1:before {
+  content: "\ed2c";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-terraform .path2:before {
+  content: "\ed2d";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-terraform .path3:before {
+  content: "\ed2e";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-terraform-open .path1:before {
+  content: "\ed2f";
+  color: rgb(92, 107, 192);
+}
+.icon-material-folder-terraform-open .path2:before {
+  content: "\ed30";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-terraform-open .path3:before {
+  content: "\ed31";
+  margin-left: -1em;
+  color: rgb(197, 202, 233);
+}
+.icon-material-folder-test .path1:before {
+  content: "\ed32";
+  color: rgb(0, 191, 165);
+}
+.icon-material-folder-test .path2:before {
+  content: "\ed33";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-test-open .path1:before {
+  content: "\ed34";
+  color: rgb(0, 191, 165);
+}
+.icon-material-folder-test-open .path2:before {
+  content: "\ed35";
+  margin-left: -1em;
+  color: rgb(167, 255, 235);
+}
+.icon-material-folder-theme .path1:before {
+  content: "\ed36";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-theme .path2:before {
+  content: "\ed37";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-theme-open .path1:before {
+  content: "\ed38";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-theme-open .path2:before {
+  content: "\ed39";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-tools .path1:before {
+  content: "\ed3a";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-tools .path2:before {
+  content: "\ed3b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-tools-open .path1:before {
+  content: "\ed3c";
+  color: rgb(30, 136, 229);
+}
+.icon-material-folder-tools-open .path2:before {
+  content: "\ed3d";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-typescript .path1:before {
+  content: "\ed3e";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-typescript .path2:before {
+  content: "\ed3f";
+  margin-left: -1em;
+  color: rgb(144, 202, 249);
+}
+.icon-material-folder-typescript-open .path1:before {
+  content: "\ed40";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-typescript-open .path2:before {
+  content: "\ed41";
+  margin-left: -1em;
+  color: rgb(144, 202, 249);
+}
+.icon-material-folder-unity .path1:before {
+  content: "\ed42";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-unity .path2:before {
+  content: "\ed43";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-unity-open .path1:before {
+  content: "\ed44";
+  color: rgb(25, 118, 210);
+}
+.icon-material-folder-unity-open .path2:before {
+  content: "\ed45";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-update .path1:before {
+  content: "\ed46";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-update .path2:before {
+  content: "\ed47";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-update-open .path1:before {
+  content: "\ed48";
+  color: rgb(67, 160, 71);
+}
+.icon-material-folder-update-open .path2:before {
+  content: "\ed49";
+  margin-left: -1em;
+  color: rgb(200, 230, 201);
+}
+.icon-material-folder-upload .path1:before {
+  content: "\ed4a";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-upload .path2:before {
+  content: "\ed4b";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-upload-open .path1:before {
+  content: "\ed4c";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-upload-open .path2:before {
+  content: "\ed4d";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-utils .path1:before {
+  content: "\ed4e";
+  color: rgb(124, 179, 66);
+}
+.icon-material-folder-utils .path2:before {
+  content: "\ed4f";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-utils-open .path1:before {
+  content: "\ed50";
+  color: rgb(124, 179, 66);
+}
+.icon-material-folder-utils-open .path2:before {
+  content: "\ed51";
+  margin-left: -1em;
+  color: rgb(220, 237, 200);
+}
+.icon-material-folder-vercel .path1:before {
+  content: "\ed52";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-vercel .path2:before {
+  content: "\ed53";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-vercel-open .path1:before {
+  content: "\ed54";
+  color: rgb(84, 110, 122);
+}
+.icon-material-folder-vercel-open .path2:before {
+  content: "\ed55";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-folder-verdaccio .path1:before {
+  content: "\ed56";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-verdaccio .path2:before {
+  content: "\ed57";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-verdaccio .path3:before {
+  content: "\ed58";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-verdaccio-open .path1:before {
+  content: "\ed59";
+  color: rgb(0, 137, 123);
+}
+.icon-material-folder-verdaccio-open .path2:before {
+  content: "\ed5a";
+  margin-left: -1em;
+  color: rgb(178, 223, 219);
+}
+.icon-material-folder-verdaccio-open .path3:before {
+  content: "\ed5b";
+  margin-left: -1em;
+  color: rgb(255, 205, 210);
+}
+.icon-material-folder-video .path1:before {
+  content: "\ed5c";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-video .path2:before {
+  content: "\ed5d";
+  margin-left: -1em;
+  color: rgb(255, 224, 178);
+}
+.icon-material-folder-video-open .path1:before {
+  content: "\ed5e";
+  color: rgb(255, 152, 0);
+}
+.icon-material-folder-video-open .path2:before {
+  content: "\ed5f";
+  margin-left: -1em;
+  color: rgb(255, 224, 178);
+}
+.icon-material-folder-views .path1:before {
+  content: "\ed60";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-views .path2:before {
+  content: "\ed61";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-views-open .path1:before {
+  content: "\ed62";
+  color: rgb(255, 112, 67);
+}
+.icon-material-folder-views-open .path2:before {
+  content: "\ed63";
+  margin-left: -1em;
+  color: rgb(255, 204, 188);
+}
+.icon-material-folder-vm .path1:before {
+  content: "\ed64";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-vm .path2:before {
+  content: "\ed65";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-vm-open .path1:before {
+  content: "\ed66";
+  color: rgb(3, 155, 229);
+}
+.icon-material-folder-vm-open .path2:before {
+  content: "\ed67";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-vscode .path1:before {
+  content: "\ed68";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-vscode .path2:before {
+  content: "\ed69";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-vscode-open .path1:before {
+  content: "\ed6a";
+  color: rgb(66, 165, 245);
+}
+.icon-material-folder-vscode-open .path2:before {
+  content: "\ed6b";
+  margin-left: -1em;
+  color: rgb(187, 222, 251);
+}
+.icon-material-folder-vue .path1:before {
+  content: "\ed6c";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-vue .path2:before {
+  content: "\ed6d";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vue .path3:before {
+  content: "\ed6e";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vue-directives .path1:before {
+  content: "\ed6f";
+  color: rgb(0, 131, 143);
+}
+.icon-material-folder-vue-directives .path2:before {
+  content: "\ed70";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vue-directives .path3:before {
+  content: "\ed71";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vue-directives-open .path1:before {
+  content: "\ed72";
+  color: rgb(0, 131, 143);
+}
+.icon-material-folder-vue-directives-open .path2:before {
+  content: "\ed73";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vue-directives-open .path3:before {
+  content: "\ed74";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vue-open .path1:before {
+  content: "\ed75";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-vue-open .path2:before {
+  content: "\ed76";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vue-open .path3:before {
+  content: "\ed77";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vuepress .path1:before {
+  content: "\ed78";
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuepress .path2:before {
+  content: "\ed79";
+  margin-left: -1em;
+  color: rgb(232, 245, 233);
+}
+.icon-material-folder-vuepress .path3:before {
+  content: "\ed7a";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuepress .path4:before {
+  content: "\ed7b";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vuepress-open .path1:before {
+  content: "\ed7c";
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuepress-open .path2:before {
+  content: "\ed7d";
+  margin-left: -1em;
+  color: rgb(232, 245, 233);
+}
+.icon-material-folder-vuepress-open .path3:before {
+  content: "\ed7e";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuepress-open .path4:before {
+  content: "\ed7f";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vuex-store .path1:before {
+  content: "\ed80";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-vuex-store .path2:before {
+  content: "\ed81";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuex-store .path3:before {
+  content: "\ed82";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-vuex-store-open .path1:before {
+  content: "\ed83";
+  color: rgb(0, 150, 136);
+}
+.icon-material-folder-vuex-store-open .path2:before {
+  content: "\ed84";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-folder-vuex-store-open .path3:before {
+  content: "\ed85";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-folder-wakatime .path1:before {
+  content: "\ed86";
+  color: rgb(69, 90, 100);
+}
+.icon-material-folder-wakatime .path2:before {
+  content: "\ed87";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-folder-wakatime .path3:before {
+  content: "\ed88";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-wakatime-open .path1:before {
+  content: "\ed89";
+  color: rgb(69, 90, 100);
+}
+.icon-material-folder-wakatime-open .path2:before {
+  content: "\ed8a";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-folder-wakatime-open .path3:before {
+  content: "\ed8b";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-folder-webpack .path1:before {
+  content: "\ed8c";
+  color: rgb(3, 169, 244);
+}
+.icon-material-folder-webpack .path2:before {
+  content: "\ed8d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.785;
+}
+.icon-material-folder-webpack .path3:before {
+  content: "\ed8e";
+  margin-left: -1em;
+  color: rgb(142, 214, 251);
+}
+.icon-material-folder-webpack .path4:before {
+  content: "\ed8f";
+  margin-left: -1em;
+  color: rgb(28, 120, 192);
+}
+.icon-material-folder-webpack-open .path1:before {
+  content: "\ed90";
+  color: rgb(3, 169, 244);
+}
+.icon-material-folder-webpack-open .path2:before {
+  content: "\ed91";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.785;
+}
+.icon-material-folder-webpack-open .path3:before {
+  content: "\ed92";
+  margin-left: -1em;
+  color: rgb(142, 214, 251);
+}
+.icon-material-folder-webpack-open .path4:before {
+  content: "\ed93";
+  margin-left: -1em;
+  color: rgb(28, 120, 192);
+}
+.icon-material-folder-wordpress .path1:before {
+  content: "\ed94";
+  color: rgb(33, 117, 155);
+}
+.icon-material-folder-wordpress .path2:before {
+  content: "\ed95";
+  margin-left: -1em;
+  color: rgb(225, 245, 254);
+}
+.icon-material-folder-wordpress-open .path1:before {
+  content: "\ed96";
+  color: rgb(33, 117, 155);
+}
+.icon-material-folder-wordpress-open .path2:before {
+  content: "\ed97";
+  margin-left: -1em;
+  color: rgb(225, 245, 254);
+}
+.icon-material-folder-yarn .path1:before {
+  content: "\ed98";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-yarn .path2:before {
+  content: "\ed99";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-folder-yarn-open .path1:before {
+  content: "\ed9a";
+  color: rgb(2, 136, 209);
+}
+.icon-material-folder-yarn-open .path2:before {
+  content: "\ed9b";
+  margin-left: -1em;
+  color: rgb(179, 229, 252);
+}
+.icon-material-font:before {
+  content: "\ed9c";
+  color: #f44336;
+}
+.icon-material-forth:before {
+  content: "\ed9d";
+  color: #ef5350;
+}
+.icon-material-fortran:before {
+  content: "\ed9e";
+  color: #ff7043;
+}
+.icon-material-foxpro .path1:before {
+  content: "\ed9f";
+  color: rgb(251, 192, 45);
+}
+.icon-material-foxpro .path2:before {
+  content: "\eda0";
+  margin-left: -1em;
+  color: rgb(255, 152, 0);
+}
+.icon-material-foxpro .path3:before {
+  content: "\eda1";
+  margin-left: -1em;
+  color: rgb(38, 50, 56);
+}
+.icon-material-fsharp .path1:before {
+  content: "\eda2";
+  color: rgb(55, 139, 186);
+}
+.icon-material-fsharp .path2:before {
+  content: "\eda3";
+  margin-left: -1em;
+  color: rgb(55, 139, 186);
+}
+.icon-material-fsharp .path3:before {
+  content: "\eda4";
+  margin-left: -1em;
+  color: rgb(48, 185, 219);
+}
+.icon-material-fusebox .path1:before {
+  content: "\eda5";
+  color: rgb(255, 255, 255);
+}
+.icon-material-fusebox .path2:before {
+  content: "\eda6";
+  margin-left: -1em;
+  color: rgb(81, 81, 81);
+}
+.icon-material-fusebox .path3:before {
+  content: "\eda7";
+  margin-left: -1em;
+  color: rgb(29, 121, 191);
+}
+.icon-material-fusebox .path4:before {
+  content: "\eda8";
+  margin-left: -1em;
+  color: rgb(56, 56, 56);
+}
+.icon-material-fusebox .path5:before {
+  content: "\eda9";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-fusebox .path6:before {
+  content: "\edaa";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-fusebox .path7:before {
+  content: "\edab";
+  margin-left: -1em;
+  color: rgb(56, 56, 56);
+}
+.icon-material-gamemaker:before {
+  content: "\edac";
+  color: #26a69a;
+}
+.icon-material-gatsby .path1:before {
+  content: "\edad";
+  color: rgb(255, 255, 255);
+}
+.icon-material-gatsby .path2:before {
+  content: "\edae";
+  margin-left: -1em;
+  color: rgb(102, 51, 153);
+}
+.icon-material-gcp .path1:before {
+  content: "\edaf";
+  color: rgb(244, 67, 54);
+}
+.icon-material-gcp .path2:before {
+  content: "\edb0";
+  margin-left: -1em;
+  color: rgb(68, 138, 255);
+}
+.icon-material-gcp .path3:before {
+  content: "\edb1";
+  margin-left: -1em;
+  color: rgb(67, 160, 71);
+}
+.icon-material-gcp .path4:before {
+  content: "\edb2";
+  margin-left: -1em;
+  color: rgb(255, 193, 7);
+}
+.icon-material-gemfile:before {
+  content: "\edb3";
+  color: #e53935;
+}
+.icon-material-gemini:before {
+  content: "\edb4";
+  color: #81c784;
+}
+.icon-material-git:before {
+  content: "\edb5";
+  color: #e64a19;
+}
+.icon-material-gitlab .path1:before {
+  content: "\edb6";
+  color: rgb(229, 57, 53);
+}
+.icon-material-gitlab .path2:before {
+  content: "\edb7";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-gitlab .path3:before {
+  content: "\edb8";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-gitlab .path4:before {
+  content: "\edb9";
+  margin-left: -1em;
+  color: rgb(239, 108, 0);
+}
+.icon-material-gitpod:before {
+  content: "\edba";
+  color: #ffa726;
+}
+.icon-material-gleam:before {
+  content: "\edbb";
+  color: #ea80fc;
+}
+.icon-material-go:before {
+  content: "\edbc";
+  color: #00acc1;
+}
+.icon-material-go_gopher .path1:before {
+  content: "\edbd";
+  color: rgb(115, 205, 220);
+}
+.icon-material-go_gopher .path2:before {
+  content: "\edbe";
+  margin-left: -1em;
+  color: rgb(115, 205, 220);
+}
+.icon-material-go_gopher .path3:before {
+  content: "\edbf";
+  margin-left: -1em;
+  color: rgb(115, 205, 220);
+}
+.icon-material-go_gopher .path4:before {
+  content: "\edc0";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path5:before {
+  content: "\edc1";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path6:before {
+  content: "\edc2";
+  margin-left: -1em;
+  color: rgb(3, 13, 24);
+}
+.icon-material-go_gopher .path7:before {
+  content: "\edc3";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path8:before {
+  content: "\edc4";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path9:before {
+  content: "\edc5";
+  margin-left: -1em;
+  color: rgb(3, 13, 24);
+}
+.icon-material-go_gopher .path10:before {
+  content: "\edc6";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path11:before {
+  content: "\edc7";
+  margin-left: -1em;
+  color: rgb(246, 210, 161);
+}
+.icon-material-go_gopher .path12:before {
+  content: "\edc8";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-go_gopher .path13:before {
+  content: "\edc9";
+  margin-left: -1em;
+  color: rgb(246, 210, 161);
+}
+.icon-material-go_gopher .path14:before {
+  content: "\edca";
+  margin-left: -1em;
+  color: rgb(246, 210, 161);
+}
+.icon-material-go_gopher .path15:before {
+  content: "\edcb";
+  margin-left: -1em;
+  color: rgb(246, 210, 161);
+}
+.icon-material-go_gopher .path16:before {
+  content: "\edcc";
+  margin-left: -1em;
+  color: rgb(246, 210, 161);
+}
+.icon-material-go_gopher .path17:before {
+  content: "\edcd";
+  margin-left: -1em;
+  color: rgb(3, 13, 24);
+}
+.icon-material-godot:before {
+  content: "\edce";
+  color: #42a5f5;
+}
+.icon-material-godot-assets:before {
+  content: "\edcf";
+  color: #66bb6a;
+}
+.icon-material-go-mod:before {
+  content: "\edd0";
+  color: #ec407a;
+}
+.icon-material-gradle:before {
+  content: "\edd1";
+  color: #0097a7;
+}
+.icon-material-grain .path1:before {
+  content: "\edd2";
+  color: rgb(255, 167, 38);
+}
+.icon-material-grain .path2:before {
+  content: "\edd3";
+  margin-left: -1em;
+  color: rgb(245, 127, 23);
+}
+.icon-material-grain .path3:before {
+  content: "\edd4";
+  margin-left: -1em;
+  color: rgb(245, 124, 0);
+}
+.icon-material-graphcool:before {
+  content: "\edd5";
+  color: #27ae60;
+}
+.icon-material-graphql:before {
+  content: "\edd6";
+  color: #ec407a;
+}
+.icon-material-gridsome:before {
+  content: "\edd7";
+  color: #00bfa5;
+}
+.icon-material-groovy:before {
+  content: "\edd8";
+  color: #26c6da;
+}
+.icon-material-grunt .path1:before {
+  content: "\edd9";
+  color: rgb(251, 169, 25);
+}
+.icon-material-grunt .path2:before {
+  content: "\edda";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path3:before {
+  content: "\eddb";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path4:before {
+  content: "\eddc";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path5:before {
+  content: "\eddd";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path6:before {
+  content: "\edde";
+  margin-left: -1em;
+  color: rgb(253, 193, 104);
+}
+.icon-material-grunt .path7:before {
+  content: "\eddf";
+  margin-left: -1em;
+  color: rgb(251, 169, 25);
+}
+.icon-material-grunt .path8:before {
+  content: "\ede0";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-grunt .path9:before {
+  content: "\ede1";
+  margin-left: -1em;
+  color: rgb(201, 201, 201);
+}
+.icon-material-grunt .path10:before {
+  content: "\ede2";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path11:before {
+  content: "\ede3";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path12:before {
+  content: "\ede4";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path13:before {
+  content: "\ede5";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path14:before {
+  content: "\ede6";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path15:before {
+  content: "\ede7";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path16:before {
+  content: "\ede8";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path17:before {
+  content: "\ede9";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path18:before {
+  content: "\edea";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path19:before {
+  content: "\edeb";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-grunt .path20:before {
+  content: "\edec";
+  margin-left: -1em;
+  color: rgb(201, 201, 201);
+}
+.icon-material-grunt .path21:before {
+  content: "\eded";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path22:before {
+  content: "\edee";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path23:before {
+  content: "\edef";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path24:before {
+  content: "\edf0";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path25:before {
+  content: "\edf1";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path26:before {
+  content: "\edf2";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path27:before {
+  content: "\edf3";
+  margin-left: -1em;
+  color: rgb(253, 193, 104);
+}
+.icon-material-grunt .path28:before {
+  content: "\edf4";
+  margin-left: -1em;
+  color: rgb(251, 169, 25);
+}
+.icon-material-grunt .path29:before {
+  content: "\edf5";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-grunt .path30:before {
+  content: "\edf6";
+  margin-left: -1em;
+  color: rgb(201, 201, 201);
+}
+.icon-material-grunt .path31:before {
+  content: "\edf7";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path32:before {
+  content: "\edf8";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path33:before {
+  content: "\edf9";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path34:before {
+  content: "\edfa";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path35:before {
+  content: "\edfb";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path36:before {
+  content: "\edfc";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path37:before {
+  content: "\edfd";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path38:before {
+  content: "\edfe";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path39:before {
+  content: "\edff";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path40:before {
+  content: "\ee00";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path41:before {
+  content: "\ee01";
+  margin-left: -1em;
+  color: rgb(231, 135, 36);
+}
+.icon-material-grunt .path42:before {
+  content: "\ee02";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path43:before {
+  content: "\ee03";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-grunt .path44:before {
+  content: "\ee04";
+  margin-left: -1em;
+  color: rgb(201, 201, 201);
+}
+.icon-material-grunt .path45:before {
+  content: "\ee05";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path46:before {
+  content: "\ee06";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-grunt .path47:before {
+  content: "\ee07";
+  margin-left: -1em;
+  color: rgb(70, 48, 20);
+}
+.icon-material-gulp:before {
+  content: "\ee08";
+  color: #e53935;
+}
+.icon-material-h:before {
+  content: "\ee09";
+  color: #0277bd;
+}
+.icon-material-hack .path1:before {
+  content: "\ee0a";
+  color: rgb(96, 125, 139);
+}
+.icon-material-hack .path2:before {
+  content: "\ee0b";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-hack .path3:before {
+  content: "\ee0c";
+  margin-left: -1em;
+  color: rgb(96, 125, 139);
+}
+.icon-material-hack .path4:before {
+  content: "\ee0d";
+  margin-left: -1em;
+  color: rgb(255, 160, 0);
+}
+.icon-material-haml:before {
+  content: "\ee0e";
+  color: #f4511e;
+}
+.icon-material-handlebars:before {
+  content: "\ee0f";
+  color: #ff7043;
+}
+.icon-material-hardhat:before {
+  content: "\ee10";
+  color: #ffd600;
+}
+.icon-material-haskell .path1:before {
+  content: "\ee11";
+  color: rgb(239, 83, 80);
+}
+.icon-material-haskell .path2:before {
+  content: "\ee12";
+  margin-left: -1em;
+  color: rgb(255, 167, 38);
+}
+.icon-material-haskell .path3:before {
+  content: "\ee13";
+  margin-left: -1em;
+  color: rgb(255, 238, 88);
+}
+.icon-material-haxe .path1:before {
+  content: "\ee14";
+  color: rgb(246, 135, 18);
+}
+.icon-material-haxe .path2:before {
+  content: "\ee15";
+  margin-left: -1em;
+  color: rgb(250, 178, 11);
+}
+.icon-material-haxe .path3:before {
+  content: "\ee16";
+  margin-left: -1em;
+  color: rgb(251, 199, 7);
+}
+.icon-material-haxe .path4:before {
+  content: "\ee17";
+  margin-left: -1em;
+  color: rgb(255, 242, 0);
+}
+.icon-material-haxe .path5:before {
+  content: "\ee18";
+  margin-left: -1em;
+  color: rgb(244, 114, 22);
+}
+.icon-material-haxe .path6:before {
+  content: "\ee19";
+  margin-left: -1em;
+  color: rgb(241, 71, 29);
+}
+.icon-material-haxe .path7:before {
+  content: "\ee1a";
+  margin-left: -1em;
+  color: rgb(251, 199, 7);
+}
+.icon-material-haxe .path8:before {
+  content: "\ee1b";
+  margin-left: -1em;
+  color: rgb(242, 92, 25);
+}
+.icon-material-haxe .path9:before {
+  content: "\ee1c";
+  margin-left: -1em;
+  color: rgb(246, 135, 18);
+}
+.icon-material-haxe .path10:before {
+  content: "\ee1d";
+  margin-left: -1em;
+  color: rgb(241, 71, 29);
+}
+.icon-material-haxe .path11:before {
+  content: "\ee1e";
+  margin-left: -1em;
+  color: rgb(248, 156, 14);
+}
+.icon-material-haxe .path12:before {
+  content: "\ee1f";
+  margin-left: -1em;
+  color: rgb(255, 242, 0);
+}
+.icon-material-haxe .path13:before {
+  content: "\ee20";
+  margin-left: -1em;
+  color: rgb(242, 92, 25);
+}
+.icon-material-hcl:before {
+  content: "\ee21";
+  color: #eceff1;
+}
+.icon-material-hcl_light:before {
+  content: "\ee22";
+  color: #455a64;
+}
+.icon-material-helm:before {
+  content: "\ee23";
+  color: #00acc1;
+}
+.icon-material-heroku:before {
+  content: "\ee24";
+  color: #6963b9;
+}
+.icon-material-hex:before {
+  content: "\ee25";
+  color: #26a69a;
+}
+.icon-material-horusec:before {
+  content: "\ee26";
+  color: #e64a19;
+}
+.icon-material-hpp:before {
+  content: "\ee27";
+  color: #0277bd;
+}
+.icon-material-html:before {
+  content: "\ee28";
+  color: #e44d26;
+}
+.icon-material-http:before {
+  content: "\ee29";
+  color: #e53935;
+}
+.icon-material-husky:before {
+  content: "\ee2a";
+  color: #90a4ae;
+}
+.icon-material-i18n:before {
+  content: "\ee2b";
+  color: #7986cb;
+}
+.icon-material-idris:before {
+  content: "\ee2c";
+  color: #f44336;
+}
+.icon-material-ifanr-cloud:before {
+  content: "\ee2d";
+  color: #0288d1;
+}
+.icon-material-image:before {
+  content: "\ee2e";
+  color: #26a69a;
+}
+.icon-material-imba:before {
+  content: "\ee2f";
+  color: #ffc400;
+}
+.icon-material-ionic:before {
+  content: "\ee30";
+  color: #4f8ff7;
+}
+.icon-material-istanbul:before {
+  content: "\ee31";
+  color: #fdd835;
+}
+.icon-material-jar:before {
+  content: "\ee32";
+  color: #f44336;
+}
+.icon-material-java:before {
+  content: "\ee33";
+  color: #f44336;
+}
+.icon-material-javaclass:before {
+  content: "\ee34";
+  color: #1e88e5;
+}
+.icon-material-javascript:before {
+  content: "\ee35";
+  color: #ffca28;
+}
+.icon-material-javascript-map:before {
+  content: "\ee36";
+  color: #ffca28;
+}
+.icon-material-jenkins .path1:before {
+  content: "\ee37";
+  color: rgb(240, 214, 183);
+}
+.icon-material-jenkins .path2:before {
+  content: "\ee38";
+  margin-left: -1em;
+  color: rgb(51, 80, 97);
+}
+.icon-material-jenkins .path3:before {
+  content: "\ee39";
+  margin-left: -1em;
+  color: rgb(109, 107, 109);
+}
+.icon-material-jenkins .path4:before {
+  content: "\ee3a";
+  margin-left: -1em;
+  color: rgb(220, 217, 216);
+}
+.icon-material-jenkins .path5:before {
+  content: "\ee3b";
+  margin-left: -1em;
+  color: rgb(247, 228, 205);
+}
+.icon-material-jenkins .path6:before {
+  content: "\ee3c";
+  margin-left: -1em;
+  color: rgb(247, 228, 205);
+}
+.icon-material-jenkins .path7:before {
+  content: "\ee3d";
+  margin-left: -1em;
+  color: rgb(247, 228, 205);
+}
+.icon-material-jenkins .path8:before {
+  content: "\ee3e";
+  margin-left: -1em;
+  color: rgb(247, 228, 205);
+}
+.icon-material-jenkins .path9:before {
+  content: "\ee3f";
+  margin-left: -1em;
+  color: rgb(73, 114, 139);
+}
+.icon-material-jenkins .path10:before {
+  content: "\ee40";
+  margin-left: -1em;
+  color: rgb(51, 80, 97);
+}
+.icon-material-jenkins .path11:before {
+  content: "\ee41";
+  margin-left: -1em;
+  color: rgb(73, 114, 139);
+}
+.icon-material-jenkins .path12:before {
+  content: "\ee42";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-jenkins .path13:before {
+  content: "\ee43";
+  margin-left: -1em;
+  color: rgb(220, 217, 216);
+}
+.icon-material-jenkins .path14:before {
+  content: "\ee44";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-jenkins .path15:before {
+  content: "\ee45";
+  margin-left: -1em;
+  color: rgb(220, 217, 216);
+}
+.icon-material-jenkins .path16:before {
+  content: "\ee46";
+  margin-left: -1em;
+  color: rgb(211, 56, 51);
+}
+.icon-material-jenkins .path17:before {
+  content: "\ee47";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-jenkins .path18:before {
+  content: "\ee48";
+  margin-left: -1em;
+  color: rgb(211, 56, 51);
+}
+.icon-material-jenkins .path19:before {
+  content: "\ee49";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-jenkins .path20:before {
+  content: "\ee4a";
+  margin-left: -1em;
+  color: rgb(211, 56, 51);
+}
+.icon-material-jenkins .path21:before {
+  content: "\ee4b";
+  margin-left: -1em;
+  color: none;
+}
+.icon-material-jenkins .path22:before {
+  content: "\ee4c";
+  margin-left: -1em;
+  color: rgb(239, 61, 58);
+}
+.icon-material-jenkins .path23:before {
+  content: "\ee4d";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.icon-material-jenkins .path24:before {
+  content: "\ee4e";
+  margin-left: -1em;
+  color: rgb(129, 176, 196);
+}
+.icon-material-jenkins .path25:before {
+  content: "\ee4f";
+  margin-left: -1em;
+  color: rgb(240, 214, 183);
+}
+.icon-material-jenkins .path26:before {
+  content: "\ee50";
+  margin-left: -1em;
+  color: rgb(129, 176, 196);
+}
+.icon-material-jenkins .path27:before {
+  content: "\ee51";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.icon-material-jenkins .path28:before {
+  content: "\ee52";
+  margin-left: -1em;
+  color: rgb(247, 228, 205);
+}
+.icon-material-jenkins .path29:before {
+  content: "\ee53";
+  margin-left: -1em;
+  color: rgb(29, 25, 25);
+}
+.icon-material-jenkins .path30:before {
+  content: "\ee54";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-jenkins .path31:before {
+  content: "\ee55";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-jenkins .path32:before {
+  content: "\ee56";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-jenkins .path33:before {
+  content: "\ee57";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-jest:before {
+  content: "\ee58";
+  color: #f4511e;
+}
+.icon-material-jinja:before {
+  content: "\ee59";
+  color: #bdbdbd;
+}
+.icon-material-jinja_light:before {
+  content: "\ee5a";
+  color: #616161;
+}
+.icon-material-jsconfig .path1:before {
+  content: "\ee5b";
+  color: rgb(117, 117, 117);
+}
+.icon-material-jsconfig .path2:before {
+  content: "\ee5c";
+  margin-left: -1em;
+  color: rgb(255, 202, 40);
+}
+.icon-material-jsconfig .path3:before {
+  content: "\ee5d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-json:before {
+  content: "\ee5e";
+  color: #fbc02d;
+}
+.icon-material-julia .path1:before {
+  content: "\ee5f";
+  color: rgb(188, 52, 45);
+}
+.icon-material-julia .path2:before {
+  content: "\ee60";
+  margin-left: -1em;
+  color: rgb(134, 78, 159);
+}
+.icon-material-julia .path3:before {
+  content: "\ee61";
+  margin-left: -1em;
+  color: rgb(50, 138, 34);
+}
+.icon-material-jupyter .path1:before {
+  content: "\ee62";
+  color: rgb(245, 124, 0);
+}
+.icon-material-jupyter .path2:before {
+  content: "\ee63";
+  margin-left: -1em;
+  color: rgb(158, 158, 158);
+}
+.icon-material-jupyter .path3:before {
+  content: "\ee64";
+  margin-left: -1em;
+  color: rgb(97, 97, 97);
+}
+.icon-material-jupyter .path4:before {
+  content: "\ee65";
+  margin-left: -1em;
+  color: rgb(117, 117, 117);
+}
+.icon-material-karma .path1:before {
+  content: "\ee66";
+  color: rgb(53, 155, 139);
+}
+.icon-material-karma .path2:before {
+  content: "\ee67";
+  margin-left: -1em;
+  color: rgb(60, 190, 174);
+}
+.icon-material-key:before {
+  content: "\ee68";
+  color: #26a69a;
+}
+.icon-material-kivy:before {
+  content: "\ee69";
+  color: #90a4ae;
+}
+.icon-material-kl:before {
+  content: "\ee6a";
+  color: #29b6f6;
+}
+.icon-material-kotlin:before {
+  content: "\ee6b";
+}
+.icon-material-kusto:before {
+  content: "\ee6c";
+  color: #1e88e5;
+}
+.icon-material-laravel:before {
+  content: "\ee6d";
+  color: #ff5252;
+}
+.icon-material-lerna:before {
+  content: "\ee6e";
+  color: #448aff;
+}
+.icon-material-less:before {
+  content: "\ee6f";
+  color: #0277bd;
+}
+.icon-material-lib:before {
+  content: "\ee70";
+  color: #8bc34a;
+}
+.icon-material-lighthouse:before {
+  content: "\ee71";
+  color: #f4511e;
+}
+.icon-material-lilypond:before {
+  content: "\ee72";
+  color: #66bb6a;
+}
+.icon-material-liquid:before {
+  content: "\ee73";
+  color: #29b6f6;
+}
+.icon-material-lisp:before {
+  content: "\ee74";
+  color: #ef5350;
+}
+.icon-material-livescript:before {
+  content: "\ee75";
+  color: #317eac;
+}
+.icon-material-lock:before {
+  content: "\ee76";
+  color: #ffd54f;
+}
+.icon-material-log:before {
+  content: "\ee77";
+  color: #afb42b;
+}
+.icon-material-lolcode:before {
+  content: "\ee78";
+  color: #ef5350;
+}
+.icon-material-lua:before {
+  content: "\ee79";
+}
+.icon-material-makefile:before {
+  content: "\ee7a";
+  color: #ef5350;
+}
+.icon-material-markdown:before {
+  content: "\ee7b";
+  color: #42a5f5;
+}
+.icon-material-markojs .path1:before {
+  content: "\ee7c";
+  color: rgb(33, 150, 243);
+}
+.icon-material-markojs .path2:before {
+  content: "\ee7d";
+  margin-left: -1em;
+  color: rgb(38, 166, 154);
+}
+.icon-material-markojs .path3:before {
+  content: "\ee7e";
+  margin-left: -1em;
+  color: rgb(139, 195, 74);
+}
+.icon-material-markojs .path4:before {
+  content: "\ee7f";
+  margin-left: -1em;
+  color: rgb(255, 193, 7);
+}
+.icon-material-markojs .path5:before {
+  content: "\ee80";
+  margin-left: -1em;
+  color: rgb(244, 67, 54);
+}
+.icon-material-mathematica:before {
+  content: "\ee81";
+  color: #f44336;
+}
+.icon-material-matlab .path1:before {
+  content: "\ee82";
+  color: rgb(77, 182, 172);
+}
+.icon-material-matlab .path2:before {
+  content: "\ee83";
+  margin-left: -1em;
+  color: rgb(0, 137, 123);
+}
+.icon-material-matlab .path3:before {
+  content: "\ee84";
+  margin-left: -1em;
+  color: rgb(255, 183, 77);
+}
+.icon-material-maven:before {
+  content: "\ee85";
+}
+.icon-material-mdsvex:before {
+  content: "\ee86";
+  color: #ff5722;
+}
+.icon-material-mdx:before {
+  content: "\ee87";
+  color: #ffca28;
+}
+.icon-material-mercurial:before {
+  content: "\ee88";
+  color: #78909c;
+}
+.icon-material-merlin:before {
+  content: "\ee89";
+  color: #42a5f5;
+}
+.icon-material-mermaid:before {
+  content: "\ee8a";
+  color: #ff4081;
+}
+.icon-material-meson:before {
+  content: "\ee8b";
+  color: #3f51b5;
+}
+.icon-material-minecraft:before {
+  content: "\ee8c";
+  color: #4caf50;
+}
+.icon-material-mint:before {
+  content: "\ee8d";
+  color: #43a047;
+}
+.icon-material-mjml .path1:before {
+  content: "\ee8e";
+  color: rgb(255, 87, 34);
+}
+.icon-material-mjml .path2:before {
+  content: "\ee8f";
+  margin-left: -1em;
+  color: rgb(255, 87, 34);
+}
+.icon-material-mjml .path3:before {
+  content: "\ee90";
+  margin-left: -1em;
+  color: rgb(255, 87, 34);
+}
+.icon-material-mjml .path4:before {
+  content: "\ee91";
+  margin-left: -1em;
+  color: rgb(255, 23, 68);
+}
+.icon-material-mjml .path5:before {
+  content: "\ee92";
+  margin-left: -1em;
+  color: rgb(255, 87, 34);
+}
+.icon-material-mjml .path6:before {
+  content: "\ee93";
+  margin-left: -1em;
+  color: rgb(255, 87, 34);
+}
+.icon-material-mocha:before {
+  content: "\ee94";
+  color: #a1887f;
+}
+.icon-material-modernizr:before {
+  content: "\ee95";
+  color: #e91e63;
+}
+.icon-material-moonscript:before {
+  content: "\ee96";
+  color: #fbc02d;
+}
+.icon-material-mxml:before {
+  content: "\ee97";
+  color: #ffa726;
+}
+.icon-material-nano-staged:before {
+  content: "\ee98";
+  color: #b0bec5;
+}
+.icon-material-nano-staged_light:before {
+  content: "\ee99";
+  color: #546e7a;
+}
+.icon-material-ndst:before {
+  content: "\ee9a";
+  color: #0097a7;
+}
+.icon-material-nest:before {
+  content: "\ee9b";
+  color: #ea2845;
+}
+.icon-material-nest-controller:before {
+  content: "\ee9c";
+  color: #0288d1;
+}
+.icon-material-nest-decorator:before {
+  content: "\ee9d";
+  color: #ab47bc;
+}
+.icon-material-nest-filter:before {
+  content: "\ee9e";
+  color: #ff7043;
+}
+.icon-material-nest-gateway:before {
+  content: "\ee9f";
+  color: #afb42b;
+}
+.icon-material-nest-guard:before {
+  content: "\eea0";
+  color: #43a047;
+}
+.icon-material-nest-middleware:before {
+  content: "\eea1";
+  color: #5c6bc0;
+}
+.icon-material-nest-module:before {
+  content: "\eea2";
+  color: #e53935;
+}
+.icon-material-nest-pipe:before {
+  content: "\eea3";
+  color: #00897b;
+}
+.icon-material-nest-resolver:before {
+  content: "\eea4";
+  color: #ec407a;
+}
+.icon-material-nest-service:before {
+  content: "\eea5";
+  color: #ffca28;
+}
+.icon-material-netlify .path1:before {
+  content: "\eea6";
+  color: rgb(0, 191, 165);
+}
+.icon-material-netlify .path2:before {
+  content: "\eea7";
+  margin-left: -1em;
+  color: rgb(207, 216, 220);
+}
+.icon-material-netlify_light .path1:before {
+  content: "\eea8";
+  color: rgb(0, 191, 165);
+}
+.icon-material-netlify_light .path2:before {
+  content: "\eea9";
+  margin-left: -1em;
+  color: rgb(0, 137, 123);
+}
+.icon-material-next:before {
+  content: "\eeaa";
+  color: #cfd8dc;
+}
+.icon-material-next_light:before {
+  content: "\eeab";
+  color: #455a64;
+}
+.icon-material-nginx:before {
+  content: "\eeac";
+  color: #43a047;
+}
+.icon-material-ngrx-actions:before {
+  content: "\eead";
+  color: #ab47bc;
+}
+.icon-material-ngrx-effects:before {
+  content: "\eeae";
+  color: #26c6da;
+}
+.icon-material-ngrx-entity:before {
+  content: "\eeaf";
+  color: #fbc02d;
+}
+.icon-material-ngrx-reducer:before {
+  content: "\eeb0";
+  color: #e53935;
+}
+.icon-material-ngrx-selectors:before {
+  content: "\eeb1";
+  color: #ff6e40;
+}
+.icon-material-ngrx-state:before {
+  content: "\eeb2";
+  color: #9ccc65;
+}
+.icon-material-nim:before {
+  content: "\eeb3";
+  color: #ffca28;
+}
+.icon-material-nix .path1:before {
+  content: "\eeb4";
+  color: rgb(80, 117, 193);
+}
+.icon-material-nix .path2:before {
+  content: "\eeb5";
+  margin-left: -1em;
+  color: rgb(125, 183, 225);
+}
+.icon-material-nodejs:before {
+  content: "\eeb6";
+  color: #8bc34a;
+}
+.icon-material-nodejs_alt .path1:before {
+  content: "\eeb7";
+  color: rgb(56, 142, 60);
+}
+.icon-material-nodejs_alt .path2:before {
+  content: "\eeb8";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.icon-material-nodejs_alt .path3:before {
+  content: "\eeb9";
+  margin-left: -1em;
+  color: rgb(102, 187, 106);
+}
+.icon-material-nodemon:before {
+  content: "\eeba";
+  color: #8bc34a;
+}
+.icon-material-npm:before {
+  content: "\eebb";
+  color: #cb3837;
+}
+.icon-material-nrwl:before {
+  content: "\eebc";
+  color: #00b8d4;
+}
+.icon-material-nuget:before {
+  content: "\eebd";
+  color: #0288d1;
+}
+.icon-material-nunjucks:before {
+  content: "\eebe";
+  color: #388e3c;
+}
+.icon-material-nuxt .path1:before {
+  content: "\eebf";
+  color: rgb(105, 240, 174);
+}
+.icon-material-nuxt .path2:before {
+  content: "\eec0";
+  margin-left: -1em;
+  color: rgb(0, 230, 118);
+}
+.icon-material-objective-c:before {
+  content: "\eec1";
+  color: #ffab40;
+}
+.icon-material-objective-cpp:before {
+  content: "\eec2";
+  color: #ffab40;
+}
+.icon-material-ocaml:before {
+  content: "\eec3";
+  color: #ff9800;
+}
+.icon-material-odin:before {
+  content: "\eec4";
+  color: #448aff;
+}
+.icon-material-opa .path1:before {
+  content: "\eec5";
+  color: rgb(189, 189, 189);
+}
+.icon-material-opa .path2:before {
+  content: "\eec6";
+  margin-left: -1em;
+  color: rgb(84, 110, 122);
+}
+.icon-material-opa .path3:before {
+  content: "\eec7";
+  margin-left: -1em;
+  color: rgb(120, 144, 156);
+}
+.icon-material-opa .path4:before {
+  content: "\eec8";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-opam:before {
+  content: "\eec9";
+  color: #ff9800;
+}
+.icon-material-otne:before {
+  content: "\eeca";
+  color: #00c853;
+}
+.icon-material-parcel:before {
+  content: "\eecb";
+  color: #ffb74d;
+}
+.icon-material-pascal:before {
+  content: "\eecc";
+  color: #0288d1;
+}
+.icon-material-pawn:before {
+  content: "\eecd";
+  color: #ef6c00;
+}
+.icon-material-pdf:before {
+  content: "\eece";
+  color: #ef5350;
+}
+.icon-material-percy:before {
+  content: "\eecf";
+  color: #ba68c8;
+}
+.icon-material-perl:before {
+  content: "\eed0";
+  color: #9575cd;
+}
+.icon-material-php:before {
+  content: "\eed1";
+  color: #1e88e5;
+}
+.icon-material-php_elephant:before {
+  content: "\eed2";
+  color: #0288d1;
+}
+.icon-material-php_elephant_pink:before {
+  content: "\eed3";
+  color: #ec407a;
+}
+.icon-material-php-cs-fixer:before {
+  content: "\eed4";
+  color: #ff7043;
+}
+.icon-material-phpunit:before {
+  content: "\eed5";
+  color: #5c6bc0;
+}
+.icon-material-pinejs .path1:before {
+  content: "\eed6";
+  color: rgb(102, 187, 106);
+}
+.icon-material-pinejs .path2:before {
+  content: "\eed7";
+  margin-left: -1em;
+  color: rgb(56, 142, 60);
+}
+.icon-material-pipeline:before {
+  content: "\eed8";
+  color: #f57f17;
+}
+.icon-material-plastic:before {
+  content: "\eed9";
+  color: #ff9800;
+}
+.icon-material-playwright .path1:before {
+  content: "\eeda";
+  color: rgb(239, 83, 80);
+}
+.icon-material-playwright .path2:before {
+  content: "\eedb";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.icon-material-plop:before {
+  content: "\eedc";
+  color: #00bfa5;
+}
+.icon-material-pnpm .path1:before {
+  content: "\eedd";
+  color: rgb(255, 179, 0);
+}
+.icon-material-pnpm .path2:before {
+  content: "\eede";
+  margin-left: -1em;
+  color: rgb(224, 224, 224);
+}
+.icon-material-pnpm_light .path1:before {
+  content: "\eedf";
+  color: rgb(255, 179, 0);
+}
+.icon-material-pnpm_light .path2:before {
+  content: "\eee0";
+  margin-left: -1em;
+  color: rgb(117, 117, 117);
+}
+.icon-material-poetry .path1:before {
+  content: "\eee1";
+  color: rgb(63, 81, 181);
+}
+.icon-material-poetry .path2:before {
+  content: "\eee2";
+  margin-left: -1em;
+  color: rgb(25, 118, 210);
+}
+.icon-material-poetry .path3:before {
+  content: "\eee3";
+  margin-left: -1em;
+  color: rgb(41, 182, 246);
+}
+.icon-material-postcss:before {
+  content: "\eee4";
+}
+.icon-material-posthtml:before {
+  content: "\eee5";
+  color: #f57f17;
+}
+.icon-material-powerpoint:before {
+  content: "\eee6";
+  color: #d14524;
+}
+.icon-material-powershell:before {
+  content: "\eee7";
+  color: #03a9f4;
+}
+.icon-material-prettier .path1:before {
+  content: "\eee8";
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path2:before {
+  content: "\eee9";
+  margin-left: -1em;
+  color: rgb(234, 94, 94);
+}
+.icon-material-prettier .path3:before {
+  content: "\eeea";
+  margin-left: -1em;
+  color: rgb(191, 133, 191);
+}
+.icon-material-prettier .path4:before {
+  content: "\eeeb";
+  margin-left: -1em;
+  color: rgb(234, 94, 94);
+}
+.icon-material-prettier .path5:before {
+  content: "\eeec";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path6:before {
+  content: "\eeed";
+  margin-left: -1em;
+  color: rgb(191, 133, 191);
+}
+.icon-material-prettier .path7:before {
+  content: "\eeee";
+  margin-left: -1em;
+  color: rgb(191, 133, 191);
+}
+.icon-material-prettier .path8:before {
+  content: "\eeef";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path9:before {
+  content: "\eef0";
+  margin-left: -1em;
+  color: rgb(234, 94, 94);
+}
+.icon-material-prettier .path10:before {
+  content: "\eef1";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path11:before {
+  content: "\eef2";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path12:before {
+  content: "\eef3";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path13:before {
+  content: "\eef4";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path14:before {
+  content: "\eef5";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path15:before {
+  content: "\eef6";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path16:before {
+  content: "\eef7";
+  margin-left: -1em;
+  color: rgb(234, 94, 94);
+}
+.icon-material-prettier .path17:before {
+  content: "\eef8";
+  margin-left: -1em;
+  color: rgb(191, 133, 191);
+}
+.icon-material-prettier .path18:before {
+  content: "\eef9";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prettier .path19:before {
+  content: "\eefa";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path20:before {
+  content: "\eefb";
+  margin-left: -1em;
+  color: rgb(191, 133, 191);
+}
+.icon-material-prettier .path21:before {
+  content: "\eefc";
+  margin-left: -1em;
+  color: rgb(234, 94, 94);
+}
+.icon-material-prettier .path22:before {
+  content: "\eefd";
+  margin-left: -1em;
+  color: rgb(247, 186, 62);
+}
+.icon-material-prettier .path23:before {
+  content: "\eefe";
+  margin-left: -1em;
+  color: rgb(86, 179, 180);
+}
+.icon-material-prisma:before {
+  content: "\eeff";
+  color: #00bfa5;
+}
+.icon-material-processing:before {
+  content: "\ef00";
+}
+.icon-material-prolog:before {
+  content: "\ef01";
+  color: #ef5350;
+}
+.icon-material-proto .path1:before {
+  content: "\ef02";
+  color: rgb(255, 87, 34);
+}
+.icon-material-proto .path2:before {
+  content: "\ef03";
+  margin-left: -1em;
+  color: rgb(3, 169, 244);
+}
+.icon-material-proto .path3:before {
+  content: "\ef04";
+  margin-left: -1em;
+  color: rgb(255, 235, 59);
+}
+.icon-material-proto .path4:before {
+  content: "\ef05";
+  margin-left: -1em;
+  color: rgb(0, 230, 118);
+}
+.icon-material-protractor .path1:before {
+  content: "\ef06";
+  color: rgb(229, 57, 53);
+}
+.icon-material-protractor .path2:before {
+  content: "\ef07";
+  margin-left: -1em;
+  color: rgb(213, 28, 47);
+}
+.icon-material-protractor .path3:before {
+  content: "\ef08";
+  margin-left: -1em;
+  color: rgb(245, 245, 245);
+}
+.icon-material-pug .path1:before {
+  content: "\ef09";
+  color: rgb(239, 204, 163);
+}
+.icon-material-pug .path2:before {
+  content: "\ef0a";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path3:before {
+  content: "\ef0b";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path4:before {
+  content: "\ef0c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-pug .path5:before {
+  content: "\ef0d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-pug .path6:before {
+  content: "\ef0e";
+  margin-left: -1em;
+  color: rgb(239, 204, 163);
+}
+.icon-material-pug .path7:before {
+  content: "\ef0f";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path8:before {
+  content: "\ef10";
+  margin-left: -1em;
+  color: rgb(86, 51, 43);
+}
+.icon-material-pug .path9:before {
+  content: "\ef11";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path10:before {
+  content: "\ef12";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path11:before {
+  content: "\ef13";
+  margin-left: -1em;
+  color: rgb(86, 51, 43);
+}
+.icon-material-pug .path12:before {
+  content: "\ef14";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-pug .path13:before {
+  content: "\ef15";
+  margin-left: -1em;
+  color: rgb(127, 74, 65);
+}
+.icon-material-pug .path14:before {
+  content: "\ef16";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path15:before {
+  content: "\ef17";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path16:before {
+  content: "\ef18";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path17:before {
+  content: "\ef19";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-pug .path18:before {
+  content: "\ef1a";
+  margin-left: -1em;
+  color: rgb(51, 23, 18);
+}
+.icon-material-pug .path19:before {
+  content: "\ef1b";
+  margin-left: -1em;
+  color: rgb(51, 23, 18);
+}
+.icon-material-pug .path20:before {
+  content: "\ef1c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-pug .path21:before {
+  content: "\ef1d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-pug .path22:before {
+  content: "\ef1e";
+  margin-left: -1em;
+  color: rgb(127, 74, 65);
+}
+.icon-material-pug .path23:before {
+  content: "\ef1f";
+  margin-left: -1em;
+  color: rgb(239, 204, 163);
+}
+.icon-material-pug .path24:before {
+  content: "\ef20";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path25:before {
+  content: "\ef21";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path26:before {
+  content: "\ef22";
+  margin-left: -1em;
+  color: rgb(86, 51, 43);
+}
+.icon-material-pug .path27:before {
+  content: "\ef23";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path28:before {
+  content: "\ef24";
+  margin-left: -1em;
+  color: rgb(86, 51, 43);
+}
+.icon-material-pug .path29:before {
+  content: "\ef25";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path30:before {
+  content: "\ef26";
+  margin-left: -1em;
+  color: rgb(204, 172, 141);
+}
+.icon-material-pug .path31:before {
+  content: "\ef27";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path32:before {
+  content: "\ef28";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path33:before {
+  content: "\ef29";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path34:before {
+  content: "\ef2a";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path35:before {
+  content: "\ef2b";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-pug .path36:before {
+  content: "\ef2c";
+  margin-left: -1em;
+  color: rgb(68, 40, 35);
+}
+.icon-material-puppet:before {
+  content: "\ef2d";
+  color: #fbc02d;
+}
+.icon-material-purescript:before {
+  content: "\ef2e";
+  color: #42a5f5;
+}
+.icon-material-python .path1:before {
+  content: "\ef2f";
+  color: rgb(60, 120, 170);
+}
+.icon-material-python .path2:before {
+  content: "\ef30";
+  margin-left: -1em;
+  color: rgb(253, 216, 53);
+}
+.icon-material-python-misc .path1:before {
+  content: "\ef31";
+  color: rgb(117, 117, 117);
+}
+.icon-material-python-misc .path2:before {
+  content: "\ef32";
+  margin-left: -1em;
+  color: rgb(60, 120, 170);
+}
+.icon-material-python-misc .path3:before {
+  content: "\ef33";
+  margin-left: -1em;
+  color: rgb(253, 216, 53);
+}
+.icon-material-qsharp:before {
+  content: "\ef34";
+  color: #fbc02d;
+}
+.icon-material-quasar:before {
+  content: "\ef35";
+  color: #1976d2;
+}
+.icon-material-qwik .path1:before {
+  content: "\ef36";
+  color: rgb(41, 182, 246);
+}
+.icon-material-qwik .path2:before {
+  content: "\ef37";
+  margin-left: -1em;
+  color: rgb(179, 136, 255);
+}
+.icon-material-qwik .path3:before {
+  content: "\ef38";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-r:before {
+  content: "\ef39";
+  color: #1976d2;
+}
+.icon-material-racket .path1:before {
+  content: "\ef3a";
+  color: rgb(2, 136, 209);
+}
+.icon-material-racket .path2:before {
+  content: "\ef3b";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-raml:before {
+  content: "\ef3c";
+  color: #42a5f5;
+}
+.icon-material-razor:before {
+  content: "\ef3d";
+  color: #42a5f5;
+}
+.icon-material-rc:before {
+  content: "\ef3e";
+  color: #0288d1;
+}
+.icon-material-react:before {
+  content: "\ef3f";
+  color: #00bcd4;
+}
+.icon-material-react_ts:before {
+  content: "\ef40";
+  color: #0288d1;
+}
+.icon-material-readme:before {
+  content: "\ef41";
+  color: #42a5f5;
+}
+.icon-material-reason:before {
+  content: "\ef42";
+  color: #f44336;
+}
+.icon-material-red .path1:before {
+  content: "\ef43";
+  color: rgb(251, 192, 45);
+}
+.icon-material-red .path2:before {
+  content: "\ef44";
+  margin-left: -1em;
+  color: rgb(183, 28, 28);
+}
+.icon-material-red .path3:before {
+  content: "\ef45";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-red .path4:before {
+  content: "\ef46";
+  margin-left: -1em;
+  color: rgb(183, 28, 28);
+}
+.icon-material-red .path5:before {
+  content: "\ef47";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-redux-action:before {
+  content: "\ef48";
+  color: #ab47bc;
+}
+.icon-material-redux-reducer:before {
+  content: "\ef49";
+  color: #ef5350;
+}
+.icon-material-redux-selector:before {
+  content: "\ef4a";
+  color: #ff6e40;
+}
+.icon-material-redux-store:before {
+  content: "\ef4b";
+  color: #8bc34a;
+}
+.icon-material-remix:before {
+  content: "\ef4c";
+  color: #b0bec5;
+}
+.icon-material-remix_light:before {
+  content: "\ef4d";
+  color: #455a64;
+}
+.icon-material-renovate:before {
+  content: "\ef4e";
+  color: #ffb300;
+}
+.icon-material-replit:before {
+  content: "\ef4f";
+  color: #ff6d00;
+}
+.icon-material-rescript:before {
+  content: "\ef50";
+  color: #ef5350;
+}
+.icon-material-rescript-interface:before {
+  content: "\ef51";
+  color: #ef5350;
+}
+.icon-material-restql .path1:before {
+  content: "\ef52";
+  color: rgb(131, 232, 194);
+}
+.icon-material-restql .path2:before {
+  content: "\ef53";
+  margin-left: -1em;
+  color: rgb(17, 29, 90);
+}
+.icon-material-restql .path3:before {
+  content: "\ef54";
+  margin-left: -1em;
+  color: rgb(131, 232, 194);
+}
+.icon-material-restql .path4:before {
+  content: "\ef55";
+  margin-left: -1em;
+  color: rgb(222, 89, 65);
+}
+.icon-material-riot:before {
+  content: "\ef56";
+  color: #e53935;
+}
+.icon-material-roadmap:before {
+  content: "\ef57";
+  color: #26a69a;
+}
+.icon-material-robot:before {
+  content: "\ef58";
+  color: #00bfa5;
+}
+.icon-material-robots:before {
+  content: "\ef59";
+  color: #ff5252;
+}
+.icon-material-rollup:before {
+  content: "\ef5a";
+  color: #f44336;
+}
+.icon-material-rome .path1:before {
+  content: "\ef5b";
+  color: rgb(84, 110, 122);
+}
+.icon-material-rome .path2:before {
+  content: "\ef5c";
+  margin-left: -1em;
+  color: rgb(255, 196, 0);
+}
+.icon-material-routing:before {
+  content: "\ef5d";
+  color: #43a047;
+}
+.icon-material-rubocop .path1:before {
+  content: "\ef5e";
+  color: rgb(215, 37, 44);
+}
+.icon-material-rubocop .path2:before {
+  content: "\ef5f";
+  margin-left: -1em;
+  color: rgb(215, 37, 44);
+}
+.icon-material-rubocop .path3:before {
+  content: "\ef60";
+  margin-left: -1em;
+  color: rgb(176, 190, 197);
+}
+.icon-material-rubocop .path4:before {
+  content: "\ef61";
+  margin-left: -1em;
+  color: rgb(176, 190, 197);
+}
+.icon-material-rubocop_light .path1:before {
+  content: "\ef62";
+  color: rgb(215, 37, 44);
+}
+.icon-material-rubocop_light .path2:before {
+  content: "\ef63";
+  margin-left: -1em;
+  color: rgb(215, 37, 44);
+}
+.icon-material-rubocop_light .path3:before {
+  content: "\ef64";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-rubocop_light .path4:before {
+  content: "\ef65";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-ruby:before {
+  content: "\ef66";
+  color: #f44336;
+}
+.icon-material-rust:before {
+  content: "\ef67";
+  color: #ff7043;
+}
+.icon-material-salesforce:before {
+  content: "\ef68";
+  color: #039be5;
+}
+.icon-material-san .path1:before {
+  content: "\ef69";
+  color: rgb(41, 88, 146);
+}
+.icon-material-san .path2:before {
+  content: "\ef6a";
+  margin-left: -1em;
+  color: rgb(161, 224, 255);
+}
+.icon-material-sas:before {
+  content: "\ef6b";
+  color: #039be5;
+}
+.icon-material-sass:before {
+  content: "\ef6c";
+  color: #ec407a;
+}
+.icon-material-sbt:before {
+  content: "\ef6d";
+  color: #0277bd;
+}
+.icon-material-scala:before {
+  content: "\ef6e";
+  color: #f44336;
+}
+.icon-material-scheme:before {
+  content: "\ef6f";
+  color: #f44336;
+}
+.icon-material-search:before {
+  content: "\ef70";
+  color: #42a5f5;
+}
+.icon-material-semantic-release:before {
+  content: "\ef71";
+  color: #f5f5f5;
+}
+.icon-material-semantic-release_light:before {
+  content: "\ef72";
+  color: #455a64;
+}
+.icon-material-sentry:before {
+  content: "\ef73";
+  color: #f06292;
+}
+.icon-material-sequelize .path1:before {
+  content: "\ef74";
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path2:before {
+  content: "\ef75";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path3:before {
+  content: "\ef76";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path4:before {
+  content: "\ef77";
+  margin-left: -1em;
+  color: rgb(47, 64, 106);
+}
+.icon-material-sequelize .path5:before {
+  content: "\ef78";
+  margin-left: -1em;
+  color: rgb(35, 121, 189);
+}
+.icon-material-sequelize .path6:before {
+  content: "\ef79";
+  margin-left: -1em;
+  color: rgb(3, 175, 239);
+}
+.icon-material-sequelize .path7:before {
+  content: "\ef7a";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path8:before {
+  content: "\ef7b";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path9:before {
+  content: "\ef7c";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path10:before {
+  content: "\ef7d";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path11:before {
+  content: "\ef7e";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path12:before {
+  content: "\ef7f";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path13:before {
+  content: "\ef80";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path14:before {
+  content: "\ef81";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path15:before {
+  content: "\ef82";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path16:before {
+  content: "\ef83";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path17:before {
+  content: "\ef84";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path18:before {
+  content: "\ef85";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path19:before {
+  content: "\ef86";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path20:before {
+  content: "\ef87";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path21:before {
+  content: "\ef88";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path22:before {
+  content: "\ef89";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path23:before {
+  content: "\ef8a";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path24:before {
+  content: "\ef8b";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-sequelize .path25:before {
+  content: "\ef8c";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-sequelize .path26:before {
+  content: "\ef8d";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-sequelize .path27:before {
+  content: "\ef8e";
+  margin-left: -1em;
+  color: rgb(79, 195, 247);
+}
+.icon-material-serverless:before {
+  content: "\ef8f";
+  color: #ef5350;
+}
+.icon-material-settings:before {
+  content: "\ef90";
+  color: #42a5f5;
+}
+.icon-material-shader:before {
+  content: "\ef91";
+  color: #ab47bc;
+}
+.icon-material-shaderlab:before {
+  content: "\ef92";
+  color: #1976d2;
+}
+.icon-material-silverstripe:before {
+  content: "\ef93";
+  color: #0288d1;
+}
+.icon-material-siyuan .path1:before {
+  content: "\ef94";
+  color: rgb(229, 57, 53);
+}
+.icon-material-siyuan .path2:before {
+  content: "\ef95";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-siyuan .path3:before {
+  content: "\ef96";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-sketch:before {
+  content: "\ef97";
+  color: #ffc107;
+}
+.icon-material-slim:before {
+  content: "\ef98";
+  color: #f57f17;
+}
+.icon-material-slug:before {
+  content: "\ef99";
+  color: #f9a825;
+}
+.icon-material-smarty:before {
+  content: "\ef9a";
+  color: #ffce00;
+}
+.icon-material-sml:before {
+  content: "\ef9b";
+  color: #f44336;
+}
+.icon-material-snowpack:before {
+  content: "\ef9c";
+  color: #cfd8dc;
+}
+.icon-material-snowpack_light:before {
+  content: "\ef9d";
+  color: #607d8b;
+}
+.icon-material-snyk .path1:before {
+  content: "\ef9e";
+  color: rgb(96, 125, 139);
+}
+.icon-material-snyk .path2:before {
+  content: "\ef9f";
+  margin-left: -1em;
+  color: rgb(144, 164, 174);
+}
+.icon-material-snyk .path3:before {
+  content: "\efa0";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-snyk .path4:before {
+  content: "\efa1";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-snyk .path5:before {
+  content: "\efa2";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-snyk .path6:before {
+  content: "\efa3";
+  margin-left: -1em;
+  color: rgb(69, 90, 100);
+}
+.icon-material-snyk .path7:before {
+  content: "\efa4";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-snyk .path8:before {
+  content: "\efa5";
+  margin-left: -1em;
+  color: rgb(55, 71, 79);
+}
+.icon-material-snyk .path9:before {
+  content: "\efa6";
+  margin-left: -1em;
+  color: rgb(96, 125, 139);
+}
+.icon-material-solidity:before {
+  content: "\efa7";
+  color: #0288d1;
+}
+.icon-material-sonarcloud:before {
+  content: "\efa8";
+  color: #ef6c00;
+}
+.icon-material-steadybit:before {
+  content: "\efa9";
+  color: #e53935;
+}
+.icon-material-stencil:before {
+  content: "\efaa";
+  color: #448aff;
+}
+.icon-material-stitches:before {
+  content: "\efab";
+  color: #cfd8dc;
+}
+.icon-material-stitches_light:before {
+  content: "\efac";
+  color: #546e7a;
+}
+.icon-material-storybook .path1:before {
+  content: "\efad";
+  color: rgb(255, 64, 129);
+}
+.icon-material-storybook .path2:before {
+  content: "\efae";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-stryker:before {
+  content: "\efaf";
+  color: #ef5350;
+}
+.icon-material-stylable .path1:before {
+  content: "\efb0";
+  color: rgb(102, 187, 106);
+}
+.icon-material-stylable .path2:before {
+  content: "\efb1";
+  margin-left: -1em;
+  color: rgb(1, 87, 155);
+}
+.icon-material-stylable .path3:before {
+  content: "\efb2";
+  margin-left: -1em;
+  color: rgb(255, 23, 68);
+}
+.icon-material-stylable .path4:before {
+  content: "\efb3";
+  margin-left: -1em;
+  color: rgb(183, 28, 28);
+}
+.icon-material-stylelint:before {
+  content: "\efb4";
+  color: #cfd8dc;
+}
+.icon-material-stylelint_light:before {
+  content: "\efb5";
+  color: #546e7a;
+}
+.icon-material-stylus:before {
+  content: "\efb6";
+  color: #c0ca33;
+}
+.icon-material-sublime:before {
+  content: "\efb7";
+  color: #ffb74d;
+}
+.icon-material-supabase:before {
+  content: "\efb8";
+  color: #66bb6a;
+}
+.icon-material-svelte:before {
+  content: "\efb9";
+  color: #ff5722;
+}
+.icon-material-svg:before {
+  content: "\efba";
+  color: #ffb300;
+}
+.icon-material-svgo:before {
+  content: "\efbb";
+  color: #0288d1;
+}
+.icon-material-svgr:before {
+  content: "\efbc";
+  color: #ffb300;
+}
+.icon-material-swc:before {
+  content: "\efbd";
+  color: #e53935;
+}
+.icon-material-swift:before {
+  content: "\efbe";
+  color: #fe5e2f;
+}
+.icon-material-table:before {
+  content: "\efbf";
+  color: #8bc34a;
+}
+.icon-material-tailwindcss:before {
+  content: "\efc0";
+  color: #4db6ac;
+}
+.icon-material-tauri .path1:before {
+  content: "\efc1";
+  color: rgb(255, 202, 40);
+}
+.icon-material-tauri .path2:before {
+  content: "\efc2";
+  margin-left: -1em;
+  color: rgb(38, 198, 218);
+}
+.icon-material-tauri .path3:before {
+  content: "\efc3";
+  margin-left: -1em;
+  color: rgb(255, 202, 40);
+}
+.icon-material-tauri .path4:before {
+  content: "\efc4";
+  margin-left: -1em;
+  color: rgb(38, 198, 218);
+}
+.icon-material-tcl:before {
+  content: "\efc5";
+  color: #ef5350;
+}
+.icon-material-teal:before {
+  content: "\efc6";
+  color: #00acc1;
+}
+.icon-material-template:before {
+  content: "\efc7";
+  color: #90a4ae;
+}
+.icon-material-terraform:before {
+  content: "\efc8";
+  color: #5c6bc0;
+}
+.icon-material-test-js:before {
+  content: "\efc9";
+  color: #ffca28;
+}
+.icon-material-test-jsx:before {
+  content: "\efca";
+  color: #00bcd4;
+}
+.icon-material-test-ts:before {
+  content: "\efcb";
+  color: #0288d1;
+}
+.icon-material-tex:before {
+  content: "\efcc";
+  color: #42a5f5;
+}
+.icon-material-textlint .path1:before {
+  content: "\efcd";
+  color: rgb(240, 98, 146);
+}
+.icon-material-textlint .path2:before {
+  content: "\efce";
+  margin-left: -1em;
+  color: rgb(0, 229, 255);
+}
+.icon-material-tilt:before {
+  content: "\efcf";
+  color: #4caf50;
+}
+.icon-material-tldraw:before {
+  content: "\efd0";
+  color: #b0bec5;
+}
+.icon-material-tldraw_light:before {
+  content: "\efd1";
+  color: #455a64;
+}
+.icon-material-tobi:before {
+  content: "\efd2";
+  color: #c2185b;
+}
+.icon-material-tobimake .path1:before {
+  content: "\efd3";
+  color: rgb(117, 117, 117);
+}
+.icon-material-tobimake .path2:before {
+  content: "\efd4";
+  margin-left: -1em;
+  color: rgb(194, 24, 91);
+}
+.icon-material-tobimake .path3:before {
+  content: "\efd5";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-todo:before {
+  content: "\efd6";
+  color: #7cb342;
+}
+.icon-material-travis .path1:before {
+  content: "\efd7";
+  color: rgb(203, 51, 73);
+}
+.icon-material-travis .path2:before {
+  content: "\efd8";
+  margin-left: -1em;
+  color: rgb(244, 237, 174);
+}
+.icon-material-travis .path3:before {
+  content: "\efd9";
+  margin-left: -1em;
+  color: rgb(230, 204, 173);
+}
+.icon-material-travis .path4:before {
+  content: "\efda";
+  margin-left: -1em;
+  color: rgb(101, 108, 103);
+}
+.icon-material-travis .path5:before {
+  content: "\efdb";
+  margin-left: -1em;
+  color: rgb(229, 202, 163);
+}
+.icon-material-travis .path6:before {
+  content: "\efdc";
+  margin-left: -1em;
+  color: rgb(199, 179, 154);
+}
+.icon-material-travis .path7:before {
+  content: "\efdd";
+  margin-left: -1em;
+  color: rgb(230, 204, 173);
+}
+.icon-material-travis .path8:before {
+  content: "\efde";
+  margin-left: -1em;
+  color: rgb(230, 204, 173);
+}
+.icon-material-travis .path9:before {
+  content: "\efdf";
+  margin-left: -1em;
+  color: rgb(235, 213, 153);
+}
+.icon-material-travis .path10:before {
+  content: "\efe0";
+  margin-left: -1em;
+  color: rgb(45, 49, 54);
+}
+.icon-material-travis .path11:before {
+  content: "\efe1";
+  margin-left: -1em;
+  color: rgb(237, 246, 250);
+}
+.icon-material-travis .path12:before {
+  content: "\efe2";
+  margin-left: -1em;
+  color: rgb(45, 49, 54);
+}
+.icon-material-travis .path13:before {
+  content: "\efe3";
+  margin-left: -1em;
+  color: rgb(237, 246, 250);
+}
+.icon-material-travis .path14:before {
+  content: "\efe4";
+  margin-left: -1em;
+  color: rgb(235, 213, 153);
+  opacity: 0.64;
+}
+.icon-material-travis .path15:before {
+  content: "\efe5";
+  margin-left: -1em;
+  color: rgb(235, 213, 153);
+  opacity: 0.5625;
+}
+.icon-material-travis .path16:before {
+  content: "\efe6";
+  margin-left: -1em;
+  color: rgb(45, 49, 54);
+}
+.icon-material-travis .path17:before {
+  content: "\efe7";
+  margin-left: -1em;
+  color: rgb(45, 49, 54);
+}
+.icon-material-travis .path18:before {
+  content: "\efe8";
+  margin-left: -1em;
+  color: rgb(203, 51, 73);
+}
+.icon-material-travis .path19:before {
+  content: "\efe9";
+  margin-left: -1em;
+  color: rgb(101, 108, 103);
+}
+.icon-material-travis .path20:before {
+  content: "\efea";
+  margin-left: -1em;
+  color: rgb(199, 179, 154);
+}
+.icon-material-travis .path21:before {
+  content: "\efeb";
+  margin-left: -1em;
+  color: rgb(199, 179, 154);
+}
+.icon-material-travis .path22:before {
+  content: "\efec";
+  margin-left: -1em;
+  color: rgb(45, 49, 54);
+}
+.icon-material-tree:before {
+  content: "\efed";
+  color: #7cb342;
+}
+.icon-material-tsconfig .path1:before {
+  content: "\efee";
+  color: rgb(117, 117, 117);
+}
+.icon-material-tsconfig .path2:before {
+  content: "\efef";
+  margin-left: -1em;
+  color: rgb(2, 136, 209);
+}
+.icon-material-tsconfig .path3:before {
+  content: "\eff0";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-tune:before {
+  content: "\eff1";
+  color: #fbc02d;
+}
+.icon-material-turborepo .path1:before {
+  content: "\eff2";
+  color: rgb(41, 121, 255);
+}
+.icon-material-turborepo .path2:before {
+  content: "\eff3";
+  margin-left: -1em;
+  color: rgb(68, 138, 255);
+}
+.icon-material-turborepo .path3:before {
+  content: "\eff4";
+  margin-left: -1em;
+  color: rgb(126, 87, 194);
+}
+.icon-material-turborepo .path4:before {
+  content: "\eff5";
+  margin-left: -1em;
+  color: rgb(171, 71, 188);
+}
+.icon-material-turborepo .path5:before {
+  content: "\eff6";
+  margin-left: -1em;
+  color: rgb(216, 27, 96);
+}
+.icon-material-turborepo .path6:before {
+  content: "\eff7";
+  margin-left: -1em;
+  color: rgb(245, 0, 87);
+}
+.icon-material-turborepo .path7:before {
+  content: "\eff8";
+  margin-left: -1em;
+  color: rgb(236, 239, 241);
+}
+.icon-material-turborepo_light .path1:before {
+  content: "\eff9";
+  color: rgb(41, 121, 255);
+}
+.icon-material-turborepo_light .path2:before {
+  content: "\effa";
+  margin-left: -1em;
+  color: rgb(68, 138, 255);
+}
+.icon-material-turborepo_light .path3:before {
+  content: "\effb";
+  margin-left: -1em;
+  color: rgb(126, 87, 194);
+}
+.icon-material-turborepo_light .path4:before {
+  content: "\effc";
+  margin-left: -1em;
+  color: rgb(171, 71, 188);
+}
+.icon-material-turborepo_light .path5:before {
+  content: "\effd";
+  margin-left: -1em;
+  color: rgb(216, 27, 96);
+}
+.icon-material-turborepo_light .path6:before {
+  content: "\effe";
+  margin-left: -1em;
+  color: rgb(245, 0, 87);
+}
+.icon-material-turborepo_light .path7:before {
+  content: "\efff";
+  margin-left: -1em;
+  color: rgb(96, 125, 139);
+}
+.icon-material-twig:before {
+  content: "\f000";
+  color: #9bb92f;
+}
+.icon-material-twine .path1:before {
+  content: "\f001";
+  color: rgb(30, 136, 229);
+}
+.icon-material-twine .path2:before {
+  content: "\f002";
+  margin-left: -1em;
+  color: rgb(105, 240, 174);
+}
+.icon-material-typescript:before {
+  content: "\f003";
+  color: #0288d1;
+}
+.icon-material-typescript-def:before {
+  content: "\f004";
+  color: #0288d1;
+}
+.icon-material-typst:before {
+  content: "\f005";
+  color: #0097a7;
+}
+.icon-material-uml .path1:before {
+  content: "\f006";
+  color: rgb(179, 157, 219);
+}
+.icon-material-uml .path2:before {
+  content: "\f007";
+  margin-left: -1em;
+  color: rgb(251, 192, 45);
+}
+.icon-material-uml .path3:before {
+  content: "\f008";
+  margin-left: -1em;
+  color: rgb(240, 98, 146);
+}
+.icon-material-uml_light .path1:before {
+  content: "\f009";
+  color: rgb(149, 117, 205);
+}
+.icon-material-uml_light .path2:before {
+  content: "\f00a";
+  margin-left: -1em;
+  color: rgb(249, 168, 37);
+}
+.icon-material-uml_light .path3:before {
+  content: "\f00b";
+  margin-left: -1em;
+  color: rgb(236, 64, 122);
+}
+.icon-material-url:before {
+  content: "\f00c";
+  color: #42a5f5;
+}
+.icon-material-vagrant .path1:before {
+  content: "\f00d";
+  color: rgb(21, 101, 192);
+}
+.icon-material-vagrant .path2:before {
+  content: "\f00e";
+  margin-left: -1em;
+  color: rgb(41, 121, 255);
+}
+.icon-material-vala:before {
+  content: "\f00f";
+  color: #9575cd;
+}
+.icon-material-velocity:before {
+  content: "\f010";
+  color: #0288d1;
+}
+.icon-material-vercel:before {
+  content: "\f011";
+  color: #cfd8dc;
+}
+.icon-material-vercel_light:before {
+  content: "\f012";
+  color: #455a64;
+}
+.icon-material-verdaccio .path1:before {
+  content: "\f013";
+  color: rgb(0, 137, 123);
+}
+.icon-material-verdaccio .path2:before {
+  content: "\f014";
+  margin-left: -1em;
+  color: rgb(229, 115, 115);
+}
+.icon-material-verilog:before {
+  content: "\f015";
+  color: #ff7043;
+}
+.icon-material-vfl .path1:before {
+  content: "\f016";
+  color: rgb(240, 82, 35);
+}
+.icon-material-vfl .path2:before {
+  content: "\f017";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-material-vfl .path3:before {
+  content: "\f018";
+  margin-left: -1em;
+  color: rgb(240, 82, 35);
+}
+.icon-material-video:before {
+  content: "\f019";
+  color: #ff9800;
+}
+.icon-material-vim:before {
+  content: "\f01a";
+  color: #43a047;
+}
+.icon-material-virtual:before {
+  content: "\f01b";
+  color: #039be5;
+}
+.icon-material-visualstudio:before {
+  content: "\f01c";
+  color: #ab47bc;
+}
+.icon-material-vite:before {
+  content: "\f01d";
+  color: #ffab00;
+}
+.icon-material-vitest .path1:before {
+  content: "\f01e";
+  color: rgb(255, 202, 40);
+}
+.icon-material-vitest .path2:before {
+  content: "\f01f";
+  margin-left: -1em;
+  color: rgb(104, 159, 56);
+}
+.icon-material-vitest .path3:before {
+  content: "\f020";
+  margin-left: -1em;
+  color: rgb(104, 159, 56);
+  opacity: 0.5020;
+}
+.icon-material-vlang .path1:before {
+  content: "\f021";
+  color: rgb(84, 110, 122);
+}
+.icon-material-vlang .path2:before {
+  content: "\f022";
+  margin-left: -1em;
+  color: rgb(3, 155, 229);
+}
+.icon-material-vscode:before {
+  content: "\f023";
+  color: #2196f3;
+}
+.icon-material-vue .path1:before {
+  content: "\f024";
+  color: rgb(65, 184, 131);
+}
+.icon-material-vue .path2:before {
+  content: "\f025";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-vue-config .path1:before {
+  content: "\f026";
+  color: rgb(117, 117, 117);
+}
+.icon-material-vue-config .path2:before {
+  content: "\f027";
+  margin-left: -1em;
+  color: rgb(65, 184, 131);
+}
+.icon-material-vue-config .path3:before {
+  content: "\f028";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-vuex-store .path1:before {
+  content: "\f029";
+  color: rgb(65, 184, 131);
+}
+.icon-material-vuex-store .path2:before {
+  content: "\f02a";
+  margin-left: -1em;
+  color: rgb(53, 73, 94);
+}
+.icon-material-wakatime:before {
+  content: "\f02b";
+}
+.icon-material-wakatime_light:before {
+  content: "\f02c";
+}
+.icon-material-wallaby:before {
+  content: "\f02d";
+  color: #4caf50;
+}
+.icon-material-watchman .path1:before {
+  content: "\f02e";
+  color: rgb(255, 255, 255);
+}
+.icon-material-watchman .path2:before {
+  content: "\f02f";
+  margin-left: -1em;
+  color: rgb(66, 85, 229);
+}
+.icon-material-webassembly:before {
+  content: "\f030";
+  color: #7c4dff;
+}
+.icon-material-webhint:before {
+  content: "\f031";
+  color: #1e88e5;
+}
+.icon-material-webpack .path1:before {
+  content: "\f032";
+  color: rgb(255, 255, 255);
+  opacity: 0.785;
+}
+.icon-material-webpack .path2:before {
+  content: "\f033";
+  margin-left: -1em;
+  color: rgb(142, 214, 251);
+}
+.icon-material-webpack .path3:before {
+  content: "\f034";
+  margin-left: -1em;
+  color: rgb(28, 120, 192);
+}
+.icon-material-wepy:before {
+  content: "\f035";
+  color: #4caf50;
+}
+.icon-material-windicss:before {
+  content: "\f036";
+  color: #42a5f5;
+}
+.icon-material-wolframlanguage .path1:before {
+  content: "\f037";
+  color: rgb(33, 33, 33);
+}
+.icon-material-wolframlanguage .path2:before {
+  content: "\f038";
+  margin-left: -1em;
+  color: rgb(229, 57, 53);
+}
+.icon-material-wolframlanguage .path3:before {
+  content: "\f039";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-material-word:before {
+  content: "\f03a";
+  color: #01579b;
+}
+.icon-material-xaml:before {
+  content: "\f03b";
+  color: #42a5f5;
+}
+.icon-material-xml:before {
+  content: "\f03c";
+  color: #8bc34a;
+}
+.icon-material-yaml:before {
+  content: "\f03d";
+  color: #ff5252;
+}
+.icon-material-yang:before {
+  content: "\f03e";
+  color: #42a5f5;
+}
+.icon-material-yarn:before {
+  content: "\f03f";
+  color: #0288d1;
+}
+.icon-material-zig:before {
+  content: "\f040";
+  color: #f9a825;
+}
+.icon-material-zip:before {
+  content: "\f041";
+  color: #afb42b;
+}
