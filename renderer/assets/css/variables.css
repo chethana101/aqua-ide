@@ -23,6 +23,8 @@
     --editor-scrollbar-background: #212125;
     --editor-tooltip-suggest-border: #595656;
     --editor-search-border-default: #37383b;
+    /*  Aqua Background Color  */
+    --aqua-background-text-default: #38383d;
     /*  Selector Colors  */
     --selector-background-default: #212123;
     --selector-border-default: #292a2c;
@@ -37,5 +39,6 @@
     /*  Directory Font Sizes  */
     --directory-font-size-default: 12px;
     --directory-icon-size-default: 15px;
-    --default-icon-size-16px: 16px;
+    --default-folder-icon-size-16px: 70%;
+    --default-file-icon-size-16px: 16px;
 }

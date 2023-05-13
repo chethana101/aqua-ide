@@ -1,10 +1,12 @@
 // worker.js
-
 let folderFileCount = -1;
 self.addEventListener('message', async (event) => {
     const obj = event.data;
     const data = convertObjectToData(obj);
-    self.postMessage(data);
+    self.postMessage({
+        directoryResources: data,
+        folderCount: folderFileCount,
+    });
 });
 
 
@@ -15,7 +17,30 @@ function convertObjectToData(obj) {
     const data = [];
 
     const items = Object.values(obj).sort((a, b) => {
-        return a.type === 'directory' ? -1 : b.type === 'directory' ? 1 : 0;
+        if (a.type === b.type) {
+            // if both have children, sort by directory first
+            if (a.children && b.children) {
+                if (a.type === 'directory' && b.type === 'directory') {
+                    return -1;
+                } else if (a.type === 'file' && b.type === 'file') {
+                    return 1;
+                } else if (a.type === 'directory' && b.type === 'file') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (a.children) {
+                return -1; // a has children, b does not
+            } else if (b.children) {
+                return 1; // b has children, a does not
+            } else {
+                return 0; // both do not have children
+            }
+        } else if (a.type === 'directory' && b.type === 'file') {
+            return -1; // sort directory before file
+        } else {
+            return 1; // sort file after directory
+        }
     });
 
     for (let i = 0; i < items.length; i++) {
@@ -28,6 +53,11 @@ function convertObjectToData(obj) {
             extension: item.extension,
             imageHtml: getFileIcon(item),
         };
+        if (item.name == 'vendor' || item.name == 'node_modules') {
+            // TODO:: Need to refactor this for, when some one click on those files. the data will load
+            data.push(newItem);
+            continue;
+        }
         if (item.children) {
             newItem.children = convertObjectToData(item.children);
         }
@@ -49,7 +79,7 @@ function getFileIcon(item) {
     // Folder icons
     const folderClass = getFolderIconClass(item.name)
     if (folderClass == null) {
-        return '<span class="icon-color-folder-icon"></span>';
+        return '<span class="icon-gray-folder-icon aqua-folder-styles"></span>';
     }
     return '<span class="icon-material-' + folderClass + '">' +
         '<span class="path1"></span>' +

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../icons/icomoon.eot?q00lwp');
-  src:  url('../icons/icomoon.eot?q00lwp#iefix') format('embedded-opentype'),
-    url('../icons/icomoon.ttf?q00lwp') format('truetype'),
-    url('../icons/icomoon.woff?q00lwp') format('woff'),
-    url('../icons/icomoon.svg?q00lwp#icomoon') format('svg');
+  src:  url('../icons/icomoon.eot?v4oms7');
+  src:  url('../icons/icomoon.eot?v4oms7#iefix') format('embedded-opentype'),
+    url('../icons/icomoon.ttf?v4oms7') format('truetype'),
+    url('../icons/icomoon.woff?v4oms7') format('woff'),
+    url('../icons/icomoon.svg?v4oms7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,13 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-read-only-false:before {
+  content: "\e90f";
+  color: var(--text-default);
+}
+.icon-read-only:before {
+  content: "\e913";
+  color: var(--text-default);
+}
+.icon-aqua-ide-background:before {
+  content: "\e916";
+}
 .icon-folder-border:before {
   content: "\e915";
 }
 .icon-file-icon-default:before {
   content: "\e914";
   color: #616c73;
-  font-size: var(--default-icon-size-16px);
+  font-size: var(--default-file-icon-size-16px);
 }
 .icon-add-new-file:before {
   content: "\e900";
@@ -56,7 +67,7 @@
 .icon-color-folder-icon:before {
   content: "\e905";
   color: #e79b42;
-  font-size: var(--default-icon-size-16px);
+  font-size: var(--default-folder-icon-size-16px);
 }
 .icon-correct-icon:before {
   content: "\e906";
@@ -81,7 +92,7 @@
 .icon-gray-folder-icon:before {
   content: "\e90b";
   color: #c0c0c0;
-  font-size: var(--default-icon-size-16px);
+  font-size: var(--default-folder-icon-size-16px);
 }
 .icon-maximize-icon:before {
   content: "\e90c";
@@ -95,10 +106,6 @@
   content: "\e90e";
   color: #c0c0c0;
 }
-.icon-read-only-icon:before {
-  content: "\e90f";
-  color: #c0c0c0;
-}
 .icon-right-arrow:before {
   content: "\e910";
   color: #c0c0c0;
@@ -110,8 +117,4 @@
 .icon-todo-icon:before {
   content: "\e912";
   color: #ced0d6;
-}
-.icon-unlock-icon:before {
-  content: "\e913";
-  color: #c0c0c0;
 }

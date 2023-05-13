@@ -32,7 +32,6 @@ window.editorsConfig = [];
 * Set editor tabs
 *----------------------------------------*/
 window.editorTabs = function (fileConfig) {
-    console.log(fileConfig);
     const tabGroup = document.querySelector("tab-group");
 
     // TODO:: Footer file navigator path add
@@ -67,13 +66,24 @@ window.editorTabs = function (fileConfig) {
         editor.on('change', () => {
             const newEditorValue = editor.getValue();
             if (newEditorValue !== oldEditorValue) {
-                console.log('Editor value has changed!');
                 tab.setBadge({text: "*", classname: "icon-add-new-icon"});
                 // oldEditorValue = newEditorValue;
             } else {
                 tab.setBadge({text: "", classname: "icon-add-new-icon"});
             }
         });
+
+        // Update IDE footer data with opened file
+        editor.container.addEventListener("click", function (e) {
+            let editorRowColumn = editor.selection.getCursor();
+            document.getElementById("aqua-file-row-column")
+                .innerText = "Ln " + (editorRowColumn.row + 1) + " Col " + (editorRowColumn.column + 1);
+        }, false);
+
+        // Change editor file read type and file extension
+        document.getElementById("footer-toggle-item-file-type")
+            .style.display = "flex";
+        updateEditorFooterFileInfo(editor, fileConfig);
     }
 
     tab.id = fileConfig.id;
@@ -107,7 +117,18 @@ window.editorTabs = function (fileConfig) {
                 allFiles: pathAfterRoot,
                 imageHtml: fileConfig.imageHtml,
             }, true);
+
+        // Change editor file read type and file extension
+        if (!editor.classList.contains("aqua-image-file-preview")) {
+            let currentEditor = ace.edit("aqua-editor-" + tab.id);
+            updateEditorFooterFileInfo(currentEditor, fileConfig);
+        } else {
+            let readOnlyController =
+                document.getElementById("aqua-file-footer-read-type");
+            readOnlyController.className = "icon-read-only-false";
+        }
     });
+
     // When tab closed
     tab.on("close", (tab) => {
         document.getElementById("aqua-editor-" + tab.id).remove();
@@ -122,6 +143,55 @@ window.editorTabs = function (fileConfig) {
         }
     });
 }
+// File ready only setter
+document.getElementById("aqua-file-footer-read-type-click")
+    .addEventListener("click", function (e) {
+        let tabGroup = document.querySelector("tab-group");
+        let activeTab = tabGroup.getActiveTab();
+
+        if (activeTab) {
+            let isEditor = document.getElementById("aqua-editor-" + activeTab.id);
+            if (!isEditor.classList.contains("aqua-image-file-preview")) {
+                let editor = ace.edit("aqua-editor-" + activeTab.id);
+                let readOnlyController = document.getElementById("aqua-file-footer-read-type");
+                if (editor.getReadOnly() == false) {
+                    editor.setReadOnly(true);
+                    readOnlyController.className = "icon-read-only";
+                } else {
+                    editor.setReadOnly(false)
+                    readOnlyController.className = "icon-read-only-false";
+                }
+            }
+        }
+    });
+
+// Copy editor selected data
+// console.log(await navigator.clipboard.readText());
+// console.log(await navigator.clipboard.writeText("OK););
+document.getElementById("aqua-editor-contextmenu-copy")
+    .addEventListener("click", async function (e) {
+        let tabGroup = document.querySelector("tab-group");
+        let activeTab = tabGroup.getActiveTab();
+        let editor = ace.edit("aqua-editor-" + activeTab.id);
+
+        // Write editor selected data
+        if (editor.getSelectedText()) {
+            await navigator.clipboard.writeText(editor.getSelectedText());
+            document.getElementById("contextmenu-editor-popup").style.display = "none";
+        }
+    });
+
+// Paste editor selected data
+document.getElementById("aqua-editor-contextmenu-paste")
+    .addEventListener("click", async function (e) {
+        let tabGroup = document.querySelector("tab-group");
+        let activeTab = tabGroup.getActiveTab();
+        let editor = ace.edit("aqua-editor-" + activeTab.id);
+
+        // Paste editor selected data
+        editor.session.insert(editor.selection.getCursor() , await navigator.clipboard.readText());
+        document.getElementById("contextmenu-editor-popup").style.display = "none";
+    });
 
 /*-------------------------------------
 * Get Editor Instance
@@ -138,7 +208,7 @@ function getEditor(fileConfig) {
         editorHolder.insertBefore(editorElement, editorHolder.firstChild);
 
         let editor = ace.edit(editorElement.id);
-        editor.setTheme("ace/theme/one_dark");
+        editor.setTheme("ace/theme/new_one_dark");
 
         ace.require("ace/ext/language_tools");
         editor.setOptions(getEditorOptions(editor));
@@ -147,7 +217,7 @@ function getEditor(fileConfig) {
 
         // Read the file and add content
         const data = fs.readFileSync(fileConfig.filePath);
-        editor.setValue(data.toString());
+        editor.setValue(data.toString(), -1);
 
         // TODO:: Need to handle when clear the current content and try to type. getiing error
         var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
@@ -336,4 +406,35 @@ function getFileType(fileExtension, fileName) {
     };
 
     return fileTypes[fileExtension] || "text";
+}
+
+/*-------------------------------------
+* Update IDE footer data with opened file
+*------------------------------------*/
+function updateEditorFooterFileInfo(editor, fileConfig) {
+    const fileFullNames = {
+        js: "JavaScript",
+        ts: "TypeScript",
+        xml: "XML",
+        html: "HTML",
+        py: "Python",
+        java: "Java",
+        php: "PHP",
+        json: "Json",
+        txt: "text",
+    };
+    // Update IDE footer file type
+    let editorFileExt = fileConfig.extension.replace(/\./g, '');
+    editorFileExt = editorFileExt == "" ? "text" : editorFileExt;
+
+    document.getElementById("aqua-file-footer-file-extension").innerText
+        = fileFullNames[editorFileExt] == undefined ? editorFileExt : fileFullNames[editorFileExt];
+
+    // Get editor read only status
+    let readOnlyController = document.getElementById("aqua-file-footer-read-type");
+    if (editor.getReadOnly()) {
+        readOnlyController.className = "icon-read-only";
+    } else {
+        readOnlyController.className = "icon-read-only-false";
+    }
 }

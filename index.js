@@ -81,7 +81,7 @@ app.on('activate', function () {
         createWindow();
     }
 });
-
-require('electron-reload')(__dirname, {
-    electron: path.join("node_modules\\", '.bin', 'electron')
-});
+//
+// require('electron-reload')(__dirname, {
+//     electron: path.join("node_modules\\", '.bin', 'electron')
+// });

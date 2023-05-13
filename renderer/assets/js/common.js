@@ -3,6 +3,7 @@
 *----------------------------------------*/
 
 const path = require("path");
+const fs = require("fs");
 
 // Get file and folder icons
 function getFileIcon(item, isEditor) {
@@ -16,11 +17,11 @@ function getFileIcon(item, isEditor) {
         }
         return '<span class="icon-material-' + iconClass + '"></span>';
     }
-    const folderClass = getFolderIconClass(item.name)
-    return '<span class="icon-material-' + folderClass + '">' +
-        '<span class="path1"></span>' +
-        '<span class="path2"></span>' +
-        '</span>';
+    const folderClass = getFolderIconClass(item.text)
+    if (folderClass == null && isEditor == true) {
+        return "icon-file-icon-default"
+    }
+    return '<span class="icon-gray-folder-icon aqua-folder-styles"></span>';
 }
 
 // Get file icon class
@@ -214,6 +215,7 @@ function isImage(extension) {
         ".heif",
         ".heic",
         ".bmp",
+        ".ttf",
     ];
 
     return imageExtensions.includes(extension.toLowerCase());
@@ -241,6 +243,13 @@ function isNoPreview(extension) {
     return imageExtensions.includes(extension.toLowerCase());
 }
 
+// Create new folder
+function createNewFolder(path) {
+    fs.mkdir(path, (err) => {
+        if (err) throw err;
+        console.log('Directory created successfully!');
+    });
+}
 
 export {
     getFileIcon,
@@ -250,4 +259,5 @@ export {
     previewImageComponent,
     isImage,
     isNoPreview,
+    createNewFolder,
 };

@@ -51,6 +51,17 @@ div::-webkit-scrollbar-thumb {
     color: var(--primary-dark) !important;
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.aqua-folder-styles {
+    margin-bottom: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ------------------------------------
 * Loading spinner
 --------------------------------------- */
@@ -375,6 +386,41 @@ div::-webkit-scrollbar-thumb {
 }
 
 /* ------------------------------------
+ * Aqua background cover
+ * ------------------------------------ */
+.aqua-background-cover {
+    width: 100%;
+    height: calc(100vh - 114px);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aqua-background-cover-holder {
+    text-align: center;
+}
+
+.aqua-background-cover-holder .icon-aqua-ide-background {
+    color: var(--primary-dark);
+    font-size: 200px;
+}
+
+.aqua-background-titles-box {
+    margin-top: 15px;
+    color: var(--aqua-background-text-default);
+}
+
+.aqua-background-titles-box .click-here-button {
+    cursor: pointer;
+}
+
+.aqua-background-titles-box .click-here-button:hover {
+    color: var(--primary-color);
+}
+
+/* ------------------------------------
  * Footer section
  * ------------------------------------ */
 .container-footer {
@@ -445,6 +491,8 @@ div::-webkit-scrollbar-thumb {
     border-radius: 2px;
     cursor: pointer;
     margin-left: 8px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-toggle-item:hover {

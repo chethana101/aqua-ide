@@ -69,7 +69,7 @@
                             <div class="side-bar-panel-toggle">
                                 <span class="side-bar-panel-head-icon icon-add-new-file"></span>
                             </div>
-                            <div class="side-bar-panel-toggle">
+                            <div class="side-bar-panel-toggle" id="aqua-create-new-folder-header">
                                 <span class="side-bar-panel-head-icon icon-add-new-foder"></span>
                             </div>
                             <div class="side-bar-panel-toggle" id="collapse-directory-tree">
@@ -227,7 +227,7 @@
                                 .icon-file-icon-default:before {
                                     content: "\e914";
                                     color: #616c73;
-                                    font-size: var(--default-icon-size-16px);
+                                    font-size: var(--default-file-icon-size-16px);
                                 }
 
                                 .views {
@@ -323,12 +323,23 @@
 <!--                        </div>-->
                     </div>
                 </div>
+                <!-- Background Cover -->
+                <div class="aqua-background-cover">
+                    <div class="aqua-background-cover-holder">
+                        <span class="icon-aqua-ide-background"></span>
+                        <div class="aqua-background-titles-box">
+                            <p>Drag & Drop a Folder/Project</p>
+                            <p>or</p>
+                            <a class="click-here-button">Click here to open</a>
+                        </div>
+                    </div>
+                </div>
                 <!-- TODO:: Welcome section -->
             </div>
         </div>
     </div>
     <!--  Container Footer  -->
-    <div class="container-footer">
+    <div class="container-footer" id="container-footer">
         <div class="container-footer-holder">
             <div class="footer-left">
                 <div class="footer-navigator" id="footer-navigator">
@@ -343,13 +354,13 @@
             </div>
             <div class="footer-right">
                 <div class="footer-toggle-item">
-                    <span class="footer-toggle-item-text">Ln 1, Col 2</span>
+                    <span class="footer-toggle-item-text" id="aqua-file-row-column">Ln 0, Col 0</span>
                 </div>
-                <div class="footer-toggle-item">
-                    <span class="footer-toggle-item-text">JavaScript</span>
+                <div class="footer-toggle-item" id="footer-toggle-item-file-type" style="display: none">
+                    <span class="footer-toggle-item-text" id="aqua-file-footer-file-extension"></span>
                 </div>
-                <div class="footer-toggle-item abc">
-                    <span class="icon-read-only-icon"></span>
+                <div class="footer-toggle-item" id="aqua-file-footer-read-type-click">
+                    <span class="icon-read-only-false" id="aqua-file-footer-read-type"></span>
                 </div>
             </div>
         </div>
@@ -363,11 +374,11 @@
     <hr>
     <li class="dropdown-menu-item" id="contextmenu-delete-action" data-action-type="Delete">Delete</li>
 </ul>
-<!-- Context menu for directory tree -->
+<!-- Context menu for editor -->
 <ul class="dropdown-menu right-click-popup" id="contextmenu-editor-popup" style="display: none">
-    <li class="dropdown-menu-item">Save</li>
-    <li class="dropdown-menu-item">Copy</li>
-    <li class="dropdown-menu-item">Paste</li>
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-save">Save</li>
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-copy">Copy</li>
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-paste">Paste</li>
     <hr>
     <li class="dropdown-menu-item" id="aqua-format-editor">Format</li>
 </ul>
@@ -404,7 +415,7 @@
     </div>
     <div class="aqua-dialog-popup-footer" data-role="footer">
         <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
-        <button class="btn btn-primary btn-dialog-popup">CREATE</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_create_folder_file_button">CREATE</button>
     </div>
 </div>
 <!-- Rename popup -->

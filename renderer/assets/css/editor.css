@@ -172,7 +172,7 @@
 }
 
 .aqua-image-file {
-    width: auto;
+    width: 400px;
     height: auto;
     object-fit: cover;
     position: relative;
