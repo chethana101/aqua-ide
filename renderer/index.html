@@ -66,7 +66,7 @@
                             <div class="side-bar-panel-title">PROJECT</div>
                         </div>
                         <div class="side-bar-panel-toggle-box">
-                            <div class="side-bar-panel-toggle">
+                            <div class="side-bar-panel-toggle" id="aqua-create-new-file-header">
                                 <span class="side-bar-panel-head-icon icon-add-new-file"></span>
                             </div>
                             <div class="side-bar-panel-toggle" id="aqua-create-new-folder-header">
@@ -106,7 +106,6 @@
                                         <select>
                                             <option value="1">Ace Dark</option>
                                             <option value="2">Ace Light</option>
-                                            <option value="3">One Dark</option>
                                         </select>
                                     </div>
                                 </div>
@@ -120,7 +119,6 @@
                                         <select>
                                             <option value="123354">JetBrains Mono</option>
                                             <option value="inter">Inter</option>
-                                            <option value="inter0">Inter123</option>
                                         </select>
                                     </div>
                                 </div>
@@ -271,13 +269,13 @@
 
                                 .tab {
                                     box-shadow: none;
-                                    background: var(--primary-dark-100);
+                                    background: var(--primary-dark);
                                     color: #999999;
                                 }
 
                                 .tab.active {
                                     background: var(--editor-primary);
-                                    color: #ffffff;
+                                    color: var(--text-default);
                                     border-left: none;
                                     border-bottom: 2px solid var(--primary-color);
                                     border-right: none;
@@ -372,7 +370,7 @@
     <li class="dropdown-menu-item" id="contextmenu-create-new-folder-action">New Folder</li>
     <li class="dropdown-menu-item" id="contextmenu-rename-action">Rename</li>
     <hr>
-    <li class="dropdown-menu-item" id="contextmenu-delete-action" data-action-type="Delete">Delete</li>
+    <li class="dropdown-menu-item" id="contextmenu-delete-action" data-action-type="delete">Delete</li>
 </ul>
 <!-- Context menu for editor -->
 <ul class="dropdown-menu right-click-popup" id="contextmenu-editor-popup" style="display: none">
@@ -392,13 +390,16 @@
                 <label class="field-label">File name: </label>
             </div>
             <div class="field-input">
-                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_new_file" value="">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_new_file_field" value="">
+            </div>
+            <div class="field-label-holder" id="aquaCreateNewFileDialogError">
+                <label class="field-label field-label-danger"></label>
             </div>
         </div>
     </div>
     <div class="aqua-dialog-popup-footer" data-role="footer">
         <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
-        <button class="btn btn-primary btn-dialog-popup">CREATE</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_create_file_button">CREATE</button>
     </div>
 </div>
 <!-- Create folder popup -->
@@ -410,6 +411,9 @@
             </div>
             <div class="field-input">
                 <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_folder_file" value="">
+            </div>
+            <div class="field-label-holder" id="aquaCreateNewFolderDialogError">
+                <label class="field-label field-label-danger"></label>
             </div>
         </div>
     </div>
@@ -425,11 +429,14 @@
             <div class="field-input">
                 <input class="field aqua-primary-dark-bg" type="text" id="aqua_rename_value" value="">
             </div>
+            <div class="field-label-holder" id="aquaRenameFileFolderDialogError">
+                <label class="field-label field-label-danger"></label>
+            </div>
         </div>
     </div>
     <div class="aqua-dialog-popup-footer" data-role="footer">
         <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
-        <button class="btn btn-primary btn-dialog-popup">RENAME</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_rename_folder_file_button">RENAME</button>
     </div>
 </div>
 <!-- Confirmation box -->
@@ -453,19 +460,17 @@
     </div>
     <div class="aqua-dialog-popup-footer" data-role="footer">
         <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
-        <button class="btn btn-primary btn-dialog-popup">CONFIRM</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_confirm_dialog_confirm_button">CONFIRM</button>
     </div>
 </div>
 <!--  Scripts  -->
+<script>
+    <!--  Global variables  -->
+    let $tree;
+</script>
 <script src="./editor/ace/ace.js" type="module"></script>
 <script type="module" src="./assets/js/style.js"></script>
 <script type="module" src="./assets/js/directory.js"></script>
 <script type="module" src="./assets/js/editor.js"></script>
-<script>
-    // window.onload = function () {
-    //     // Display the container after loading all the resources
-    //     document.querySelector(".main-container").style.display = "block";
-    // }
-</script>
 </body>
 </html>

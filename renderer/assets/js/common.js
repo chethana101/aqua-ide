@@ -8,12 +8,17 @@ const fs = require("fs");
 // Get file and folder icons
 function getFileIcon(item, isEditor) {
     if (item.type == "file") {
-        const iconClass = getFileIconClass(item.extension, item.text);
+        let defaultClass = "icon-file-icon-default";
+        let iconClass = getFileIconClass(item.extension, item.text);
+
         if (isEditor) {
             if (iconClass == null) {
-                return "icon-file-icon-default"
+                return defaultClass;
             }
             return "icon-material-theme-tabs icon-material-" + iconClass;
+        }
+        if (iconClass == null) {
+            return '<span class="' + defaultClass + '"></span>';
         }
         return '<span class="icon-material-' + iconClass + '"></span>';
     }
@@ -21,7 +26,7 @@ function getFileIcon(item, isEditor) {
     if (folderClass == null && isEditor == true) {
         return "icon-file-icon-default"
     }
-    return '<span class="icon-gray-folder-icon aqua-folder-styles"></span>';
+    return '<span class="icon-color-folder-icon aqua-folder-styles"></span>';
 }
 
 // Get file icon class
@@ -77,6 +82,8 @@ function getFileIconClass(fileExtension, name) {
         case 'rar':
         case '7z':
             return 'zip';
+        case 'java':
+            return 'java';
         default:
             return null;
     }
@@ -245,10 +252,135 @@ function isNoPreview(extension) {
 
 // Create new folder
 function createNewFolder(path) {
-    fs.mkdir(path, (err) => {
-        if (err) throw err;
-        console.log('Directory created successfully!');
-    });
+    try {
+        if (fs.existsSync(path)) {
+            return 'Directory already exists';
+        } else {
+            fs.mkdirSync(path);
+            return null;
+        }
+    } catch (err) {
+        console.error(err);
+        return err;
+    }
+}
+
+// Create new file
+function createNewFile(path) {
+    try {
+        if (fs.existsSync(path)) {
+            return 'File already exists';
+        } else {
+            fs.writeFileSync(path, '')
+            return null;
+        }
+    } catch (err) {
+        console.error(err);
+        return err;
+    }
+}
+
+// Rename file or folder
+function renameFileFolder(oldPath, newPath) {
+    try {
+        if (fs.existsSync(oldPath)) {
+            fs.renameSync(oldPath, newPath);
+            return null;
+        } else {
+            return 'The source you are looking for no longer available';
+        }
+    } catch (err) {
+        console.error(err);
+        return err;
+    }
+}
+
+// Check file or folder
+function checkFileOrFolder(path) {
+    try {
+        const stats = fs.statSync(path);
+        if (stats.isFile()) {
+            return "file";
+        } else if (stats.isDirectory()) {
+            return "directory";
+        }
+    } catch (err) {
+        console.log(`${path} does not exist`);
+    }
+}
+
+// Write the updated content back to the file
+function updateFileContent(path, content) {
+    try {
+        // Write the updated content back to the file
+        fs.writeFileSync(path, content, 'utf8');
+
+        return "success";
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+/*-------------------------------------
+* Update IDE footer data with opened file
+*------------------------------------*/
+function updateEditorFooterFileInfo(editor, fileConfig) {
+    const fileFullNames = {
+        js: "JavaScript",
+        ts: "TypeScript",
+        xml: "XML",
+        html: "HTML",
+        py: "Python",
+        java: "Java",
+        php: "PHP",
+        json: "Json",
+        txt: "text",
+    };
+    // Update IDE footer file type
+    let editorFileExt = fileConfig.extension.replace(/\./g, '');
+    editorFileExt = editorFileExt == "" ? "text" : editorFileExt;
+
+    document.getElementById("aqua-file-footer-file-extension").innerText
+        = fileFullNames[editorFileExt] == undefined ? editorFileExt : fileFullNames[editorFileExt];
+
+    // Get editor read only status
+    let readOnlyController = document.getElementById("aqua-file-footer-read-type");
+    if (editor.getReadOnly()) {
+        readOnlyController.className = "icon-read-only";
+    } else {
+        readOnlyController.className = "icon-read-only-false";
+    }
+}
+
+/*-------------------------------------
+* Get language name
+*------------------------------------*/
+function getFileType(fileExtension, fileName) {
+    fileExtension = fileExtension.replace(/\./g, '');
+    const fileTypes = {
+        js: "javascript",
+        py: "python",
+        rb: "ruby",
+        java: "java",
+        cpp: "c++",
+        cs: "c#",
+        php: "php",
+        swift: "swift",
+        go: "go",
+        kotlin: "kotlin",
+        ts: "javascript",
+        jsx: "react JSX",
+        tsx: "react TSX",
+        vue: "vue",
+        html: "html",
+        css: "css",
+        scss: "scss",
+        json: "json",
+        xml: "xml",
+        svg: "xml",
+    };
+
+    return fileTypes[fileExtension] || "text";
 }
 
 export {
@@ -260,4 +392,10 @@ export {
     isImage,
     isNoPreview,
     createNewFolder,
+    createNewFile,
+    renameFileFolder,
+    checkFileOrFolder,
+    updateEditorFooterFileInfo,
+    getFileType,
+    updateFileContent,
 };

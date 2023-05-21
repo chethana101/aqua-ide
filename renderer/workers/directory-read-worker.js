@@ -79,7 +79,7 @@ function getFileIcon(item) {
     // Folder icons
     const folderClass = getFolderIconClass(item.name)
     if (folderClass == null) {
-        return '<span class="icon-gray-folder-icon aqua-folder-styles"></span>';
+        return '<span class="icon-color-folder-icon aqua-folder-styles"></span>';
     }
     return '<span class="icon-material-' + folderClass + '">' +
         '<span class="path1"></span>' +
@@ -142,6 +142,8 @@ function getFileIconClass(fileExtension, name) {
         case 'rar':
         case '7z':
             return 'zip';
+        case 'java':
+            return 'java';
         default:
             return null;
     }

@@ -127,7 +127,7 @@ div::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--primary-color-50);
+    background: var(--editor-primary);
     font-family: 'Inter', sans-serif;
     overflow: hidden;
 }
@@ -223,7 +223,7 @@ div::-webkit-scrollbar-thumb {
     align-items: center;
     padding: 0px 10px;
     background: var(--primary-dark);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-bottom: var(--common-border-bottom-shadow);
     height: 39px;
 }
 
@@ -251,7 +251,7 @@ div::-webkit-scrollbar-thumb {
 
 .side-bar-panel-body {
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 7px 10px 10px 10px;
     background: var(--primary-dark);
     width: auto;
     height: calc(100vh - 72px);
@@ -284,7 +284,7 @@ div::-webkit-scrollbar-thumb {
     padding: 0px 0px;
     background: var(--primary-dark);
     app-region: drag;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    border-bottom: var(--common-border-bottom-shadow);
 }
 
 .title-bar-left {
@@ -403,7 +403,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .aqua-background-cover-holder .icon-aqua-ide-background {
-    color: var(--primary-dark);
+    color: var(--aqua-background-icon-default);
     font-size: 200px;
 }
 
@@ -539,6 +539,10 @@ div::-webkit-scrollbar-thumb {
     font-size: 12px;
 }
 
+.field-label-danger {
+    color: var(--danger);
+}
+
 .field-box {
     width: 100%;
     height: 100%;
@@ -569,7 +573,7 @@ div::-webkit-scrollbar-thumb {
     font-size: 12px;
     background-color: var(--selector-background-default);
     border-radius: 3px;
-    border: 1.5px solid var(--selector-border-default);
+    border: 1.5px solid var(--selector-border-default) !important;
 }
 
 .select-selected:after {

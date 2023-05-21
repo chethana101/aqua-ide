@@ -3,7 +3,7 @@
     --primary-color-50: #1a1a1c;
     --primary-color-100: rgba(67, 71, 255, 0.3);
     --primary-color-200: rgb(31, 36, 155);
-    --primary-dark: #151517;
+    --primary-dark: #1f1f1f;
     --primary-dark-100: #131315;
     --primary-dark-200: #151517;
     --primary-dark-300: #27272a;
@@ -12,12 +12,12 @@
     --text-default: #C0C0C0;
     --text-default-hover: #ffffff;
     --scroll-bar-default: rgba(182, 182, 182, 0.1);
-    --border: #1E1F22;
-    --danger: #e30d0d;
+    --border: #282828;
+    --danger: #ff1a1a;
     --success: #00d94c;
     --white: #ffffff;
     /*  Editor Colors  */
-    --editor-primary: #1a1b1e;
+    --editor-primary: #171717;
     --editor-gutter-text-default: #696565;
     --editor-tooltip-completion: #7679ff;
     --editor-scrollbar-background: #212125;
@@ -25,6 +25,7 @@
     --editor-search-border-default: #37383b;
     /*  Aqua Background Color  */
     --aqua-background-text-default: #38383d;
+    --aqua-background-icon-default: #111111;
     /*  Selector Colors  */
     --selector-background-default: #212123;
     --selector-border-default: #292a2c;
@@ -41,4 +42,54 @@
     --directory-icon-size-default: 15px;
     --default-folder-icon-size-16px: 70%;
     --default-file-icon-size-16px: 16px;
+    /* Common Border Bottom Shadow* */
+    --common-border-bottom-shadow: 3px solid rgba(0, 0, 0, 0.2);
 }
+
+/*:root {*/
+/*    --primary-color: #4347FF;*/
+/*    --primary-color-50: #f1f1f1;*/
+/*    --primary-color-100: rgba(67, 71, 255, 0.3);*/
+/*    --primary-color-200: rgb(31, 36, 155);*/
+/*    --primary-dark: #f9f9f9;*/
+/*    --primary-dark-100: #f5f5f5;*/
+/*    --primary-dark-200: #eeeeee;*/
+/*    --primary-dark-300: #eaeaea;*/
+/*    --icon-default: #343434;*/
+/*    --icon-default-hover: #ffffff;*/
+/*    --text-default: #2d2d2d;*/
+/*    --text-default-hover: #ffffff;*/
+/*    --scroll-bar-default: rgba(182, 182, 182, 0.1);*/
+/*    --border: #efefef;*/
+/*    --danger: #ff1a1a;*/
+/*    --success: #00d94c;*/
+/*    --white: #000000;*/
+/*    !*  Editor Colors  *!*/
+/*    --editor-primary: #ffffff;*/
+/*    --editor-gutter-text-default: #696565;*/
+/*    --editor-tooltip-completion: #7679ff;*/
+/*    --editor-scrollbar-background: #212125;*/
+/*    --editor-tooltip-suggest-border: #595656;*/
+/*    --editor-search-border-default: #37383b;*/
+/*    !*  Aqua Background Color  *!*/
+/*    --aqua-background-text-default: #38383d;*/
+/*    --aqua-background-icon-default: #3f3f3f;*/
+/*    !*  Selector Colors  *!*/
+/*    --selector-background-default: #eeeeee;*/
+/*    --selector-border-default: #d5d5d5;*/
+/*    !*  Dialog Popup Colors  *!*/
+/*    --dialog-popup-head: #e5e5e5;*/
+/*    --dialog-popup-body: #e5e5e5;*/
+/*    !*  Editor Font Sizes  *!*/
+/*    --editor-tooltip-font-default: 13px;*/
+/*    --editor-tooltip-suggest-font-default: 12px;*/
+/*    !*  Editor Font  *!*/
+/*    --editor-font: "JetBrains Mono", sans-serif;*/
+/*    !*  Directory Font Sizes  *!*/
+/*    --directory-font-size-default: 12px;*/
+/*    --directory-icon-size-default: 15px;*/
+/*    --default-folder-icon-size-16px: 70%;*/
+/*    --default-file-icon-size-16px: 16px;*/
+/*    !* Common Border Bottom Shadow *!*/
+/*    --common-border-bottom-shadow: 2px solid rgba(0, 0, 0, 0.1);*/
+/*}*/

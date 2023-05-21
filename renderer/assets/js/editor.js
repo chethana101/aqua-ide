@@ -18,6 +18,9 @@ import {
     isImage,
     previewImageComponent,
     isNoPreview,
+    updateEditorFooterFileInfo,
+    getFileType,
+    updateFileContent,
 } from '../../assets/js/common.js';
 
 const fs = require("fs");
@@ -27,6 +30,7 @@ const path = require("path");
 * Necessary Variables
 *----------------------------------------*/
 window.editorsConfig = [];
+const $contextMenu = $('#contextmenu-editor-popup');
 
 /*----------------------------------------
 * Set editor tabs
@@ -62,14 +66,50 @@ window.editorTabs = function (fileConfig) {
         let editor = getEditor(fileConfig);
 
         // Check if file has change or not
-        let oldEditorValue = editor.getValue();
-        editor.on('change', () => {
+        fileConfig.editorOldData = editor.getValue();
+        editor.on('change', function (e) {
             const newEditorValue = editor.getValue();
-            if (newEditorValue !== oldEditorValue) {
+            if (newEditorValue !== fileConfig.editorOldData) {
                 tab.setBadge({text: "*", classname: "icon-add-new-icon"});
-                // oldEditorValue = newEditorValue;
             } else {
                 tab.setBadge({text: "", classname: "icon-add-new-icon"});
+            }
+        });
+
+        // Editor content save
+        editor.commands.addCommand({
+            name: 'Save editor data',
+            bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
+            exec: function (editor) {
+                storeEditorData();
+            },
+        });
+
+        // Editor zoom/font size increase
+        // Add event listener for mouse wheel with Ctrl key
+        editor.container.addEventListener("wheel", function(event) {
+            // Check if the Ctrl key is pressed
+            if (event.ctrlKey) {
+                // Normalize the delta value across different browsers
+                var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+
+                // Check if the wheel was scrolled up or down
+                if (delta < 0) {
+                    // Ctrl + Mouse wheel down
+                    let fontSize = parseInt(editor.getOption("fontSize"));
+                    if(fontSize > 1){
+                        editor.setOption("fontSize", fontSize - 1);
+                    }
+                    // Perform desired action
+                } else if (delta > 0) {
+                    // Ctrl + Mouse wheel up
+                    let fontSize = parseInt(editor.getOption("fontSize"));
+                    editor.setOption("fontSize", fontSize + 1);
+                    // Perform desired action
+                }
+
+                // Prevent the default scrolling behavior
+                event.preventDefault();
             }
         });
 
@@ -166,8 +206,6 @@ document.getElementById("aqua-file-footer-read-type-click")
     });
 
 // Copy editor selected data
-// console.log(await navigator.clipboard.readText());
-// console.log(await navigator.clipboard.writeText("OK););
 document.getElementById("aqua-editor-contextmenu-copy")
     .addEventListener("click", async function (e) {
         let tabGroup = document.querySelector("tab-group");
@@ -189,9 +227,37 @@ document.getElementById("aqua-editor-contextmenu-paste")
         let editor = ace.edit("aqua-editor-" + activeTab.id);
 
         // Paste editor selected data
-        editor.session.insert(editor.selection.getCursor() , await navigator.clipboard.readText());
+        editor.session.insert(editor.selection.getCursor(), await navigator.clipboard.readText());
         document.getElementById("contextmenu-editor-popup").style.display = "none";
     });
+
+// Save editor data action click
+document.getElementById("aqua-editor-contextmenu-save")
+    .addEventListener("click", async function (e) {
+        storeEditorData();
+    });
+
+/*-------------------------------------
+* Store editor data inside the file
+*------------------------------------*/
+function storeEditorData() {
+    // Get active tab
+    let tabGroup = document.querySelector("tab-group");
+    let activeTab = tabGroup.getActiveTab();
+    // Get active editor context
+    let editor = ace.edit("aqua-editor-" + activeTab.id);
+    // Get editor data
+    let activeEditorData = $tree.getDataById(activeTab.id);
+    // Update file with new content
+    let fileWriteStatus = updateFileContent(activeEditorData.filePath, editor.getValue());
+    if (fileWriteStatus == "success") {
+        activeTab.setBadge({text: "", classname: "icon-add-new-icon"});
+        $contextMenu.hide();
+        // Get editor config
+        let activeEditorConfig = window.editorsConfig.find((obj) => obj.id === activeTab.id);
+        activeEditorConfig.editorOldData = editor.getValue();
+    }
+}
 
 /*-------------------------------------
 * Get Editor Instance
@@ -209,6 +275,7 @@ function getEditor(fileConfig) {
 
         let editor = ace.edit(editorElement.id);
         editor.setTheme("ace/theme/new_one_dark");
+        // editor.setTheme("ace/theme/chrome");
 
         ace.require("ace/ext/language_tools");
         editor.setOptions(getEditorOptions(editor));
@@ -283,11 +350,11 @@ function getEditor(fileConfig) {
             document.getElementById("aqua-format-editor")
                 .addEventListener("click", () => {
                     beautify.beautify(editor.session);
+                    $contextMenu.hide();
                 });
         });
 
         // Editor context menu
-        const $contextMenu = $('#contextmenu-editor-popup');
         editor.container.addEventListener("contextmenu", function (e) {
             $('#right-click-popup').hide();
             $contextMenu.css({
@@ -374,67 +441,5 @@ function getEditorOptions(editor) {
         indentedSoftWrap: true, // boolean
         foldStyle: "markbegin", // enum: 'manual'/'markbegin'/'markbeginend'.
         enableEmmet: true, enableMultiselect: true, enableLinking: true,
-    }
-}
-
-/*-------------------------------------
-* Get language name
-*------------------------------------*/
-function getFileType(fileExtension, fileName) {
-    fileExtension = fileExtension.replace(/\./g, '');
-    const fileTypes = {
-        js: "javascript",
-        py: "python",
-        rb: "ruby",
-        java: "java",
-        cpp: "c++",
-        cs: "c#",
-        php: "php",
-        swift: "swift",
-        go: "go",
-        kotlin: "kotlin",
-        ts: "typescript",
-        jsx: "react JSX",
-        tsx: "react TSX",
-        vue: "vue",
-        html: "html",
-        css: "css",
-        scss: "scss",
-        json: "json",
-        xml: "xml",
-        svg: "xml",
-    };
-
-    return fileTypes[fileExtension] || "text";
-}
-
-/*-------------------------------------
-* Update IDE footer data with opened file
-*------------------------------------*/
-function updateEditorFooterFileInfo(editor, fileConfig) {
-    const fileFullNames = {
-        js: "JavaScript",
-        ts: "TypeScript",
-        xml: "XML",
-        html: "HTML",
-        py: "Python",
-        java: "Java",
-        php: "PHP",
-        json: "Json",
-        txt: "text",
-    };
-    // Update IDE footer file type
-    let editorFileExt = fileConfig.extension.replace(/\./g, '');
-    editorFileExt = editorFileExt == "" ? "text" : editorFileExt;
-
-    document.getElementById("aqua-file-footer-file-extension").innerText
-        = fileFullNames[editorFileExt] == undefined ? editorFileExt : fileFullNames[editorFileExt];
-
-    // Get editor read only status
-    let readOnlyController = document.getElementById("aqua-file-footer-read-type");
-    if (editor.getReadOnly()) {
-        readOnlyController.className = "icon-read-only";
-    } else {
-        readOnlyController.className = "icon-read-only-false";
     }
 }

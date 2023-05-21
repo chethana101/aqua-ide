@@ -1,4 +1,4 @@
-const {app, BrowserWindow, ipcMain, dialog} = require('electron');
+const {app, BrowserWindow, ipcMain, dialog, shell} = require('electron');
 const path = require("path");
 const electronReload = require('electron-reload')
 const ipc = ipcMain;
@@ -12,7 +12,7 @@ function createWindow() {
         minWidth: 800,
         minHeight: 600,
         // icon: path.join(__dirname, "aqua/ui/root_icon/aqua-ide-logo.png"),
-        frame: false,
+        frame: true,
         webPreferences: {
             enableRemoteModule: true,
             nodeIntegration: true,
@@ -65,6 +65,27 @@ function createWindow() {
             console.log(err);
             event.returnValue = {state: false, pathGet: null, error: err};
         })
+    });
+
+    /*
+     * Move to the recycle bin, files or folders
+     * */
+    ipc.on("move-to-trash", (event, json) => {
+        console.log(event);
+        console.log(json);
+        shell.trashItem(json.path)
+            .then(() => {
+                event.returnValue = {
+                    status: "success",
+                    message: "File moved to the recycle bin successfully!",
+                };
+            })
+            .catch((error) => {
+                event.returnValue = {
+                    status: "error",
+                    message: 'Error moving file to the recycle bin:' + error,
+                };
+            });
     });
 }
 
