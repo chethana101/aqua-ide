@@ -149,6 +149,10 @@
     outline: 1px solid transparent;
 }
 
+.ace_print-margin {
+    background: var(--border) !important;
+}
+
 /* --------------------------
 * Image preview styles
 * -----------------------------*/

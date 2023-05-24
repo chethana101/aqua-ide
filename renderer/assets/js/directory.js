@@ -46,6 +46,32 @@ const workerRename = new Worker('./workers/rename-worker.js');
 const workerDelete = new Worker('./workers/delete-file-folder-worker.js');
 
 /*----------------------------------------
+* Open single file
+*----------------------------------------*/
+document.getElementById("title-bar-open-file")
+    .addEventListener("click", async () => {
+        let fetchedOpenedFileData = await ipcRenderer.sendSync("open-file-dialog", {data: true});
+        // Prepare the editor object
+        let fileData = path.parse(fetchedOpenedFileData.filePath[0]);
+        const newItem = {
+            id: ++window.totalFolderCount,
+            filePath: fetchedOpenedFileData.filePath[0],
+            text: fileData.base,
+            type: "file",
+            extension: fileData.ext,
+            imageHtml: getFileIcon({
+                type: "file",
+                extension: fileData.ext,
+                text: fileData.base,
+            }, false),
+        };
+        window.editorTabs(newItem);
+        window.editorsConfigIds.push({id: newItem.id});
+        // Hide menu
+        document.getElementById("dropdown-menu-main-toggle").style.display = "none";
+    });
+
+/*----------------------------------------
 * Get directory data
 *----------------------------------------*/
 const titleBarOpenFolder = document.getElementById("title-bar-open-folder");

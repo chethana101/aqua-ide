@@ -28,10 +28,10 @@
     --aqua-background-icon-default: #111111;
     /*  Selector Colors  */
     --selector-background-default: #212123;
-    --selector-border-default: #292a2c;
+    --selector-border-default: #333333;
     /*  Dialog Popup Colors  */
-    --dialog-popup-head: #1D1D1F;
-    --dialog-popup-body: #232327;
+    --dialog-popup-head: #1f1f1f;
+    --dialog-popup-body: #1f1f1f;
     /*  Editor Font Sizes  */
     --editor-tooltip-font-default: 13px;
     --editor-tooltip-suggest-font-default: 12px;

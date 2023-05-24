@@ -38,8 +38,6 @@ const $contextMenu = $('#contextmenu-editor-popup');
 window.editorTabs = function (fileConfig) {
     const tabGroup = document.querySelector("tab-group");
 
-    // TODO:: Footer file navigator path add
-
     const editorIcon = getFileIcon(fileConfig, true);
     // Set up the default tab which is created when the "New Tab" button is clicked
     const tab = tabGroup.addTab({
@@ -87,7 +85,7 @@ window.editorTabs = function (fileConfig) {
 
         // Editor zoom/font size increase
         // Add event listener for mouse wheel with Ctrl key
-        editor.container.addEventListener("wheel", function(event) {
+        editor.container.addEventListener("wheel", function (event) {
             // Check if the Ctrl key is pressed
             if (event.ctrlKey) {
                 // Normalize the delta value across different browsers
@@ -97,7 +95,7 @@ window.editorTabs = function (fileConfig) {
                 if (delta < 0) {
                     // Ctrl + Mouse wheel down
                     let fontSize = parseInt(editor.getOption("fontSize"));
-                    if(fontSize > 1){
+                    if (fontSize > 1) {
                         editor.setOption("fontSize", fontSize - 1);
                     }
                     // Perform desired action
@@ -288,6 +286,7 @@ function getEditor(fileConfig) {
 
         // TODO:: Need to handle when clear the current content and try to type. getiing error
         var useWebWorker = window.location.search.toLowerCase().indexOf('noworker') == -1;
+
         editor.getSession().setMode({
             path: 'ace/mode/' + getFileType(fileConfig.extension, fileConfig.text),
             inline: true
@@ -346,12 +345,7 @@ function getEditor(fileConfig) {
 
             // modify beautify options as needed:
             window.beautifyOptions = beautify.options;
-
-            document.getElementById("aqua-format-editor")
-                .addEventListener("click", () => {
-                    beautify.beautify(editor.session);
-                    $contextMenu.hide();
-                });
+            window.beautify = beautify;
         });
 
         // Editor context menu
@@ -383,6 +377,27 @@ function getEditor(fileConfig) {
 }
 
 /*-------------------------------------
+* Format selected editor
+*------------------------------------*/
+document.getElementById("aqua-format-editor")
+    .addEventListener("click", () => {
+        let tabGroup = document.querySelector("tab-group");
+        let activeTab = tabGroup.getActiveTab();
+        let editorSelect = ace.edit("aqua-editor-" + activeTab.id);
+        let fileExt = path.parse(activeTab.title).ext;
+
+        if (fileExt == ".html" || fileExt == ".php") {
+            let val = editorSelect.getValue();
+            val = html_beautify(val);
+            editorSelect.setValue(val, -1);
+        } else {
+            beautify.beautify(editorSelect.session);
+        }
+
+        $contextMenu.hide();
+    });
+
+/*-------------------------------------
 * Get Editor Options / Config
 *------------------------------------*/
 function getEditorOptions(editor) {
@@ -397,7 +412,7 @@ function getEditorOptions(editor) {
         highlightActiveLine: true, // boolean
         highlightSelectedWord: true, // boolean
         readOnly: false, // boolean: true if read only
-        cursorStyle: "ace", // "ace"|"slim"|"smooth"|"wide"
+        cursorStyle: "smooth", // "ace"|"slim"|"smooth"|"wide"
         mergeUndoDeltas: true, // false|true|"always"
         behavioursEnabled: true, // boolean: true if enable custom behaviours
         wrapBehavioursEnabled: true, // boolean
@@ -408,13 +423,14 @@ function getEditorOptions(editor) {
         animatedScroll: false, // boolean: true if scroll should be animated
         displayIndentGuides: true, // boolean: true if the indent should be shown. See 'showInvisibles'
         showInvisibles: false, // boolean -> displayIndentGuides: true if show the invisible tabs/spaces in indents
-        showPrintMargin: false, // boolean: true if show the vertical print margin
-        printMarginColumn: 8000, // number: number of columns for vertical print margin
-        printMargin: undefined, // boolean | number: showPrintMargin | printMarginColumn
+        showPrintMargin: true, // boolean: true if show the vertical print margin
+        printMarginColumn: 120, // number: number of columns for vertical print margin
+        printMargin: true, // boolean | number: showPrintMargin | printMarginColumn
         showGutter: true, // boolean: true if show line gutter
         fadeFoldWidgets: false, // boolean: true if the fold lines should be faded
         showFoldWidgets: true, // boolean: true if the fold lines should be shown ?
-        showLineNumbers: true, highlightGutterLine: true, // boolean: true if the gutter line should be highlighted
+        showLineNumbers: true,
+        highlightGutterLine: true, // boolean: true if the gutter line should be highlighted
         hScrollBarAlwaysVisible: false, // boolean: true if the horizontal scroll bar should be shown regardless
         vScrollBarAlwaysVisible: false, // boolean: true if the vertical scroll bar should be shown regardless
         fontSize: 13, // number | string: set the font size to this many pixels
@@ -436,7 +452,7 @@ function getEditorOptions(editor) {
         newLineMode: "auto", // "auto" | "unix" | "windows"
         useWorker: true, // boolean: true if use web worker for loading scripts
         useSoftTabs: true, // boolean: true if we want to use spaces than tabs
-        tabSize: 4, // number
+        tabSize: 2, // number
         wrap: false, // boolean | string | number: true/'free' means wrap instead of horizontal scroll, false/'off' means horizontal scroll instead of wrap, and number means number of column before wrap. -1 means wrap at print margin
         indentedSoftWrap: true, // boolean
         foldStyle: "markbegin", // enum: 'manual'/'markbegin'/'markbeginend'.

@@ -5,6 +5,7 @@
     <script src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./assets/js/lib/gijgo.min.js" type="text/javascript"></script>
+    <script src="./assets/js/lib/beautify.min.js" type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="./assets/css/lib/gijgo.min.css"/>
     <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">
@@ -150,16 +151,14 @@
                             <div class="title-bar-menu dropdown-toggle" id="dropdown1">
                                 <span class="icon-menu-icon"></span>
                             </div>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item">New File...</li>
-                                <li class="dropdown-menu-item">New Folder</li>
-                                <li class="dropdown-menu-item">New Window</li>
+                            <ul class="dropdown-menu" id="dropdown-menu-main-toggle">
+                                <li class="dropdown-menu-item" id="title-bar-open-new-window">New Window</li>
                                 <hr>
-                                <li class="dropdown-menu-item">Open File...</li>
+                                <li class="dropdown-menu-item" id="title-bar-open-file">Open File...</li>
                                 <li class="dropdown-menu-item" id="title-bar-open-folder">Open Folder</li>
                                 <hr>
-                                <li class="dropdown-menu-item">Close Window</li>
-                                <li class="dropdown-menu-item">Exit</li>
+                                <li class="dropdown-menu-item" id="title-bar-close-window">Close Window</li>
+                                <li class="dropdown-menu-item" id="title-bar-close-all-window">Exit</li>
                             </ul>
                         </div>
                         <div class="dropdown">

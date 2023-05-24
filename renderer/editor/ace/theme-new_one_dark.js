@@ -166,7 +166,10 @@ exports.cssText = ".ace-mytheme .ace_gutter {\n" +
     "\n" +
     ".ace-mytheme .ace_markup.ace_list {\n" +
     "  color: rgba(247, 101, 112, 1.0)\n" +
-    "}";
+    "}" +
+    " .ace-mytheme .ace_indent-guide {\n" +
+    " background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHB3d/8PAAOIAdULw8qMAAAAAElFTkSuQmCC) right repeat-y\n" +
+    " }";
 
     var dom = require("../lib/dom");
     dom.importCssString(exports.cssText, exports.cssClass, false);

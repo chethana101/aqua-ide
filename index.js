@@ -1,9 +1,10 @@
-const {app, BrowserWindow, ipcMain, dialog, shell} = require('electron');
+const {app, BrowserWindow, ipcMain, dialog, shell, remote} = require('electron');
 const path = require("path");
 const electronReload = require('electron-reload')
 const ipc = ipcMain;
 
 let mainWindow;
+let isOpenWindow = true;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
@@ -11,7 +12,7 @@ function createWindow() {
         height: 600,
         minWidth: 800,
         minHeight: 600,
-        // icon: path.join(__dirname, "aqua/ui/root_icon/aqua-ide-logo.png"),
+        icon: path.join(__dirname, "renderer/assets/images/aqua-ide-logo.png"),
         frame: true,
         webPreferences: {
             enableRemoteModule: true,
@@ -45,11 +46,14 @@ function createWindow() {
         mainWindow.minimize();
     });
 
-    // Example ipcMain event handler
-    mainWindow.webContents.on('did-finish-load', function () {
-        mainWindow.webContents.send('window-loaded');
+    ipc.on("close-all-aqua-ide", () => {
+        app.quit();
     });
 
+    // Example ipcMain event handler
+    // mainWindow.webContents.on('did-finish-load', function () {
+    //     mainWindow.webContents.send('window-loaded');
+    // });
 
     /*
      * Get opened folder path
@@ -60,6 +64,22 @@ function createWindow() {
                 event.returnValue = {state: false, folderPath: null, error: "Canceled"};
             } else {
                 event.returnValue = {state: true, folderPath: data.filePaths, error: null};
+            }
+        }).catch(err => {
+            console.log(err);
+            event.returnValue = {state: false, pathGet: null, error: err};
+        })
+    });
+
+    /*
+     * Get opened file path
+     * */
+    ipc.on("open-file-dialog", (event, json) => {
+        dialog.showOpenDialog({properties: ["openFile"]}).then((data) => {
+            if (data.canceled) {
+                event.returnValue = {state: false, filePath: null, error: "Canceled"};
+            } else {
+                event.returnValue = {state: true, filePath: data.filePaths, error: null};
             }
         }).catch(err => {
             console.log(err);
@@ -87,9 +107,21 @@ function createWindow() {
                 };
             });
     });
+
+    isOpenWindow = true;
 }
 
-app.on('ready', createWindow);
+ipc.on("open-new-window", () => {
+    createWindow();
+    isOpenWindow = false;
+});
+
+app.on('ready', () => {
+    if (isOpenWindow) {
+        createWindow();
+    }
+});
+
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
