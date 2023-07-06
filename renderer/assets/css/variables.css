@@ -3,7 +3,7 @@
     --primary-color-50: #1a1a1c;
     --primary-color-100: rgba(67, 71, 255, 0.3);
     --primary-color-200: rgb(31, 36, 155);
-    --primary-dark: #1f1f1f;
+    --primary-dark: #2b2d30;
     --primary-dark-100: #131315;
     --primary-dark-200: #151517;
     --primary-dark-300: #27272a;
@@ -12,12 +12,13 @@
     --text-default: #C0C0C0;
     --text-default-hover: #ffffff;
     --scroll-bar-default: rgba(182, 182, 182, 0.1);
-    --border: #282828;
+    --border: #222222;
+    --dropdown-border: #444444;
     --danger: #ff1a1a;
     --success: #00d94c;
     --white: #ffffff;
     /*  Editor Colors  */
-    --editor-primary: #171717;
+    --editor-primary: #1e1f22;
     --editor-gutter-text-default: #696565;
     --editor-tooltip-completion: #7679ff;
     --editor-scrollbar-background: #212125;
@@ -61,6 +62,7 @@
 /*    --text-default-hover: #ffffff;*/
 /*    --scroll-bar-default: rgba(182, 182, 182, 0.1);*/
 /*    --border: #efefef;*/
+/*    --dropdown-border: #eeeeee;*/
 /*    --danger: #ff1a1a;*/
 /*    --success: #00d94c;*/
 /*    --white: #000000;*/

@@ -245,9 +245,12 @@ function storeEditorData() {
     // Get active editor context
     let editor = ace.edit("aqua-editor-" + activeTab.id);
     // Get editor data
-    let activeEditorData = $tree.getDataById(activeTab.id);
+    // let activeEditorData = $tree.getDataById(activeTab.id);
+
     // Update file with new content
+    const activeEditorData = window.editorsConfig.find(obj => obj.id === activeTab.id);
     let fileWriteStatus = updateFileContent(activeEditorData.filePath, editor.getValue());
+
     if (fileWriteStatus == "success") {
         activeTab.setBadge({text: "", classname: "icon-add-new-icon"});
         $contextMenu.hide();

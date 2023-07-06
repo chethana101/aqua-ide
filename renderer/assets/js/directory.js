@@ -32,10 +32,8 @@ let createNewFileDialog;
 let createNewFolderDialog;
 let aquaRenameDialog;
 let aquaConfirmDialog;
-
-ipcRenderer.on('window-loaded', async function () {
-    console.log('Window loaded');
-});
+const fileDataFileURL = __dirname + '\\settings\\fileData.json';
+const configJsonURL = __dirname + '\\settings\\config.json';
 
 /*----------------------------------------
 * Create new web workers
@@ -76,23 +74,70 @@ document.getElementById("title-bar-open-file")
 *----------------------------------------*/
 const titleBarOpenFolder = document.getElementById("title-bar-open-folder");
 titleBarOpenFolder.addEventListener("click", async () => {
-    let folderData = await ipcRenderer.sendSync("open-output-dialog", {data: true});
+    await openFolderDataProcess(true);
 });
 
-// TODO:: Remove after testing. Combine with `open folder` feature
-const openedFolderPath = "C:\\Users\\TigEr_MP\\Desktop\\Text Document";
-window.openedFolderName = path.basename(openedFolderPath);
-
-// Set footer navigator
-footerNavigateBuilder(
-    {rootName: window.openedFolderName},
-);
-
-const treeData = dirTree(openedFolderPath, {
-    attributes: ["size", "type", "extension", "mode", "mtime"],
+// Open folder with button
+document.getElementById("btn-directory-tree-open").addEventListener("click", async () => {
+    await openFolderDataProcess(true);
 });
-worker.postMessage([treeData]);
 
+let openedFolderPath;
+
+async function openFolderDataProcess(isChoosed) {
+    // Read the JSON data from the file
+    const readConfigData = fs.readFileSync(configJsonURL);
+    // Parse the JSON data
+    const configJson = JSON.parse(readConfigData);
+    if (isChoosed) {
+        // Open the folder chooser
+        let folderData = await ipcRenderer.sendSync("open-output-dialog", {data: true});
+        if (folderData?.folderPath) {
+            // Set loader
+            document.getElementById("pre-loader").style.display = "block";
+            document.querySelector(".main-container").style.display = "none";
+
+            openedFolderPath = folderData.folderPath[0];
+            // If any folder opened, add the path to config file
+            configJson.recentOpened = openedFolderPath;
+            configJson.windowOpen = false;
+            fs.writeFileSync(configJsonURL, JSON.stringify(configJson));
+        }
+    } else {
+        openedFolderPath = configJson.recentOpened;
+        if (configJson.windowOpen) {
+            openedFolderPath = "";
+        }
+        configJson.windowOpen = true;
+        fs.writeFileSync(configJsonURL, JSON.stringify(configJson));
+    }
+
+    // If path exist
+    if (openedFolderPath != "") {
+        // Assign folder name
+        window.openedFolderName = path.basename(openedFolderPath);
+
+        // Set footer navigator
+        footerNavigateBuilder(
+            {rootName: window.openedFolderName},
+        );
+
+        const treeData = dirTree(openedFolderPath, {
+            attributes: ["size", "type", "extension", "mode", "mtime"],
+        });
+        worker.postMessage([treeData]);
+
+        // Hide menu
+        document.getElementById("dropdown-menu-main-toggle").style.display = "none";
+    } else {
+        document.getElementById("pre-loader").style.display = "none";
+        document.querySelector(".main-container").style.display = "block";
+    }
+}
+
+$(document).ready(async () => {
+    await openFolderDataProcess();
+});
 /*----------------------------------------
 * Set directory
 *----------------------------------------*/
@@ -100,12 +145,13 @@ let processedTreeData;
 worker.addEventListener('message', (event) => {
     processedTreeData = event.data.directoryResources;
     window.totalFolderCount = event.data.folderCount;
+    console.log(processedTreeData);
 
-    fs.writeFileSync(__dirname + '\\settings\\fileData.json', JSON.stringify(processedTreeData));
+    fs.writeFileSync(fileDataFileURL, JSON.stringify(processedTreeData));
 
     $tree = $('#directory').tree({
         primaryKey: 'id',
-        dataSource: __dirname + '\\settings\\fileData.json',
+        dataSource: fileDataFileURL,
         lazyLoading: true,
         imageCssClassField: 'faCssClass',
         autoLoad: false,
@@ -157,14 +203,14 @@ worker.addEventListener('message', (event) => {
         },
         dataBound: function (e) {
             $tree.expand($tree.getNodeById(0));
+            document.getElementById("pre-loader").style.display = "none";
+            document.querySelector(".main-container").style.display = "block";
         },
     });
 
     // Load the directory tree to application
     $(document).ready(() => {
         $tree.reload();
-        document.getElementById("pre-loader").style.display = "none";
-        document.querySelector(".main-container").style.display = "block";
     });
 
     /*----------------------------------------
@@ -392,7 +438,7 @@ window.hideDialogBox = function () {
 *----------------------------------------*/
 function createFolderFileTreeNode(selectedItemData, fieldValue, pathNew, config) {
     // Read the JSON data from the file
-    const readedFileData = fs.readFileSync(__dirname + '\\settings\\fileData.json');
+    const readedFileData = fs.readFileSync(fileDataFileURL);
     // Parse the JSON data
     const exportedJsonData = JSON.parse(readedFileData);
 
@@ -423,7 +469,7 @@ function createFolderFileTreeNode(selectedItemData, fieldValue, pathNew, config)
         // Write the updated JSON data back to the file
         if (event.data.directoryResources.length != 0) {
             fs.writeFileSync(
-                __dirname + '\\settings\\fileData.json',
+                fileDataFileURL,
                 JSON.stringify(event.data.directoryResources)
             );
             $tree.reload();
@@ -580,7 +626,7 @@ document.getElementById("aqua_rename_folder_file_button")
 // Renamed folder/file data update in directory
 function updateRenamedSourceTreeNode(selectedItemData, fieldValue, pathNew, config) {
     // Read the JSON data from the file
-    const readedFileData = fs.readFileSync(__dirname + '\\settings\\fileData.json');
+    const readedFileData = fs.readFileSync(fileDataFileURL);
     // Parse the JSON data
     const exportedJsonData = JSON.parse(readedFileData);
 
@@ -605,7 +651,7 @@ function updateRenamedSourceTreeNode(selectedItemData, fieldValue, pathNew, conf
         // Write the updated JSON data back to the file
         if (event.data.directoryResources.length != 0) {
             fs.writeFileSync(
-                __dirname + '\\settings\\fileData.json',
+                fileDataFileURL,
                 JSON.stringify(event.data.directoryResources)
             );
             $tree.reload();
@@ -693,7 +739,7 @@ document.getElementById("aqua_confirm_dialog_confirm_button")
 *----------------------------------------*/
 async function deleteFileFolder() {
     // Parse the JSON data
-    const readedFileData = fs.readFileSync(__dirname + '\\settings\\fileData.json');
+    const readedFileData = fs.readFileSync(fileDataFileURL);
     const exportedJsonData = JSON.parse(readedFileData);
 
     let selectedItemData = window.directorySelectGlobal;
@@ -709,7 +755,7 @@ async function deleteFileFolder() {
             workerDelete.addEventListener('message', (event) => {
                 // Write the updated JSON data back to the file
                 fs.writeFileSync(
-                    __dirname + '\\settings\\fileData.json',
+                    fileDataFileURL,
                     JSON.stringify(event.data.directoryResources)
                 );
                 $tree.reload();

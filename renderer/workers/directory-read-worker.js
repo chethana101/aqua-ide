@@ -1,6 +1,7 @@
 // worker.js
 let folderFileCount = -1;
 self.addEventListener('message', async (event) => {
+    folderFileCount = -1;
     const obj = event.data;
     const data = convertObjectToData(obj);
     self.postMessage({
@@ -11,7 +12,7 @@ self.addEventListener('message', async (event) => {
 
 
 /*----------------------------------------
-* Convert object gijga data structure
+* Convert object gijgo data structure
 *----------------------------------------*/
 function convertObjectToData(obj) {
     const data = [];
@@ -53,11 +54,11 @@ function convertObjectToData(obj) {
             extension: item.extension,
             imageHtml: getFileIcon(item),
         };
-        if (item.name == 'vendor' || item.name == 'node_modules') {
-            // TODO:: Need to refactor this for, when some one click on those files. the data will load
-            data.push(newItem);
-            continue;
-        }
+        // if (item.name == 'vendor' || item.name == 'node_modules') {
+        //     // TODO:: Need to refactor this for, when some one click on those files. the data will load
+        //     data.push(newItem);
+        //     continue;
+        // }
         if (item.children) {
             newItem.children = convertObjectToData(item.children);
         }

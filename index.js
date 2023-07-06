@@ -1,19 +1,22 @@
 const {app, BrowserWindow, ipcMain, dialog, shell, remote} = require('electron');
 const path = require("path");
 const electronReload = require('electron-reload')
+const fs = require("fs");
 const ipc = ipcMain;
 
 let mainWindow;
 let isOpenWindow = true;
+const configJsonURL = __dirname + '\\renderer\\settings\\config.json';
+let windows = new Set();
 
 function createWindow() {
-    mainWindow = new BrowserWindow({
+    let mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
         minWidth: 800,
         minHeight: 600,
         icon: path.join(__dirname, "renderer/assets/images/aqua-ide-logo.png"),
-        frame: true,
+        frame: false,
         webPreferences: {
             enableRemoteModule: true,
             nodeIntegration: true,
@@ -23,12 +26,17 @@ function createWindow() {
             webviewTag: true,
         },
     });
+    windows.add(mainWindow)
 
     mainWindow.loadFile('./renderer/index.html');
 
-    mainWindow.on('closed', function () {
+    mainWindow.on('closed', async function () {
+        windows.delete(mainWindow);
         mainWindow = null;
+        await allWindowClosed();
     });
+
+    allWindowClosed();
 
     ipc.on("maximize-aqua-ide", () => {
         if (mainWindow.isMaximized()) {
@@ -46,7 +54,15 @@ function createWindow() {
         mainWindow.minimize();
     });
 
-    ipc.on("close-all-aqua-ide", () => {
+    ipc.on("close-all-aqua-ide", async () => {
+        const readConfigData = await fs.readFileSync(configJsonURL);
+        // Parse the JSON data
+        const configJson = JSON.parse(readConfigData);
+        // Clear the recent opened folder
+        configJson.recentOpened = "";
+        configJson.windowOpen = false;
+        await fs.writeFileSync(configJsonURL, JSON.stringify(configJson));
+        // Quite all the windows
         app.quit();
     });
 
@@ -130,7 +146,7 @@ app.on('window-all-closed', function () {
 });
 
 app.on('activate', function () {
-    if (mainWindow === null) {
+    if (windows.size === 0) {
         createWindow();
     }
 });
@@ -138,3 +154,14 @@ app.on('activate', function () {
 // require('electron-reload')(__dirname, {
 //     electron: path.join("node_modules\\", '.bin', 'electron')
 // });
+
+async function allWindowClosed() {
+    if (windows.size === 0) {
+        const readConfigData = await fs.readFileSync(configJsonURL);
+        // Parse the JSON data
+        const configJson = JSON.parse(readConfigData);
+        // Clear the recent opened folder
+        configJson.windowOpen = false;
+        await fs.writeFileSync(configJsonURL, JSON.stringify(configJson));
+    }
+}
