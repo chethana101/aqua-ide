@@ -43,7 +43,7 @@
           "releaseType": "release",
           "repo": "aqua-ide",
           "private": true,
-          "token":"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"
+          "token":""
         }
       ]
     },
@@ -56,7 +56,7 @@
           "releaseType": "release",
           "repo": "aqua-ide",
           "private": true,
-          "token": "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"
+          "token": ""
         }
       ]
     },
