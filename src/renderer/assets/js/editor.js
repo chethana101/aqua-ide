@@ -33,6 +33,33 @@ window.editorsConfig = [];
 const $contextMenu = $('#contextmenu-editor-popup');
 
 /*----------------------------------------
+* Get the basic editor settings
+*----------------------------------------*/
+const settingsOnEditor = await fs.readFileSync(__dirname + '\\settings\\config.json');
+// Parse the JSON data
+const configJson = JSON.parse(settingsOnEditor);
+// Editor theme variable
+const editorTheme = getEditorTheme();
+// Get the theme from the settings
+function getEditorTheme() {
+    const editorTheme = configJson.theme ?? "ace/theme/new_one_dark";
+    if (editorTheme === "aqua-dark") {
+        return "ace/theme/new_one_dark";
+    }
+    if (editorTheme === "aqua-light") {
+        return "ace/theme/chrome";
+    }
+    return editorTheme;
+}
+
+// Add the settings value
+if (configJson.theme === "aqua-dark") {
+    themeChoices.setChoiceByValue("aqua-dark");
+} else {
+    themeChoices.setChoiceByValue("aqua-light");
+}
+document.querySelector("#aqua_editor_font_size").value = parseInt(configJson.editorFontSize);
+/*----------------------------------------
 * Set editor tabs
 *----------------------------------------*/
 window.editorTabs = function (fileConfig) {
@@ -275,8 +302,8 @@ function getEditor(fileConfig) {
         editorHolder.insertBefore(editorElement, editorHolder.firstChild);
 
         let editor = ace.edit(editorElement.id);
-        editor.setTheme("ace/theme/new_one_dark");
-        // editor.setTheme("ace/theme/chrome");
+        // Set the editor theme
+        editor.setTheme(editorTheme);
 
         ace.require("ace/ext/language_tools");
         editor.setOptions(getEditorOptions(editor));
@@ -408,6 +435,8 @@ function getEditorOptions(editor) {
 
     editor.getSession().setUseWorker(useWebWorker);
 
+    const fontSize = configJson.editorFontSize ?? "13px";
+
     return { // theme string from ace/theme or custom?
         fontFamily: "JetBrains Mono", // string: set the font-family css value
         // editor options
@@ -436,7 +465,7 @@ function getEditorOptions(editor) {
         highlightGutterLine: true, // boolean: true if the gutter line should be highlighted
         hScrollBarAlwaysVisible: false, // boolean: true if the horizontal scroll bar should be shown regardless
         vScrollBarAlwaysVisible: false, // boolean: true if the vertical scroll bar should be shown regardless
-        fontSize: 13, // number | string: set the font size to this many pixels
+        fontSize: fontSize, // number | string: set the font size to this many pixels
         maxLines: undefined, // number: set the maximum lines possible. This will make the editor height changes
         minLines: undefined, // number: set the minimum lines possible. This will make the editor height changes
         maxPixelHeight: 0, // number -> maxLines: set the maximum height in pixel, when 'maxLines' is defined.

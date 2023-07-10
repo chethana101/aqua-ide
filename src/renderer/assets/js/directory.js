@@ -73,9 +73,14 @@ document.getElementById("title-bar-open-file")
 * Get directory data
 *----------------------------------------*/
 const titleBarOpenFolder = document.getElementById("title-bar-open-folder");
+const aquaBodyFolderOpen = document.getElementById("aqua-body-click-here-to-open");
 titleBarOpenFolder.addEventListener("click", async () => {
     await openFolderDataProcess(true);
 });
+aquaBodyFolderOpen.addEventListener("click", async () => {
+    await openFolderDataProcess(true);
+});
+
 
 // Open folder with button
 document.getElementById("btn-directory-tree-open").addEventListener("click", async () => {
@@ -121,6 +126,11 @@ async function openFolderDataProcess(isChoosed) {
         footerNavigateBuilder(
             {rootName: window.openedFolderName},
         );
+
+        // Set the title bar opened folder name
+        if (window.openedFolderName != null) {
+            document.getElementById("aqua-main-title-bar-title").textContent = window.openedFolderName + " | Aqua IDE";
+        }
 
         const treeData = dirTree(openedFolderPath, {
             attributes: ["size", "type", "extension", "mode", "mtime"],

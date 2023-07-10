@@ -1,6 +1,6 @@
-const {ipcRenderer} = require("electron");
+const {app, ipcRenderer} = require("electron");
 const ipc = ipcRenderer;
-
+const path = require("path");
 /*----------------------------------------
 * Title bar toggle actions
 *----------------------------------------*/
@@ -14,7 +14,7 @@ document.getElementById("aqua-ide-maximize")
     });
 document.getElementById("aqua-ide-close")
     .addEventListener("click", () => {
-        ipc.send('close-aqua-ide');
+        window.close();
     });
 
 /*----------------------------------------
@@ -23,7 +23,7 @@ document.getElementById("aqua-ide-close")
 window.resizeEditorContainer = function () {
     Array.from(document.querySelectorAll(".editor-container"))
         .forEach(function (editorEl) {
-            if(editorEl != undefined){
+            if (editorEl != undefined) {
                 ace.edit(editorEl).resize();
             }
         });
@@ -50,6 +50,7 @@ sideBarItem.forEach((element, key) => {
 * Split.js init
 *----------------------------------------*/
 let Split = require('split.js');
+const fs = require("fs");
 
 var split = Split(['#side-bar-panels', '#title-bar-and-editor'], {
     sizes: [20, 80],
@@ -76,87 +77,14 @@ var split = Split(['#side-bar-panels', '#title-bar-and-editor'], {
 /*----------------------------------------
 * Selector style action
 *----------------------------------------*/
-var x, i, j, l, ll, selElmnt, a, b, c;
-/*look for any elements with the class "custom-select":*/
-x = document.getElementsByClassName("field-selector");
-l = x.length;
-for (i = 0; i < l; i++) {
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    ll = selElmnt.length;
-    /*for each element, create a new DIV that will act as the selected item:*/
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    x[i].appendChild(a);
-    /*for each element, create a new DIV that will contain the option list:*/
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 0; j < ll; j++) {
-        /*for each option in the original select element,
-        create a new DIV that will act as an option item:*/
-        c = document.createElement("DIV");
-        c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function (e) {
-            /*when an item is clicked, update the original select box,
-            and the selected item:*/
-            var y, i, k, s, h, sl, yl;
-            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-            sl = s.length;
-            h = this.parentNode.previousSibling;
-            for (i = 0; i < sl; i++) {
-                if (s.options[i].innerHTML == this.innerHTML) {
-                    s.selectedIndex = i;
-                    h.innerHTML = this.innerHTML;
-                    y = this.parentNode.getElementsByClassName("same-as-selected");
-                    yl = y.length;
-                    for (k = 0; k < yl; k++) {
-                        y[k].removeAttribute("class");
-                    }
-                    this.setAttribute("class", "same-as-selected");
-                    break;
-                }
-            }
-            h.click();
-        });
-        b.appendChild(c);
-    }
-    x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
-        /*when the select box is clicked, close any other select boxes,
-        and open/close the current select box:*/
-        e.stopPropagation();
-        closeAllSelect(this);
-        this.nextSibling.classList.toggle("select-hide");
-        this.classList.toggle("select-arrow-active");
-    });
-}
-
-function closeAllSelect(elmnt) {
-    /*a function that will close all select boxes in the document,
-    except the current select box:*/
-    var x, y, i, xl, yl, arrNo = [];
-    x = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    xl = x.length;
-    yl = y.length;
-    for (i = 0; i < yl; i++) {
-        if (elmnt == y[i]) {
-            arrNo.push(i)
-        } else {
-            y[i].classList.remove("select-arrow-active");
-            y[i].style.border = "1.5px solid var(--selector-background-default)";
-        }
-    }
-    for (i = 0; i < xl; i++) {
-        if (arrNo.indexOf(i)) {
-            x[i].classList.add("select-hide");
-        }
-    }
-}
-
-/* If the user clicks anywhere outside the select box,
-then close all select boxes:*/
-document.addEventListener("click", closeAllSelect);
+const element = document.getElementById("aqua-theme-selector");
+themeChoices = new Choices(element, {
+    allowHTML: true,
+    removeItemButton: false,
+    paste: false,
+    searchEnabled: false,
+    itemSelectText: "",
+});
 
 /*-------------------------------------
 * Selector border style actions
@@ -233,7 +161,7 @@ dropdownMenus.forEach((menu) => {
 
 // Add a click event listener to each dropdown toggle button
 dropdownToggles.forEach((toggle) => {
-    toggle.addEventListener('click', function(e) {
+    toggle.addEventListener('click', function (e) {
         // Prevent default button behavior
         e.preventDefault();
 
@@ -250,7 +178,7 @@ dropdownToggles.forEach((toggle) => {
 });
 
 // Add a click event listener to the document to hide all dropdown menus
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     // Check if the click was outside of a dropdown menu
     let isOutsideDropdown = true;
     dropdownToggles.forEach((toggle) => {
@@ -300,4 +228,65 @@ document.getElementById("title-bar-close-all-window")
         ipc.send('close-all-aqua-ide');
         document.getElementById("dropdown-menu-main-toggle")
             .style.display = "none";
+    });
+
+/*----------------------------------------
+* Settings update
+*----------------------------------------*/
+// TODO:: Refactor this function
+document.getElementById("apply_settings").addEventListener("click", () => {
+    const editorFontSize = document.querySelector("#aqua_editor_font_size");
+    const themeValue = document.getElementById("aqua-theme-selector");
+    const settingsPath = path.join(__dirname, "settings/config.json");
+    const readConfigData = fs.readFileSync(settingsPath);
+
+    if (themeValue == null) {
+        console.log("Theme can not be null");
+    } else if (editorFontSize.value == null || editorFontSize.value == "") {
+        editorFontSize.style.border = "1.5px solid var(--danger)";
+    } else {
+        // Remove the font size error
+        if (editorFontSize.style.border == "1.5px solid var(--danger)") {
+            editorFontSize.style.border = "1.5px solid var(--selector-border-default)";
+        }
+        // Parse the JSON data
+        const configJson = JSON.parse(readConfigData);
+        configJson.theme = themeValue.value;
+        configJson.editorFontSize = editorFontSize.value + "px";
+        fs.writeFileSync(settingsPath, JSON.stringify(configJson));
+
+        // Open the confirmation dialog box
+        let aquaSettingConfirmDialog = $("#aquaSettingsConfirmDialog").dialog({
+            title: "<img class='aqua-dialog-box-icon' src='./assets/images/aqua-ide-logo.png' width='18'> Restart IDE",
+            autoOpen: false,
+            resizable: false,
+            draggable: true,
+            opening: function (e) {
+                window.viewDialogBox();
+            },
+            closed: function (e) {
+                window.hideDialogBox();
+            }
+        });
+        aquaSettingConfirmDialog.open();
+    }
+});
+
+// Dialog box view
+// TODO:: This function available on directory.js. Refactor this
+window.viewDialogBox = function () {
+    document.getElementById("aqua-popup-box-background")
+        .style.display = "block";
+}
+
+// Dialog box hide
+window.hideDialogBox = function () {
+    document.getElementById("aqua-popup-box-background")
+        .style.display = "none";
+}
+
+// Restart the IDE
+document.getElementById("aqua_settings_confirm_dialog_confirm_button")
+    .addEventListener("click", () => {
+        ipc.send('restart-ide');
     });

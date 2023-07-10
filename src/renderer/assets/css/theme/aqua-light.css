@@ -1,0 +1,58 @@
+.aqua-light {
+    --primary-color: #4347FF;
+    --primary-color-50: #f1f1f1;
+    --primary-color-100: rgba(67, 71, 255, 0.3);
+    --primary-color-200: rgb(31, 36, 155);
+    --primary-dark: #f9f9f9;
+    --primary-dark-100: #f5f5f5;
+    --primary-dark-200: #eeeeee;
+    --primary-dark-300: #eaeaea;
+    --icon-default: #343434;
+    --icon-default-hover: #ffffff;
+    --icon-default-extra: #777777;
+    --icon-default-extra-hover: #4347FF;
+    --text-default: #2d2d2d;
+    --text-default-hover: #ffffff;
+    --scroll-bar-default: rgba(182, 182, 182, 0.1);
+    --border: #efefef;
+    --dropdown-border: #eeeeee;
+    --danger: #ff1a1a;
+    --success: #00d94c;
+    --white: #000000;
+    /*  Editor Colors  */
+    --editor-primary: #ffffff;
+    --editor-gutter-text-default: #696565;
+    --editor-tooltip-completion: #7679ff;
+    --editor-scrollbar-background: #212125;
+    --editor-tooltip-suggest-border: #595656;
+    --editor-search-border-default: #eeeeee;
+    /*  Aqua Background Color  */
+    --aqua-background-text-default: #38383d;
+    --aqua-background-icon-default: #e0e0e0;
+    /*  Selector Colors  */
+    --selector-background-default: #eeeeee;
+    --selector-border-default: #d5d5d5;
+    /*  Dialog Popup Colors  */
+    --dialog-popup-head: #f1f1f1;
+    --dialog-popup-body: #e5e5e5;
+    --dialog-popup-button-light-background: #d2d2d2;
+    --dialog-popup-button-light-text: #151515;
+    /*  Editor Font Sizes  */
+    --editor-tooltip-font-default: 13px;
+    --editor-tooltip-suggest-font-default: 12px;
+    /*  Editor Font  */
+    --editor-font: "JetBrains Mono", sans-serif;
+    /*  Directory Font Sizes  */
+    --directory-font-size-default: 12px;
+    --directory-icon-size-default: 15px;
+    --default-folder-icon-size-16px: 70%;
+    --default-file-icon-size-16px: 16px;
+    /* Common Border Bottom Shadow */
+    --common-border-bottom-shadow: 2px solid rgba(0, 0, 0, 0.1);
+    /* Button Colors */
+    --button-text-color: #ffffff;
+    /* Side bar icon color */
+    --side-bar-icon-color: #777777;
+    /* Tabs Colors */
+    --tab-badge-color: #333333;
+}
