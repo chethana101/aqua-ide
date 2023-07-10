@@ -1,15 +1,20 @@
 {
-  "name": "aqua-ide",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Aqua IDE",
+  "version": "1.0.1",
+  "description": "Aqua IDE | Integrated Development Environment for web development",
+  "main": "src/index.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder",
+    "publish": "electron-builder --publish always"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chethana101/aqua-ide.git"
+  },
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
   },
   "author": "Chethana Perera",
   "license": "ISC",
@@ -19,11 +24,46 @@
   "homepage": "https://github.com/chethana101/aqua-ide#readme",
   "dependencies": {
     "ace-builds": "^1.18.0",
+    "chokidar": "^3.5.3",
+    "css": "^3.0.0",
     "directory-tree": "^3.5.1",
-    "electron": "^24.1.2",
-    "electron-reload": "^2.0.0-alpha.1",
+    "electron-log": "^4.4.8",
     "electron-tabs": "^1.0.1",
+    "electron-updater": "^6.1.1",
     "path": "^0.12.7",
     "split.js": "^1.6.5"
+  },
+  "build": {
+    "appId": "com.aquaide.quickstart",
+    "mac": {
+      "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
+      "publish": [
+        {
+          "provider": "github",
+          "releaseType": "release",
+          "repo": "aqua-ide",
+          "private": true,
+          "token":"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"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
+      "publish": [
+        {
+          "provider": "github",
+          "releaseType": "release",
+          "repo": "aqua-ide",
+          "private": true,
+          "token": "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"
+        }
+      ]
+    },
+    "asar": false
+  },
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-builder": "^24.4.0"
   }
 }

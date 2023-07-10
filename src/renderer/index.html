@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./assets/js/lib/jquery.min.js"></script>
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/gijgo.min.js" type="text/javascript"></script>
+    <script src="./assets/js/lib/beautify.min.js" type="text/javascript"></script>
+    <script src="./assets/js/lib/choices.min.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/css/lib/choices.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./assets/css/lib/gijgo.min.css"/>
+    <link type="text/css" rel="stylesheet" href="./assets/css/variables.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/icons.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/file-folder-icons.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/index.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/editor.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/directory.css">
+    <title>Aqa IDE</title>
+</head>
+<body>
+<!-- Pre Loader -->
+<div class="pre-loader" id="pre-loader">
+    <div class="pre-loader-holder" id="loading-text">
+        <div class="loader"></div>
+    </div>
+    <div class="pre-loader-bottom">
+        <div class="pre-loader-logo-box">
+            <img width="30" height="30" src="./assets/images/aqua-ide-logo.png" alt="AQUA IDE">
+        </div>
+        <span>Aqua IDE</span>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="main-container" style="display: none">
+    <!--  Container Body  -->
+    <div class="container-body">
+        <!--  LEFT | Sidebar Toggle  -->
+        <div class="side-bar">
+            <div class="side-bar-head">
+                <div class="side-bar-logo-box">
+                    <img class="side-bar-logo" src="./assets/images/aqua-ide-logo.png" width="28" height="28"
+                         alt="LOGO">
+                </div>
+            </div>
+            <div class="side-bar-body">
+                <div class="side-bar-body-top">
+                    <div class="side-bar-item side-bar-item-toggle side-bar-item-select" data-id="aqua-directory-panel">
+                        <span class="side-bar-item-icon icon-folder-icon"></span>
+                    </div>
+                    <div class="side-bar-item side-bar-item-toggle">
+                        <span class="side-bar-item-icon icon-todo-icon"></span>
+                    </div>
+                </div>
+                <div class="side-bar-body-bottom">
+                    <div class="side-bar-item side-bar-item-toggle" data-id="aqua-settings-panel">
+                        <span class="side-bar-item-icon icon-settings-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  RIGHT | Panel, Editor, Title Bar  -->
+        <div class="main-body-area">
+            <!--  Sidebar panels  -->
+            <div class="side-bar-panels" id="side-bar-panels">
+                <!--  Project panel  -->
+                <div class="side-bar-panel" id="aqua-directory-panel">
+                    <div class="side-bar-panel-head">
+                        <div class="side-bar-panel-title-box">
+                            <div class="side-bar-panel-title">PROJECT</div>
+                        </div>
+                        <div class="side-bar-panel-toggle-box">
+                            <div class="side-bar-panel-toggle" id="aqua-create-new-file-header">
+                                <span class="side-bar-panel-head-icon icon-add-new-file"></span>
+                            </div>
+                            <div class="side-bar-panel-toggle" id="aqua-create-new-folder-header">
+                                <span class="side-bar-panel-head-icon icon-add-new-foder"></span>
+                            </div>
+                            <div class="side-bar-panel-toggle" id="collapse-directory-tree">
+                                <span class="side-bar-panel-head-icon icon-collapse-icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-bar-panel-body">
+                        <div class="directory-holder">
+                            <div id="directory">
+                                <div class="btn-directory-tree-open-holder">
+                                    <button class="btn btn-primary btn-directory-tree-open" id="btn-directory-tree-open">OPEN FOLDER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  Settings panel  -->
+                <div class="side-bar-panel" id="aqua-settings-panel" style="display: none">
+                    <div class="side-bar-panel-head">
+                        <div class="side-bar-panel-title-box">
+                            <div class="side-bar-panel-title">SETTINGS</div>
+                        </div>
+                    </div>
+                    <div class="side-bar-panel-body side-bar-panel-settings-body">
+                        <div class="settings-body">
+                            <div class="side-bar-body-title-box">
+                                <span class="side-bar-body-title">Appearance</span>
+                            </div>
+                            <div class="field-box-holder">
+                                <div class="field-label-holder">
+                                    <label class="field-label">Theme</label>
+                                </div>
+                                <div class="field-box">
+                                    <div class="field-selector">
+                                        <select class="theme-selector" id="aqua-theme-selector" type="select-one">
+                                            <option value="aqua-dark">Aqua Dark</option>
+                                            <option value="aqua-light">Aqua Light</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field-box-holder">
+                                <div class="field-label-holder">
+                                    <label class="field-label">Editor Font size</label>
+                                </div>
+                                <div class="field-box">
+                                    <div class="field-input">
+                                        <input class="field" type="number" min="1" id="aqua_editor_font_size" value="12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field-button-group">
+                                <button class="btn btn-primary" id="apply_settings">APPLY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  Editor, Title Bar  -->
+            <div class="title-bar-and-editor-holder" id="title-bar-and-editor">
+                <!-- Title Bar -->
+                <div class="title-bar">
+                    <div class="title-bar-left">
+                        <!-- HTML markup for the two dropdown menus -->
+                        <div class="dropdown">
+                            <div class="title-bar-menu dropdown-toggle" id="dropdown1">
+                                <span class="icon-menu-icon"></span>
+                            </div>
+                            <ul class="dropdown-menu" id="dropdown-menu-main-toggle">
+                                <li class="dropdown-menu-item" id="title-bar-open-new-window">New Window</li>
+                                <hr>
+                                <li class="dropdown-menu-item" id="title-bar-open-file">Open File...</li>
+                                <li class="dropdown-menu-item" id="title-bar-open-folder">Open Folder</li>
+                                <hr>
+                                <li class="dropdown-menu-item" id="title-bar-close-window">Close Window</li>
+                                <li class="dropdown-menu-item" id="title-bar-close-all-window">Exit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="title-bar-middle">
+                        <span class="title-bar-main-title" id="aqua-main-title-bar-title">Aqua IDE</span>
+                    </div>
+                    <div class="title-bar-right">
+                        <div class="title-bar-toggle" id="aqua-ide-minimize">
+                            <span class="title-bar-toggle-icon icon-minimize-icon title-bar-minimize-icon"></span>
+                        </div>
+                        <div class="title-bar-toggle" id="aqua-ide-maximize">
+                            <span class="title-bar-toggle-icon icon-maximize-icon title-bar-maximize-icon"></span>
+                        </div>
+                        <div class="title-bar-toggle title-bar-close-icon" id="aqua-ide-close">
+                            <span class="title-bar-toggle-icon title-bar-toggle-icon-close icon-close-icon"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Editor -->
+                <div class="aqua-editor" id="aqua-editor-content" style="display: none;">
+                    <div class="aqua-editor-tabs-holder">
+                        <tab-group sortable="true" dragable="false">
+                            <style>
+                                /* ---------------------------------
+                                * Material Icon configuration
+                                * -----------------------------------*/
+                                @import url("./assets/css/file-folder-icons.css");
+                                .icon-material-theme-tabs {
+                                    font-size: var(--directory-icon-size-default);
+                                }
+                                /* ---------------------------------
+                                * IDE Icon configuration
+                                * -----------------------------------*/
+                                @font-face {
+                                    font-family: 'icomoon';
+                                    src:  url('./assets/icons/icomoon.eot?ttaczi');
+                                    src:  url('./assets/icons/icomoon.eot?ttaczi#iefix') format('embedded-opentype'),
+                                    url('./assets/icons/icomoon.ttf?ttaczi') format('truetype'),
+                                    url('./assets/icons/icomoon.woff?ttaczi') format('woff'),
+                                    url('./assets/icons/icomoon.svg?ttaczi#icomoon') format('svg');
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-display: block;
+                                }
+
+                                .icon-file-icon-default {
+                                    font-family: 'icomoon';
+                                }
+
+                                .icon-file-icon-default:before {
+                                    content: "\e914";
+                                    color: #616c73;
+                                    font-size: var(--default-file-icon-size-16px);
+                                }
+
+                                .views {
+                                    display: none;
+                                }
+
+                                .etabs {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 40px;
+                                    overflow: hidden;
+                                }
+
+                                .nav {
+                                    background: var(--primary-dark);
+                                    box-shadow: inset 0 -1px var(--primary-dark);
+                                    border-top: 1px solid var(--primary-dark);
+                                    height: 40px;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    overflow-x: auto;
+                                    overflow-y: hidden;
+                                    -webkit-overflow-scrolling: touch;
+                                    white-space: nowrap;
+                                }
+
+                                .nav::-webkit-scrollbar {
+                                    display: none;
+                                }
+
+                                .tabs {
+                                    margin-top: -2px;
+                                }
+
+                                .buttons {
+                                    border-left: none;
+                                }
+
+                                .tab {
+                                    box-shadow: none;
+                                    background: var(--primary-dark);
+                                    color: #999999;
+                                }
+
+                                .tab.active {
+                                    background: var(--editor-primary);
+                                    color: var(--text-default);
+                                    border-left: none;
+                                    border-bottom: 2px solid var(--primary-color);
+                                    border-right: none;
+                                }
+
+                                .tab.visible:not(.active) + .tab.visible:not(.active) {
+                                    border-left: none;
+                                    padding-left: 8px;
+                                }
+
+                                .tab:not(.active):hover {
+                                    color: #999999;
+                                }
+
+                                .tab-close button {
+                                    border-radius: 3px !important;
+                                }
+
+                                .tab-close button:hover {
+                                    color: var(--dialog-popup-button-light-text);
+                                    background: var(--primary-dark-300);
+                                }
+
+                                .tab-icon {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+
+                                .tab-badge {
+                                    background: none;
+                                    padding: 0;
+                                    font-size: 15px;
+                                    color: var(--tab-badge-color);
+                                }
+                            </style>
+                        </tab-group>
+                    </div>
+                    <div class="aqua-editors-holder" id="aqua-editors-holder">
+                    </div>
+                </div>
+                <!-- Background Cover -->
+                <div class="aqua-background-cover">
+                    <div class="aqua-background-cover-holder">
+                        <span class="icon-aqua-ide-background"></span>
+                        <div class="aqua-background-titles-box">
+                            <p>Welcome to Aqua IDE</p>
+                            <p>-</p>
+                            <a class="click-here-button" id="aqua-body-click-here-to-open">Click here to open project/folder</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- TODO:: Welcome section -->
+            </div>
+        </div>
+    </div>
+    <!--  Container Footer  -->
+    <div class="container-footer" id="container-footer">
+        <div class="container-footer-holder">
+            <div class="footer-left">
+                <div class="footer-navigator" id="footer-navigator">
+                    <div class="footer-navigator-path-name" style="margin-left: 10px">Aqua IDE</div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-toggle-item">
+                    <span class="footer-toggle-item-text" id="aqua-file-row-column">Ln 0, Col 0</span>
+                </div>
+                <div class="footer-toggle-item" id="footer-toggle-item-file-type" style="display: none">
+                    <span class="footer-toggle-item-text" id="aqua-file-footer-file-extension"></span>
+                </div>
+                <div class="footer-toggle-item" id="aqua-file-footer-read-type-click">
+                    <span class="icon-read-only-false" id="aqua-file-footer-read-type"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Context menu for directory tree -->
+<ul class="dropdown-menu right-click-popup" id="right-click-popup" style="display: none">
+    <li class="dropdown-menu-item" id="contextmenu-create-new-file-action">New File</li>
+    <li class="dropdown-menu-item" id="contextmenu-create-new-folder-action">New Folder</li>
+    <li class="dropdown-menu-item" id="contextmenu-rename-action">Rename</li>
+    <hr>
+    <li class="dropdown-menu-item" id="contextmenu-delete-action" data-action-type="delete">Delete</li>
+</ul>
+<!-- Context menu for editor -->
+<ul class="dropdown-menu right-click-popup" id="contextmenu-editor-popup" style="display: none">
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-save">Save</li>
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-copy">Copy</li>
+    <li class="dropdown-menu-item" id="aqua-editor-contextmenu-paste">Paste</li>
+    <hr>
+    <li class="dropdown-menu-item" id="aqua-format-editor">Format</li>
+</ul>
+<!-- Popup dialogs background -->
+<div class="aqua-popup-box-background" id="aqua-popup-box-background" style="display: none;"></div>
+<!-- Create file popup -->
+<div class="aqua-popup-box" id="aquaCreateNewFileDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="field-box">
+            <div class="field-label-holder">
+                <label class="field-label">File name: </label>
+            </div>
+            <div class="field-input">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_new_file_field" value="">
+            </div>
+            <div class="field-label-holder" id="aquaCreateNewFileDialogError">
+                <label class="field-label field-label-danger"></label>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_create_file_button">CREATE</button>
+    </div>
+</div>
+<!-- Create folder popup -->
+<div class="aqua-popup-box" id="aquaCreateNewFolderDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="field-box">
+            <div class="field-label-holder">
+                <label class="field-label">Folder name: </label>
+            </div>
+            <div class="field-input">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_create_folder_file" value="">
+            </div>
+            <div class="field-label-holder" id="aquaCreateNewFolderDialogError">
+                <label class="field-label field-label-danger"></label>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_create_folder_file_button">CREATE</button>
+    </div>
+</div>
+<!-- Rename popup -->
+<div class="aqua-popup-box" id="aquaRenameDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="field-box">
+            <div class="field-input">
+                <input class="field aqua-primary-dark-bg" type="text" id="aqua_rename_value" value="">
+            </div>
+            <div class="field-label-holder" id="aquaRenameFileFolderDialogError">
+                <label class="field-label field-label-danger"></label>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_rename_folder_file_button">RENAME</button>
+    </div>
+</div>
+<!-- Confirmation box -->
+<div class="aqua-popup-box" id="aquaConfirmDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="aqua-popup-confirm-box">
+            <div class="aqua-popup-confirm-box-left">
+                <div class="aqua-popup-confirm-icon-box">
+                    <img class="aqua-popup-confirm-icon"
+                         src="./assets/images/aqua-information-icon.png"
+                         width="50" height="50" alt="CONFIRMATION ICON">
+                </div>
+            </div>
+            <div class="aqua-popup-confirm-box-right">
+                <h3 class="aqua-popup-confirm-title">Confirm action</h3>
+                <p class="aqua-popup-confirm-text" id="aquaConfirmDialogText">
+                    Are you sure you want to do this action?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_confirm_dialog_confirm_button">CONFIRM</button>
+    </div>
+</div>
+<!-- Confirmation settings box -->
+<div class="aqua-popup-box" id="aquaSettingsConfirmDialog" style="display: none;" width="350">
+    <div class="aqua-dialog-popup-body" data-role="body">
+        <div class="aqua-popup-confirm-box">
+            <div class="aqua-popup-confirm-box-left">
+                <div class="aqua-popup-confirm-icon-box">
+                    <img class="aqua-popup-confirm-icon"
+                         src="./assets/images/aqua-information-icon.png"
+                         width="50" height="50" alt="CONFIRMATION ICON">
+                </div>
+            </div>
+            <div class="aqua-popup-confirm-box-right">
+                <h3 class="aqua-popup-confirm-title">Restart action</h3>
+                <p class="aqua-popup-confirm-text">
+                    Settings are successfully updated. Do you want to restart the IDE?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aqua-dialog-popup-footer" data-role="footer">
+        <button class="btn btn-primary btn-dialog-popup btn-dialog-popup-dark" data-role="close">CANCEL</button>
+        <button class="btn btn-primary btn-dialog-popup" id="aqua_settings_confirm_dialog_confirm_button">CONFIRM</button>
+    </div>
+</div>
+<!--  Scripts  -->
+<script>
+    <!--  Global variables  -->
+    let $tree;
+    let themeChoices;
+</script>
+<script src="./editor/ace/ace.js" type="module"></script>
+<script type="module" src="./assets/js/style.js"></script>
+<script type="module" src="./assets/js/directory.js"></script>
+<script type="module" src="./assets/js/editor.js"></script>
+</body>
+</html>
