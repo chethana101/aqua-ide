@@ -1,24 +1,35 @@
-const {app, BrowserWindow, ipcMain, dialog, shell} = require('electron');
+const {app, BrowserWindow, ipcMain, dialog, shell, screen} = require('electron');
 const path = require("path");
 const fs = require("fs");
 const ipc = ipcMain;
 const log = require("electron-log");
 const { autoUpdater } = require("electron-updater");
 
-/* Config Log Options */
+/**
+ * Config logs
+ * */
 log.transports.file.getFile().path = __dirname + "\\aqua.log";
 log.transports.file.format =
     "[{y}-{m}-{d} {h}:{i}:{s}.{ms}] [{level}]{scope} {text}";
 
+/**
+ * Variables
+ * */
 let mainWindow;
 let isOpenWindow = true;
 const configJsonURL = __dirname + '\\renderer\\settings\\config.json';
 let windows = new Set();
 
+/**
+ * Create main window function
+ * */
 function createWindow() {
+    // Get current screen width height
+    const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+    // Create main window
     let mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: width,
+        height: height,
         minWidth: 800,
         minHeight: 600,
         icon: path.join(__dirname, "./renderer/assets/images/aqua-ide-logo.png"),
@@ -33,7 +44,7 @@ function createWindow() {
             webviewTag: true,
         },
     });
-    windows.add(mainWindow)
+    windows.add(mainWindow);
 
     mainWindow.loadFile('./src/renderer/index.html');
 
@@ -60,11 +71,41 @@ function createWindow() {
     isOpenWindow = true;
 }
 
+/**
+ * Aqua IDE auto update configurations
+ * */
 autoUpdater.autoDownload = false;
 autoUpdater.autoInstallOnAppQuit = true;
 
+autoUpdater.on("checking-for-update", function () {
+    console.log("Checking for update...");
+    log.info("Checking for update...");
+});
+autoUpdater.on("update-available", () => {
+    log.info("Update available");
+    const dialogOpts = {
+        type: "question",
+        buttons: ["Download Now", "Later"],
+        title: "Update Found",
+        message: "New Update Found!",
+        detail: "A new version has been released. Click on download now button to download the new update."
+    }
+
+    dialog.showMessageBox(dialogOpts).then((returnValue) => {
+        if (returnValue.response === 0) {
+            autoUpdater.downloadUpdate();
+        }
+    });
+});
+autoUpdater.on("update-not-available", () => {
+    log.info("No update available");
+});
+autoUpdater.on("download-progress", (event) => {
+    console.log("Percentage: " + event.percent);
+    console.log("Bytes Per Second: " + event.bytesPerSecond);
+});
 autoUpdater.on("update-downloaded", (event) => {
-    log.error("update downloaded");
+    log.info("update downloaded");
     const dialogOpts = {
         type: "question",
         buttons: ["Restart", "Later"],
@@ -74,32 +115,27 @@ autoUpdater.on("update-downloaded", (event) => {
     }
 
     dialog.showMessageBox(dialogOpts).then((returnValue) => {
-        if (returnValue.response === 0) autoUpdater.quitAndInstall()
-    })
-})
-
-autoUpdater.on('update-not-available', () => {
-    log.error("No update available");
-})
-
-autoUpdater.on('checking-for-update', function () {
-    console.log('Checking for update...');
-    log.error("Checking for update...");
+        if (returnValue.response === 0) {
+            autoUpdater.quitAndInstall();
+        }
+    });
+});
+autoUpdater.on("error", (message) => {
+    console.error("There was a problem updating the application")
+    console.error(message)
+    log.info("There was a problem updating the application");
+    log.info(message);
 });
 
-autoUpdater.on('error', (message) => {
-    console.error('There was a problem updating the application')
-    console.error(message)
-    log.error("There was a problem updating the application");
-    log.error(message);
-})
-
+/**
+ * Open new window
+ * */
 ipc.on("open-new-window", () => {
     createWindow();
     isOpenWindow = false;
 });
 
-/*
+/**
  * When window is ready
  * */
 app.on('ready', () => {
@@ -112,7 +148,7 @@ app.on('ready', () => {
     });
 });
 
-/*
+/**
  * Close all the windows
  * */
 ipc.on("close-all-aqua-ide", async () => {
@@ -127,7 +163,7 @@ ipc.on("close-all-aqua-ide", async () => {
     app.quit();
 });
 
-/*
+/**
  * Restart the IDE
  * */
 ipc.on("restart-ide", async () => {
@@ -142,7 +178,7 @@ ipc.on("restart-ide", async () => {
     app.quit();
 });
 
-/*
+/**
  * Get opened file path
  * */
 ipc.on("open-file-dialog", (event, json) => {
@@ -158,10 +194,13 @@ ipc.on("open-file-dialog", (event, json) => {
     })
 });
 
-/*
+/**
  * Move to the recycle bin, files or folders
  * */
 ipc.on("move-to-trash", (event, json) => {
+    if (!fs.existsSync(json.path)) {
+        return "File not exists";
+    }
     shell.trashItem(json.path)
         .then(() => {
             event.returnValue = {
@@ -177,7 +216,7 @@ ipc.on("move-to-trash", (event, json) => {
         });
 });
 
-/*
+/**
  * Get opened folder path
  * */
 ipc.on("open-output-dialog", (event, json) => {
@@ -193,22 +232,27 @@ ipc.on("open-output-dialog", (event, json) => {
     })
 });
 
-app.on('window-all-closed', function () {
+/**
+ * Close all the windows
+ * */
+app.on("window-all-closed", function () {
     if (process.platform !== 'darwin') {
         app.quit();
     }
 });
 
-app.on('activate', function () {
+/**
+ * Activate
+ * */
+app.on("activate", function () {
     if (windows.size === 0) {
         createWindow();
     }
 });
-//
-// require('electron-reload')(__dirname, {
-//     electron: path.join("node_modules\\", '.bin', 'electron')
-// });
 
+/**
+ * Close the window - function
+ * */
 async function allWindowClosed() {
     if (windows.size === 0) {
         const readConfigData = await fs.readFileSync(configJsonURL);

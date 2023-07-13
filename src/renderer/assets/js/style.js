@@ -129,21 +129,36 @@ document.querySelectorAll(".side-bar-item-toggle")
                         }
                     }
                 });
-            }
-            // Check if item is select or not
-            if (element.classList.contains('side-bar-item-select')) {
-                document.getElementById("side-bar-panels")
-                    .style.flexBasis = "calc(20% - 1px)";
-                document.getElementById("title-bar-and-editor")
-                    .style.flexBasis = "calc(80% - 1px)";
+                // Check if item is select or not
+                if (element.classList.contains('side-bar-item-select')) {
+                    document.getElementById("side-bar-panels")
+                        .style.flexBasis = "calc(20% - 1px)";
+                    document.getElementById("title-bar-and-editor")
+                        .style.flexBasis = "calc(80% - 1px)";
+                } else {
+                    document.getElementById("side-bar-panels")
+                        .style.flexBasis = "calc(0% - 1px)";
+                    document.getElementById("title-bar-and-editor")
+                        .style.flexBasis = "calc(100% - 1px)";
+                }
+                // Resize the editor
+                resizeEditorContainer();
             } else {
-                document.getElementById("side-bar-panels")
-                    .style.flexBasis = "calc(0% - 1px)";
-                document.getElementById("title-bar-and-editor")
-                    .style.flexBasis = "calc(100% - 1px)";
+                // Open the confirmation dialog box
+                let aquaSettingInformationDialog = $("#aquaInformationDialog").dialog({
+                    title: "<img class='aqua-dialog-box-icon' src='./assets/images/aqua-ide-logo.png' width='18'> Alert",
+                    autoOpen: false,
+                    resizable: false,
+                    draggable: true,
+                    opening: function (e) {
+                        window.viewDialogBox();
+                    },
+                    closed: function (e) {
+                        window.hideDialogBox();
+                    }
+                });
+                aquaSettingInformationDialog.open();
             }
-            // Resize the editor
-            resizeEditorContainer();
         });
     });
 
