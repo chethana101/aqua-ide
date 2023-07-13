@@ -35,6 +35,18 @@
   },
   "build": {
     "appId": "com.aquaide.quickstart",
+    "mac": {
+      "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
+      "publish": [
+        {
+          "provider": "github",
+          "releaseType": "release",
+          "repo": "aqua-ide",
+          "private": true,
+          "token":""
+        }
+      ]
+    },
     "win": {
       "target": "nsis",
       "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
