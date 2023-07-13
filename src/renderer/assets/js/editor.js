@@ -25,6 +25,8 @@ import {
 
 const fs = require("fs");
 const path = require("path");
+const fileDataFileURL = __dirname + '\\settings\\fileData.json';
+const workerDelete = new Worker('./workers/delete-file-folder-worker.js');
 
 /*----------------------------------------
 * Necessary Variables
@@ -284,6 +286,35 @@ function storeEditorData() {
         // Get editor config
         let activeEditorConfig = window.editorsConfig.find((obj) => obj.id === activeTab.id);
         activeEditorConfig.editorOldData = editor.getValue();
+    } else {
+        document.getElementById("aqua-editor-" + activeTab.id).remove();
+
+        // If file not exists. Remove the file from editor and directory
+        const readedFileData = fs.readFileSync(fileDataFileURL);
+        const exportedJsonData = JSON.parse(readedFileData);
+
+        let selectedItemData = window.directorySelectGlobal;
+        workerDelete.postMessage({
+            object: selectedItemData,
+            jsonData: exportedJsonData,
+        });
+        workerDelete.addEventListener('message', (event) => {
+            // Write the updated JSON data back to the file
+            fs.writeFileSync(
+                fileDataFileURL,
+                JSON.stringify(event.data.directoryResources)
+            );
+            $tree.reload();
+        });
+
+        editorsConfigIds = removeObjectFromArray(editorsConfigIds, activeTab.id);
+        window.editorsConfig = removeObjectFromArray(window.editorsConfig, activeTab.id);
+
+        // Hide editor holder if editor count is 0
+        if (window.editorsConfig.length === 0) {
+            document.getElementById("aqua-editor-content")
+                .style.display = "none";
+        }
     }
 }
 

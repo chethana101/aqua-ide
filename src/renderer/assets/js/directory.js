@@ -50,21 +50,23 @@ document.getElementById("title-bar-open-file")
     .addEventListener("click", async () => {
         let fetchedOpenedFileData = await ipcRenderer.sendSync("open-file-dialog", {data: true});
         // Prepare the editor object
-        let fileData = path.parse(fetchedOpenedFileData.filePath[0]);
-        const newItem = {
-            id: ++window.totalFolderCount,
-            filePath: fetchedOpenedFileData.filePath[0],
-            text: fileData.base,
-            type: "file",
-            extension: fileData.ext,
-            imageHtml: getFileIcon({
+        if (fetchedOpenedFileData.filePath != null) {
+            let fileData = path.parse(fetchedOpenedFileData.filePath[0]);
+            const newItem = {
+                id: ++window.totalFolderCount,
+                filePath: fetchedOpenedFileData.filePath[0],
+                text: fileData.base,
                 type: "file",
                 extension: fileData.ext,
-                text: fileData.base,
-            }, false),
-        };
-        window.editorTabs(newItem);
-        window.editorsConfigIds.push({id: newItem.id});
+                imageHtml: getFileIcon({
+                    type: "file",
+                    extension: fileData.ext,
+                    text: fileData.base,
+                }, false),
+            };
+            window.editorTabs(newItem);
+            window.editorsConfigIds.push({id: newItem.id});
+        }
         // Hide menu
         document.getElementById("dropdown-menu-main-toggle").style.display = "none";
     });
@@ -118,7 +120,7 @@ async function openFolderDataProcess(isChoosed) {
     }
 
     // If path exist
-    if (openedFolderPath != "") {
+    if (openedFolderPath != "" && fs.existsSync(openedFolderPath)) {
         // Assign folder name
         window.openedFolderName = path.basename(openedFolderPath);
 
@@ -173,36 +175,57 @@ worker.addEventListener('message', (event) => {
         select: async function (e, node, id) {
             // Unassigned old data
             window.directorySelectGlobal = [];
-            // Assigned new data
-            window.directorySelectGlobal.push($tree.getDataById(id));
-            // If left click only
-            if (window.directoryIsRightClick) {
-                if (window.directorySelectGlobal[0].type == "file") {
-                    // Check opening file exist on editor
-                    const openEditors = window.editorsConfig.find(item => item.id == id);
-                    if (openEditors == undefined) {
-                        window.editorsConfigIds = removeObjectFromArray(window.editorsConfigIds, id);
+            // Check the file is exists
+            let selectedFileData = $tree.getDataById(id);
+            if (selectedFileData.filePath != null && fs.existsSync(selectedFileData.filePath)) {
+                // Assigned new data
+                window.directorySelectGlobal.push($tree.getDataById(id));
+                // If left click only
+                if (window.directoryIsRightClick) {
+                    if (window.directorySelectGlobal[0].type == "file") {
+                        // Check opening file exist on editor
+                        const openEditors = window.editorsConfig.find(item => item.id == id);
+                        if (openEditors == undefined) {
+                            window.editorsConfigIds = removeObjectFromArray(window.editorsConfigIds, id);
+                        }
+                        // Opening file exist on local variable
+                        const result = window.editorsConfigIds.find(item => item.id == id);
+                        if (result == undefined) {
+                            window.editorTabs(window.directorySelectGlobal[0]);
+                            window.editorsConfigIds.push({id: id});
+                        } else {
+                            let tabGroup = document.querySelector("tab-group");
+                            let tab = tabGroup.getTab(parseInt(id));
+                            tab.activate();
+                        }
                     }
-                    // Opening file exist on local variable
-                    const result = window.editorsConfigIds.find(item => item.id == id);
-                    if (result == undefined) {
-                        window.editorTabs(window.directorySelectGlobal[0]);
-                        window.editorsConfigIds.push({id: id});
-                    } else {
-                        let tabGroup = document.querySelector("tab-group");
-                        let tab = tabGroup.getTab(parseInt(id));
-                        tab.activate();
-                    }
+                    let pathAfterRoot = seperateFolders(
+                        window.directorySelectGlobal[0].filePath,
+                    );
+                    footerNavigateBuilder(
+                        {
+                            rootName: window.openedFolderName,
+                            allFiles: pathAfterRoot,
+                            imageHtml: window.directorySelectGlobal[0].imageHtml,
+                        }, true);
                 }
-                let pathAfterRoot = seperateFolders(
-                    window.directorySelectGlobal[0].filePath,
-                );
-                footerNavigateBuilder(
-                    {
-                        rootName: window.openedFolderName,
-                        allFiles: pathAfterRoot,
-                        imageHtml: window.directorySelectGlobal[0].imageHtml,
-                    }, true);
+            } else {
+                // If file not exists. Remove the file from editor and directory
+                const readedFileData = fs.readFileSync(fileDataFileURL);
+                const exportedJsonData = JSON.parse(readedFileData);
+
+                workerDelete.postMessage({
+                    object: [selectedFileData],
+                    jsonData: exportedJsonData,
+                });
+                workerDelete.addEventListener('message', (event) => {
+                    // Write the updated JSON data back to the file
+                    fs.writeFileSync(
+                        fileDataFileURL,
+                        JSON.stringify(event.data.directoryResources)
+                    );
+                    $tree.reload();
+                });
             }
         },
         unselect: function (e) {

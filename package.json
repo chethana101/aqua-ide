@@ -1,6 +1,6 @@
 {
-  "name": "Aqua IDE",
-  "version": "1.0.1",
+  "name": "aqua-ide",
+  "version": "1.0.4",
   "description": "Aqua IDE | Integrated Development Environment for web development",
   "main": "src/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "releaseType": "release"
   },
   "author": "Chethana Perera",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chethana101/aqua-ide/issues"
   },
@@ -35,18 +35,6 @@
   },
   "build": {
     "appId": "com.aquaide.quickstart",
-    "mac": {
-      "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
-      "publish": [
-        {
-          "provider": "github",
-          "releaseType": "release",
-          "repo": "aqua-ide",
-          "private": true,
-          "token":"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"
-        }
-      ]
-    },
     "win": {
       "target": "nsis",
       "icon": "src/renderer/assets/icons/aqua_ide_logo.ico",
@@ -55,12 +43,19 @@
           "provider": "github",
           "releaseType": "release",
           "repo": "aqua-ide",
-          "private": true,
-          "token": "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"
+          "private": false
         }
       ]
     },
-    "asar": false
+    "asar": false,
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "src/renderer/assets/icons/aqua_ide_logo.ico",
+      "uninstallerIcon": "src/renderer/assets/icons/aqua_ide_logo.ico",
+      "uninstallDisplayName": "aqua-ide-uninstall",
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Aqua IDE"
+    }
   },
   "devDependencies": {
     "electron": "^24.1.2",

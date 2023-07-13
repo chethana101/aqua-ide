@@ -174,6 +174,9 @@ function footerNavigateBuilder(data, type = false) {
 
 // Separate folder from path
 function seperateFolders(pathSent) {
+    if (!window.openedFolderName?.length) {
+        return [path.parse(pathSent).base]
+    }
     const index = pathSent.indexOf(window.openedFolderName);
     let pathAfterRoot = pathSent.slice(index + window.openedFolderName.length);
     return pathAfterRoot.split(path.sep).filter(Boolean);
@@ -335,10 +338,12 @@ function checkFileOrFolder(path) {
 // Write the updated content back to the file
 function updateFileContent(path, content) {
     try {
-        // Write the updated content back to the file
-        fs.writeFileSync(path, content, 'utf8');
-
-        return "success";
+        if (fs.existsSync(path)) {
+            // Write the updated content back to the file
+            fs.writeFileSync(path, content, 'utf8');
+            return "success";
+        }
+        return "File not exists";
     } catch (err) {
         console.error(err);
     }
