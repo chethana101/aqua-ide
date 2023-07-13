@@ -1,7 +1,8 @@
 <div align="center">
   <img width="200" height="200"
     src="https://github.com/chethana101/aqua-ide/blob/main/src/renderer/assets/images/aqua-ide-logo-512.png">
-  <h1>Aqua IDE</h1>
+  <h1 style="margin-top: -15px">Aqua IDE</h1>
+  <p>Integrated Development Environment for Web Development</p>
 </div>
 
 ---
