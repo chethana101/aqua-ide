@@ -3,10 +3,10 @@
     --primary-color-50: #1a1a1c;
     --primary-color-100: rgba(67, 71, 255, 0.3);
     --primary-color-200: rgb(31, 36, 155);
-    --primary-dark: #2b2d30;
-    --primary-dark-100: #131315;
-    --primary-dark-200: #151517;
-    --primary-dark-300: #27272a;
+    --primary-dark: #24292E;
+    --primary-dark-100: #171a1e;
+    --primary-dark-200: #171a1e;
+    --primary-dark-300: #1e2226;
     --icon-default: #C0C0C0;
     --icon-default-hover: #ffffff;
     --icon-default-extra: #C0C0C0;
@@ -14,13 +14,13 @@
     --text-default: #C0C0C0;
     --text-default-hover: #ffffff;
     --scroll-bar-default: rgba(182, 182, 182, 0.1);
-    --border: #222222;
+    --border: #30353b;
     --dropdown-border: #444444;
     --danger: #ff1a1a;
     --success: #00d94c;
     --white: #ffffff;
     /*  Editor Colors  */
-    --editor-primary: #1e1f22;
+    --editor-primary: #1e2226;
     --editor-gutter-text-default: #696565;
     --editor-tooltip-completion: #7679ff;
     --editor-scrollbar-background: #212125;
@@ -30,10 +30,10 @@
     --aqua-background-text-default: #6a6a6a;
     --aqua-background-icon-default: #111111;
     /*  Selector Colors  */
-    --selector-background-default: #212123;
-    --selector-border-default: #333333;
+    --selector-background-default: #1e2226;
+    --selector-border-default: #30353b;
     /*  Dialog Popup Colors  */
-    --dialog-popup-head: #1f1f1f;
+    --dialog-popup-head: #1e2226;
     --dialog-popup-body: #1f1f1f;
     --dialog-popup-button-light-background: #2b2d30;
     --dialog-popup-button-light-text: #ffffff;
