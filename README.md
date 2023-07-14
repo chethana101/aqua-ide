@@ -1,11 +1,9 @@
 <div align="center">
   <img width="200" height="200"
     src="https://github.com/chethana101/aqua-ide/blob/main/src/renderer/assets/images/aqua-ide-logo-512.png">
-  <h1 style="margin-top: -15px">Aqua IDE</h1>
+  <h1 style="margin-top: 0px">Aqua IDE</h1>
   <p>Integrated Development Environment for Web Development</p>
 </div>
-
----
 
 ## About
 
@@ -35,7 +33,7 @@ Aqua IDE is released under the MIT License. You can find the details of the lice
 
 To get started with Aqua IDE, follow these steps:
 
-1. Download the latest release from the [Releases](https://github.com/yourusername/aqua-ide/releases) page.
+1. Download the latest release from the [Releases](https://github.com/chethana101/aqua-ide/releases) page.
 
 2. Install the downloaded package on your system.
 
