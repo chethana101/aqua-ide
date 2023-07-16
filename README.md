@@ -5,6 +5,13 @@
   <p>Integrated Development Environment for Web Development</p>
 </div>
 
+<p align="center">
+    <img src="https://img.shields.io/github/downloads/chethana101/aqua-ide/total" alt="Total downloads">
+    <img src="https://img.shields.io/github/repo-size/chethana101/aqua-ide?color=red" alt="Repository Size">
+    <img src="https://img.shields.io/github/license/chethana101/aqua-ide" alt="License">
+    <img src="https://img.shields.io/github/v/release/chethana101/aqua-ide" alt="Version">
+</p>
+
 ## About
 
 Aqua IDE is a lightweight and versatile Integrated Development Environment (IDE) developed using the Electron framework. It provides a user-friendly interface and essential features to facilitate your coding experience. Please note that Aqua IDE is currently in beta version, which means it may still have some rough edges and limitations. We appreciate your understanding and welcome your feedback as we continue to improve and enhance the IDE.
@@ -33,7 +40,7 @@ Aqua IDE is released under the MIT License. You can find the details of the lice
 
 To get started with Aqua IDE, follow these steps:
 
-1. Download the latest release from the [Releases](https://github.com/chethana101/aqua-ide/releases) page.
+1. Download the latest release from the [Releases](https://github.com/chethana101/aqua-ide/releases/latest) page.
 
 2. Install the downloaded package on your system.
 
