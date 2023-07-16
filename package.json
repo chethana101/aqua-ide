@@ -1,6 +1,6 @@
 {
   "name": "aqua-ide",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Aqua IDE | Integrated Development Environment for web development",
   "main": "src/index.js",
   "scripts": {
